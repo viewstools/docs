@@ -1,0 +1,12 @@
+Vertical
+List
+from docsdisagree.data
+Vertical
+teleportTo item.id
+Text
+text item.title
+
+
+
+Item
+at :id

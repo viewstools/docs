@@ -1,0 +1,12 @@
+Vertical
+List
+from items.data
+Vertical
+teleportTo item.id
+Text
+text item.label
+
+
+
+Item
+at :id

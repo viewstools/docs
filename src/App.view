@@ -1,0 +1,12 @@
+Vertical
+height 100vh
+width 100vw
+
+Home
+at / exact
+
+Agree
+at /agree exact
+
+Disagree
+at /disagree exact
