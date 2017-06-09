@@ -1,13 +1,13 @@
 Vertical
 backgroundColor #323232
-padding 60
+padding 48
 height 100vh
 Text
 text Code we write should be beautiful, meaningful, and simple
 color #fb8123
 fontFamily Montserrat, sans-serif
 fontWeight 600
-fontSize 45
+fontSize 48
 lineHeight 1.3
 Vertical
 position absolute

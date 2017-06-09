@@ -1,12 +1,35 @@
 Vertical
-List
-from docsdisagree.data
-Vertical
-teleportTo item.id
+padding 48
 Text
+text Docs for Troublemakers
+wordWrap break-word
+fontFamily Montserrat, sans-serif
+fontSize 32
+fontWeight 600
+lineHeight 1
+color #424242
+List
+marginTop 32
+from docsdisagree.data
+Horizontal
+alignItems center
+paddingTop 10
+teleportTo item.id
+borderBottom 1px solid #f2f2f2
+transformHover translate(30px)
+transition all 0.15s ease-out
+Text
+fontSize 50
 text item.title
+Text
+marginLeft 20
+fontFamily Montserrat, sans-serif
+fontSize 20
+fontWeight 300
+text item.what
 
 
 
-Item
+
+Chapter
 at :id
