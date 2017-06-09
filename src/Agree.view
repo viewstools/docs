@@ -1,6 +1,9 @@
 Vertical
-padding 48
+height 100vh
 Text
+paddingTop 48
+paddingRight 48
+paddingLeft 48
 text Docs for Evangelists
 fontFamily Montserrat, sans-serif
 fontSize 32
@@ -8,6 +11,8 @@ fontWeight 600
 lineHeight 1
 color #424242
 List
+paddingRight 48
+paddingLeft 48
 marginTop 32
 from docsagree.data
 Horizontal
@@ -28,6 +33,40 @@ fontWeight 300
 text item.what
 
 
+
+Horizontal
+position absolute
+bottom 0
+width 100vw
+alignItems center
+zIndex 1
+Horizontal
+teleportTo ..
+transformHover translate(-10px)
+transition all 0.15s ease-out
+Text
+paddingLeft 20
+paddingRight 10
+paddingTop 15
+paddingBottom 15
+text 👈
+fontSize 26
+
+
+CaptureText
+marginRight 20
+marginTop 10
+marginBottom 10
+flex 1
+border 1px solid #e6e6e6
+borderRadius 50
+paddingTop 10
+paddingBottom 10
+paddingLeft 15
+fontFamily Montserrat, sans-serif
+fontSize 16
+fontWeight 300
+placeholder I'm looking for...
 
 
 Chapter

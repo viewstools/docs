@@ -2,17 +2,21 @@ Data
 default
 item
 id c1
+title 🎧
+what Aaaaaaaaa!
+item
+id c2
 title 🧀
 what Don't install
 item
-id c2
-title 🎧
+id c3
+title 🥊
 what Atomic sucks
 item
-id c3
-title 🎟
+id c4
+title 🌵
 what I'm an outlaw
 item
-id c4
-title 🏆
-what Aaaaaaaaa! 
+id c5
+title 💣
+what Bombs away
