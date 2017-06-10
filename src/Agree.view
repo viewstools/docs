@@ -13,6 +13,7 @@ color #424242
 List
 paddingRight 48
 paddingLeft 48
+paddingBottom 100
 marginTop 32
 from docsagree.data
 Horizontal
@@ -35,11 +36,12 @@ text item.what
 
 
 Horizontal
-position absolute
+position fixed
 bottom 0
 width 100vw
 alignItems center
 zIndex 1
+backgroundColor rgba(255,255,255,0.9)
 Horizontal
 teleportTo ..
 transformHover translate(-10px)
@@ -58,6 +60,7 @@ marginRight 20
 marginTop 10
 marginBottom 10
 flex 1
+backgroundColor rgba(255,255,255,1)
 border 1px solid #e6e6e6
 borderRadius 50
 paddingTop 10
@@ -65,7 +68,7 @@ paddingBottom 10
 paddingLeft 15
 fontFamily Montserrat, sans-serif
 fontSize 16
-fontWeight 300
+fontWeight 400
 placeholder I'm looking for...
 
 
