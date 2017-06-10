@@ -14,11 +14,13 @@
   },
   "scripts": {
     "start": "concurrently  'npm run dev' 'npm run views'",
+    "lstart": "concurrently  'npm run dev' 'npm run lviews'",
     "dev": "react-scripts start",
     "prebuild": "views-morph src --as react-dom --no-tests",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "views": "views-morph src --as react-dom --watch"
+    "views": "views-morph src --as react-dom --watch",
+    "lviews": "~/views/morph/cli.js src --as react-dom --watch"
   }
 }
