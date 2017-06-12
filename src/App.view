@@ -5,8 +5,8 @@ width 100vw
 Home
 at / exact
 
-Agree
-at /agree exact
+ChosenPath
+at /(agree|disagree) exact
 
-Disagree
-at /disagree exact
+Chapter
+at /(agree|disagree)/:id exact
