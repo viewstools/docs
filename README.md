@@ -1,6 +1,25 @@
 # Views docs
 👋. Let's learn what this whole Views thing is all about together!
 
+## What is it?
+Views is a simplified front-end language to describe user interfaces (UI) and
+their interactions (UX).
+
+Its main goal is to allow non technical people to be able to contribute to the
+final product in a direct way.
+
+Does this mean that Views replaces tools like Illustrator, Invision, Sketch or
+the good ol' pen and paper? Kind of. You can still start your process in
+whatever makes you happier. Funnily enough, both, developers and designers tend
+to draw blocks in a way or another that represent how their application will
+work in logical terms. So whatever helps you get started, please, keep on doing
+it and transition to Views as you see fit.
+
+In our experience, we've found that the sooner we get into it, we had a better
+chance at delivering something that our users really wanted and are able to
+completely avoid the misunderstandings that come from working in a vacuum for
+too long.
+
 ## Why Views?
 I'll be honest with you, we made Views for us 😜. The amount of time we spent
 handing designs off and waiting for them to be real was ridiculous so we figured
@@ -31,6 +50,15 @@ Sketch or Illustrator if you like.
 
 [Here's a post showing how we got to the syntax we have today](https://learndx.com/crossing-the-impossible-a47456282b1c).
 [And this is Tom's reaction when he first saw it live 👻](https://learn.viewsdx.com/today-we-celebrate-the-freedom-of-creative-code-writing-c4477ca599a2).
+
+## Is it being used somewhere?
+Yes! 🚀 We currently have a strategic partner using Views to deliver their core
+application to their 50 million users in the USA. We're groking numbers and
+drafting a story that should help you understand what it meant for them to adopt
+Views in practical terms.
+
+Of course we use it to build things too. The docs app in this repo is an example
+of it. We'll be open sourcing more apps soon to showcase different uses of Views.
 
 ## Blocks
 
@@ -82,17 +110,46 @@ By the way, that doesn't mean that you can't use other `display` values. See
 the [quirks](QUIRKS.md) for a few cases in which we've spotted flex wasn't
 cutting it for us.
 
+`Vertical` and `Horizontal` are also actionable blocks, which is a fancy way to
+say that they take click or press events. That's how you make buttons for
+example.
+
+```views
+Button is Vertical
+onClick props.doSomeAction
+Text
+text click me
+```
+
+At this point we should probably explain what `props.doSomeAction` means, right 😬?
+`props` is stuff given to your view from the outside. In this example,
+`doSomeAction` is an example of an external function, ie, some piece of logic in
+your application that's going to be called when that button gets clicked or
+pressed. A `prop` can be anything though. For example, say we wanted to have
+some piece of text to be dynamically set in our app, then we would do something
+like:
+
+```views
+Text
+text props.text
+```
+That means that the text will take any value given to it.
+
 
 `List` lets you repeat one item many times.
-It needs one prop, called `from`
+It needs one prop, called `from`. A `List` can only take one block inside of it,
+so if you want more complex things, like a card, you will want to use a
+container block like a `Vertical` or a `Horizontal`.
 
-You'd generally want to do this with different data
+Inside a `List` you get access to an `item` and `index`. `item` has whatever your
+list has and `index` tells the position of the item in the list starting at 0.
 
 ```views
 List
-from props.list
+from props.people
+Text
+text item.name
 ```
-
 
 *Content* blocks let you, well, show stuff. You met one before, `Text`, let's
 meet all of them:
@@ -179,11 +236,44 @@ run `views-morph file.svg` and 💥! You'll get a ready to go Views Svg!
 
 TODO `onClick toggle props.stuff`
 
+### Naming blocks
+You can name a block by doing something like this:
+
+```views
+MyBlock is Vertical
+```
+
+It's something along the lines of `Name is BlockType`.
+
+[Here's a very neat trick to make your code even more readable and reusable
+through naming blocks](https://youtu.be/S-5rbcnXWtI?t=51m38s)
+
+This is a super handy pattern for QA, which can now access the elements using
+data attributes TODO.
+
 ### Proximity nesting
-TODO
+[See this bit of this video for now](https://www.youtube.com/watch?v=S-5rbcnXWtI&feature=youtu.be&t=37m54s)
 
 ## .view.tests
-TODO ✨
+✨
+We all want our UIs to be tested. It's hard to do that though. UI in particular
+changes often and it's a bit painful to keep your tests updated at all times.
+
+We want to help make testing easier and we've done that in Views through a
+practical application. Right now, our tests help you design your
+Views at different stages. Soon enough, they will automatically create unit
+tests for your views to ensure that any future changes are being consciously
+applied and that unwanted regressions are caught in time.
+
+It kind of works like this. Saw we have a View that shows a list of people:
+```views
+People is Vertical
+List
+from props.people
+Text
+text item.name
+```
+TODO
 
 ## .view.logic
 TODO
@@ -195,8 +285,18 @@ TODO 💾
 TODO
 
 ## states/better ternaries :)
+TODO
+
+## Views and your React components
+TODO
 
 ## Using Views in your project
+For now, Views morphs to the web and desktop through React DOM and to iOS and
+Android through React Native.
+
+Feel free to reach out if you want to learn how to make your own morpher to, say
+Angular, Vue, etc. 👌
+
 ### with create-react-app
 ```
 yarn add views-morph
@@ -236,6 +336,14 @@ If you’re using other editors and come up with a syntax highlighter for it, re
 and we’ll add it to this list.
 
 Happy editing!
+
+## I ran views-morph on my project and it created a bunch of other files, what's going on?
+Say you have a View called `My.view`. When morphing it, Views will create a file
+called `My.view.js`. If you're morphing to `react-dom`, it will also create a
+`My.view.css` that gets automatically imported. You can avoid that external CSS
+file altogether by running the morpher like `views-morph My.view --as react-dom
+--inlineStyles`. You can safely ignore these files as they'll be created on the
+fly when the morpher runs.
 
 ## Contributing to the docs app
 Install the dependencies with:
