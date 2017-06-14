@@ -22,5 +22,6 @@
     "eject": "react-scripts eject",
     "views": "views-morph src --as react-dom --watch",
     "lviews": "~/views/morph/cli.js src --as react-dom --watch"
-  }
+  },
+  "license": "BSD-3-Clause"
 }
