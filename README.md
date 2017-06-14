@@ -1,5 +1,20 @@
-# Views docs
-👋. Let's learn what this whole Views thing is all about together!
+# How can you benefit from what we are doing?
+👋 Today Views allows teams to become more cross-functional by use of clean,
+simple, and meaningful code.
+
+Minimized learning curve opens new possibilities of contribution even for
+non-technical members, like designers or business analysts.
+
+
+## Who else is using it successfully?
+Yes! 🚀 We currently have a strategic partner using Views to deliver their core
+application to their 50 million users in the USA. We're growing numbers and
+drafting a story that should help you understand what it meant for them to adopt
+Views in practical terms.
+
+Of course we use it to build things too. The docs app in this repo is an example
+of it. We'll be open sourcing more apps soon to showcase different uses of Views.
+
 
 ## What is it?
 Views is a simplified front-end language to describe user interfaces (UI) and
@@ -48,17 +63,41 @@ focus on what matters the most: how we describe our application.
 When you look at the code you can even think about it as a properties panel in
 Sketch or Illustrator if you like.
 
-[Here's a post showing how we got to the syntax we have today](https://learndx.com/crossing-the-impossible-a47456282b1c).
-[And this is Tom's reaction when he first saw it live 👻](https://learn.viewsdx.com/today-we-celebrate-the-freedom-of-creative-code-writing-c4477ca599a2).
+## Using Views in your project
+For now, Views morphs to the web and desktop through React DOM and to iOS and
+Android through React Native.
 
-## Is it being used somewhere?
-Yes! 🚀 We currently have a strategic partner using Views to deliver their core
-application to their 50 million users in the USA. We're groking numbers and
-drafting a story that should help you understand what it meant for them to adopt
-Views in practical terms.
+Feel free to reach out if you want to learn how to make your own morpher to, say
+Angular, Vue, etc. 👌
 
-Of course we use it to build things too. The docs app in this repo is an example
-of it. We'll be open sourcing more apps soon to showcase different uses of Views.
+### with create-react-app
+```
+yarn add views-morph
+views-morph src --watch --as react-dom
+```
+
+### with create-react-native-app
+```
+yarn add views-morph
+views-morph . --watch --as react-native
+```
+### with an existing project
+```
+yarn add views-morph
+views-morph . --watch --as react-dom
+```
+
+You will want to add this to your `.gitignore` file:
+```
+# views
+**/*.data.js
+**/*.view.js
+**/*.view.css
+**/*.view.tests.js
+```
+### in a sample project
+
+[Here's a video with the most recent overview of sample project installation and use](https://learn.viewsdx.com/june-2017-overview-update-5843a2142308).
 
 ## Blocks
 
@@ -315,39 +354,6 @@ text back
 
 ## Views and your React components
 TODO
-
-## Using Views in your project
-For now, Views morphs to the web and desktop through React DOM and to iOS and
-Android through React Native.
-
-Feel free to reach out if you want to learn how to make your own morpher to, say
-Angular, Vue, etc. 👌
-
-### with create-react-app
-```
-yarn add views-morph
-views-morph src --watch --as react-dom
-```
-
-### with create-react-native-app
-```
-yarn add views-morph
-views-morph . --watch --as react-native
-```
-### with an existing project
-```
-yarn add views-morph
-views-morph . --watch --as react-dom
-```
-
-You will want to add this to your `.gitignore` file:
-```
-# views
-**/*.data.js
-**/*.view.js
-**/*.view.css
-**/*.view.tests.js
-```
 
 ## Syntax highlighting
 We’ve created the following packages to help you understand `.view` files better:
