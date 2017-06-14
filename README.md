@@ -287,6 +287,32 @@ TODO
 ## states/better ternaries :)
 TODO
 
+## routes and teleports
+TODO
+```
+App is Vertical
+
+Home is Vertical
+at /
+Text
+text main
+Vertical
+teleportTo page
+Text
+text go to page
+
+
+Page is Vertical
+at /page
+Text
+text some page
+
+Vertical
+teleportTo ..
+Text
+text back
+```
+
 ## Views and your React components
 TODO
 
