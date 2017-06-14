@@ -1,14 +1,14 @@
 # How can you benefit from what we are doing?
-👋 Today Views allows teams to become more cross-functional by use of clean,
+👋 Today Views allows teams to become more cross-functional by the use of clean,
 simple, and meaningful code.
 
-Minimized learning curve opens new possibilities of contribution even for
+Its small learning curve opens new possibilities of contribution, even for
 non-technical members, like designers or business analysts.
 
 
-## Who else is using it successfully?
+## Is someone else using it successfully?
 Yes! 🚀 We currently have a strategic partner using Views to deliver their core
-application to their 50 million users in the USA. We're growing numbers and
+application to their 50 million users in the USA. We're gathering numbers and
 drafting a story that should help you understand what it meant for them to adopt
 Views in practical terms.
 
