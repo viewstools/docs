@@ -124,9 +124,21 @@ You will want to add this to your `.gitignore` file:
 
 [Here's a video with the most recent overview of sample project installation and use](https://learn.viewsdx.com/june-2017-overview-update-5843a2142308).
 
-## Blocks
+## Composition Elements
 
-Views are made out of blocks.
+Views uses [Atomic Design Composition Pattern](http://patternlab.io/) to ensure
+interface consistency across all views.
+
+![What is Atomic Design Pattern?](images/atomic-design.jpg)
+
+We distinguish three types of composition elements:
+1. Properties - the atoms
+2. Blocks - groups of properties
+3. Views - groups of Blocks
+
+![How Atomic maps to Views?]()
+
+## Blocks
 
 A `Hello World` example in Views may look like:
 ```views
