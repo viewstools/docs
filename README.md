@@ -84,7 +84,7 @@ cutting it for us.
 
 
 `List` lets you repeat one item many times.
-It needs one prop, called
+It needs one prop, called `list`
 
 You'd generally want to do this with
 different data
