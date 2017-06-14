@@ -86,11 +86,12 @@ cutting it for us.
 `List` lets you repeat one item many times.
 It needs one prop, called `from`
 
-You'd generally want to do this with
-different data
+You'd generally want to do this with different data
 
-`List
-from props.list`
+```views
+List
+from props.list
+```
 
 
 *Content* blocks let you, well, show stuff. You met one before, `Text`, let's
