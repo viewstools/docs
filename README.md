@@ -1,4 +1,29 @@
-# How can you benefit from what we are doing?
+# Views Docs
+* [How can you benefit from what we are doing?](#how-can-you-benefit-from-what-we-are-doing)
+* [Is someone else using it successfully?](#is-someone-else-using-it-successfully)
+* [What is it?](#what-is-it)
+* [Why Views?](#why-views)
+* [Using Views in your project](#using-views-in-your-project)
+    * [with create-react-app](#with-create-react-app)
+    * [with create-react-native-app](#with-create-react-native-app)
+    * [with an existing project](#with-an-existing-project)
+    * [in a sample project](#in-a-sample-project)
+* [Blocks](#blocks)
+    * [The types of blocks](#the-types-of-blocks)
+    * [Naming blocks](#naming-blocks)
+    * [Proximity nesting](#proximity-nesting)
+* [.view.tests](#viewtests)
+* [.view.logic](#viewlogic)
+* [.data](#data)
+* [animations](#animations)
+* [states/better ternaries :)](#statesbetter-ternaries-)
+* [routes and teleports](#routes-and-teleports)
+* [Views and your React components](#views-and-your-react-components)
+* [Syntax highlighting](#syntax-highlighting)
+* [I ran views-morph on my project and it created a bunch of other files, what's going on?](#i-ran-views-morph-on-my-project-and-it-created-a-bunch-of-other-files-whats-going-on)
+* [Contributing to the docs app](#contributing-to-the-docs-app)
+
+## How can you benefit from what we are doing?
 👋 Today Views allows teams to become more cross-functional by the use of clean,
 simple, and meaningful code.
 
