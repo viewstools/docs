@@ -124,7 +124,7 @@ You will want to add this to your `.gitignore` file:
 
 [Here's a video with the most recent overview of sample project installation and use](https://learn.viewsdx.com/june-2017-overview-update-5843a2142308).
 
-## Composition Pattern
+# Composition Pattern
 
 Views uses [Atomic Design Composition Pattern](http://patternlab.io/) to ensure
 interface consistency across all views.
@@ -140,6 +140,10 @@ We distinguish three types of composition elements:
 
 TODO Map concept of embedded views to variables with an example of updating
 font family across the application
+
+## Properties
+
+TODO Explain the difference between internal and external props
 
 ## Blocks
 
@@ -175,7 +179,7 @@ UI. It's a layout mode intended to accommodate different screen sizes and
 different display devices without much effort.
 Tom wrote a great post a while back explaining our approach at a simplified
 flexbox, [check it out here](https://learn.viewsdx.com/simplified-flexbox-for-designers-7adc79aebf55).
-[If you're curious about ou can read more about flexbox here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes).
+[If you're curious about you can read more about flexbox here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes).
 
 In CSS terms, `Vertical` is a shortcut for `flex-direction: row`
 
