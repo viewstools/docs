@@ -58,6 +58,10 @@ real users the better is the quality of testing data.
 The value of cross-functional teams is very well known to Growth Hacking community
 and it's explained well in this book [Hacking Growth: Fastest Growing Companies Breakout](https://www.amazon.com/Hacking-Growth-Fastest-Growing-Companies-Breakout/dp/045149721X)
 
+![Cover of the mentioned book](images/growthhacking.png)
+
+TODO Visually list the skills cross-functional team member should aim at acquiring
+
 Views helps build fast experiments that can be expanded to fully featured products
 and don't end-up thrown away after testing, like it's in a case of prototypes.
 
