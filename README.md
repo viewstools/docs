@@ -129,7 +129,7 @@ You will want to add this to your `.gitignore` file:
 Views uses [Atomic Design Composition Pattern](http://patternlab.io/) to ensure
 interface consistency across all views.
 
-![What is Atomic Design Pattern?](images/atomic-design.jpg)
+![What is Atomic Design Pattern?](images/mapping-atomic-to-views.jpg)
 
 We distinguish three types of composition elements:
 1. Properties - the atoms
