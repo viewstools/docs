@@ -41,52 +41,37 @@ Of course we use it to build things too. The docs app in this repo is an example
 of it. We'll be open sourcing more apps soon to showcase different uses of Views.
 
 
-## What is it?
+## What is Views, exactly?
 Views is a simplified front-end language to describe user interfaces (UI) and
 their interactions (UX).
 
-Its main goal is to allow non technical people to be able to contribute to the
-final product in a direct way.
+Views compiles to production quality Javascript.
 
-Does this mean that Views replaces tools like Illustrator, Invision, Sketch or
-the good ol' pen and paper? Kind of. You can still start your process in
-whatever makes you happier. Funnily enough, both, developers and designers tend
-to draw blocks in a way or another that represent how their application will
-work in logical terms. So whatever helps you get started, please, keep on doing
-it and transition to Views as you see fit.
+Does this mean that Views replaces tools like Illustrator, InVision, Sketch or
+the good old pen and paper? Only for those who want their interfaces to become
+functional and fully interactive during the design process.
 
-In our experience, we've found that the sooner we get into it, we had a better
-chance at delivering something that our users really wanted and are able to
-completely avoid the misunderstandings that come from working in a vacuum for
-too long.
+In our experience, the sooner we get a fully functional application in front of
+real users the better is the quality of testing data.
 
-## Why Views?
-I'll be honest with you, we made Views for us 😜. The amount of time we spent
-handing designs off and waiting for them to be real was ridiculous so we figured
-we may as well do something about it.
+## Views is a knowledge transfer platform!
+The value of cross-functional teams is very well known to Growth Hacking community
+and it's explained well in this book [Hacking Growth: Fastest Growing Companies Breakout](https://www.amazon.com/Hacking-Growth-Fastest-Growing-Companies-Breakout/dp/045149721X)
 
-So, yeah, Views means that designers, as well as developers, code.
+Views helps build fast experiments that can be expanded to fully featured products
+and don't end-up thrown away after testing, like it's in a case of prototypes.
 
-Coding helps you understand how the platform you're building for works.
+Every team that introduced non-technical members using Views on an early stage of
+product development noticed massive spikes in productivity, motivation, and cross-domain
+knowledge transfer.
 
-Developers are happy coding. However, whether designers should code or not, is a
-topic that's kind of hot nowadays in the industry with all sort of points of
-view on it. We think that they should, but maybe not in the way we know code
-today.
+_We learn the best from each other and on the job_
 
-Whether you pick HTML and CSS, React, Vue, Angular, Ember, Web Components, Svelte,
-or whatever other take at writing your app, there's a lot to learn for a newcomer.
-Designers in particular with all the other things they have to do while
-building a product, don't have tonnes of time to spare. They have to use it
-wisely.
+Because Views syntax, composition, state and logic concepts are much easier to
+grasp non-technical team members have less barriers to start writing code.
 
-_We think that the code we write should be beautiful, meaningful, and simple._
+_We think that the code we write should be beautiful, meaningful, and simple_
 
-Views sets us is free from unnecessary punctuation and indentation, letting us
-focus on what matters the most: how we describe our application.
-
-When you look at the code you can even think about it as a properties panel in
-Sketch or Illustrator if you like.
 
 ## Using Views in your project
 For now, Views morphs to the web and desktop through React DOM and to iOS and
@@ -138,7 +123,7 @@ We distinguish three types of composition elements:
 
 ![How Atomic maps to Views?](images/mapping-atomic-to-views.jpg)
 
-TODO Map concept of embedded views to variables with an example of updating
+TODO Map concept of embedded views to variables (and Sketch symbols) with an example of updating
 font family across the application
 
 ## Properties
