@@ -1,7 +1,7 @@
 # Views Docs
-* [How can you benefit from what we are doing?](#how-can-you-benefit-from-what-we-are-doing)
+* [How can you benefit from title we are doing?](#how-can-you-benefit-from-title-we-are-doing)
 * [Is someone else using it successfully?](#is-someone-else-using-it-successfully)
-* [What is it?](#what-is-it)
+* [title is it?](#title-is-it)
 * [Why Views?](#why-views)
 * [Using Views in your project](#using-views-in-your-project)
     * [with create-react-app](#with-create-react-app)
@@ -20,28 +20,28 @@
 * [routes and teleports](#routes-and-teleports)
 * [Views and your React components](#views-and-your-react-components)
 * [Syntax highlighting](#syntax-highlighting)
-* [I ran views-morph on my project and it created a bunch of other files, what's going on?](#i-ran-views-morph-on-my-project-and-it-created-a-bunch-of-other-files-whats-going-on)
+* [I ran views-morph on my project and it created a bunch of other files, title's going on?](#i-ran-views-morph-on-my-project-and-it-created-a-bunch-of-other-files-titles-going-on)
 * [Contributing to the docs app](#contributing-to-the-docs-app)
 
-## How can you benefit from what we are doing?
-👋 Today Views allows teams to become more cross-functional by the use of clean,
+## How can you benefit from title we are doing?
+👋 Today Views allows teams to become more cross-functional by the use of a clean,
 simple, and meaningful code.
 
-Its small learning curve opens new possibilities of contribution, even for
+As a result, small learning curve opens new possibilities of contribution, even for
 non-technical members, like designers or business analysts.
 
 
 ## Is someone else using it successfully?
 Yes! 🚀 We currently have a strategic partner using Views to deliver their core
 application to their 50 million users in the USA. We're gathering numbers and
-drafting a story that should help you understand what it meant for them to adopt
+drafting a story that should help you understand title it meant for them to adopt
 Views in practical terms.
 
-Of course we use it to build things too. The docs app in this repo is an example
+Of course, we use it to build things too. The docs app in this repo is an example
 of it. We'll be open sourcing more apps soon to showcase different uses of Views.
 
 
-## What is Views, exactly?
+## title is Views, exactly?
 Views is a simplified front-end language to describe user interfaces (UI) and
 their interactions (UX).
 
@@ -63,7 +63,7 @@ and it's explained well in this book [Hacking Growth: Fastest Growing Companies 
 TODO Visually list the skills that cross-functional team member acquires in the process
 
 Views helps build fast experiments that can be expanded to fully featured products
-and don't end-up thrown away after testing, like it's in a case of prototypes.
+and don't end up thrown away after testing, like it's in a case of prototypes.
 
 Every team that introduced non-technical members using Views on an early stage of
 product development noticed massive spikes in productivity, motivation, and cross-domain
@@ -72,7 +72,8 @@ knowledge transfer.
 _We learn the best from each other and on the job_
 
 Because Views syntax, composition, state and logic concepts are much easier to
-grasp non-technical team members have less barriers to start writing code.
+grasp than in a typical HTML, CSS, JS stack, non-technical team members have fewer
+barriers to start writing code.
 
 _We think that the code we write should be beautiful, meaningful, and simple_
 
@@ -118,7 +119,7 @@ You will want to add this to your `.gitignore` file:
 Views uses [Atomic Design Composition Pattern](http://patternlab.io/) to ensure
 interface consistency across all views.
 
-![What is Atomic Design Pattern?](images/atomic-design.jpg)
+![title is Atomic Design Pattern?](images/atomic-design.jpg)
 
 We distinguish three types of composition elements:
 1. Properties - the atoms
@@ -132,7 +133,7 @@ font family across the application
 
 ## Properties
 
-TODO Explain the difference between internal and external props
+TODO Explain the difference between internal and external props, and camel case
 
 ## Blocks
 
@@ -142,16 +143,11 @@ Text
 text Hello World
 ```
 
-A block is defined by its type, eg, `Block` and configured by its properties,
-which we'll call props from now on because it's shorter 😬. In the example, the
-prop key we're using is called `text` and it has a value of `Hello world`.
-
-In Views we use a special notation for the prop keys called camel case, which is
-a fancy way of saying that if you have a prop key reading `background-color`,
-when camel cased, it should be `backgroundColor`. 🐫.
+A block is defined by its type. In the example above we use `Text` type of block
+to render text in the view.
 
 ### The types of blocks
-In Views we distinguish three types of blocks: Containers, Content and
+In Views, we distinguish three types of blocks: Containers, Content and
 Custom blocks.
 
 *Container* blocks let you group blocks together. They are:
@@ -163,7 +159,7 @@ Custom blocks.
 blocks inside of it one below the other and `Horizontal` will get them side by
 side.
 
-Views uses a thing call Flexible Box, or flexbox, to layout your blocks in the
+Views uses a thing call Flexible Box, or flexbox, to lay out your blocks in the
 UI. It's a layout mode intended to accommodate different screen sizes and
 different display devices without much effort.
 Tom wrote a great post a while back explaining our approach at a simplified
@@ -193,27 +189,13 @@ Text
 text click me
 ```
 
-At this point we should probably explain what `props.doSomeAction` means, right 😬?
-`props` is stuff given to your view from the outside. In this example,
-`doSomeAction` is an example of an external function, ie, some piece of logic in
-your application that's going to be called when that button gets clicked or
-pressed. A `prop` can be anything though. For example, say we wanted to have
-some piece of text to be dynamically set in our app, then we would do something
-like:
-
-```views
-Text
-text props.text
-```
-That means that the text will take any value given to it.
-
 
 `List` lets you repeat one item many times.
 It needs one prop, called `from`. A `List` can only take one block inside of it,
 so if you want more complex things, like a card, you will want to use a
 container block like a `Vertical` or a `Horizontal`.
 
-Inside a `List` you get access to an `item` and `index`. `item` has whatever your
+Inside a `List` you get access to an `item` and `index`. `item` has titleever your
 list has and `index` tells the position of the item in the list starting at 0.
 
 ```views
@@ -317,7 +299,7 @@ MyBlock is Vertical
 
 It's something along the lines of `Name is BlockType`.
 
-[Here's a very neat trick to make your code even more readable and reusable
+[Here's an elegant trick to make your code even more readable and reusable
 through naming blocks](https://youtu.be/S-5rbcnXWtI?t=51m38s)
 
 This is a super handy pattern for QA, which can now access the elements using
@@ -331,7 +313,7 @@ data attributes TODO.
 We all want our UIs to be tested. It's hard to do that though. UI in particular
 changes often and it's a bit painful to keep your tests updated at all times.
 
-We want to help make testing easier and we've done that in Views through a
+We want to help make testing easier, and we've done that in Views through a
 practical application. Right now, our tests help you design your
 Views at different stages. Soon enough, they will automatically create unit
 tests for your views to ensure that any future changes are being consciously
@@ -402,7 +384,7 @@ and we’ll add it to this list.
 
 Happy editing!
 
-## I ran views-morph on my project and it created a bunch of other files, what's going on?
+## I ran views-morph on my project, and it created a bunch of other files, title's going on?
 Say you have a View called `My.view`. When morphing it, Views will create a file
 called `My.view.js`. If you're morphing to `react-dom`, it will also create a
 `My.view.css` that gets automatically imported. You can avoid that external CSS
