@@ -58,7 +58,7 @@ real users the better is the quality of testing data.
 The value of cross-functional teams is very well known to Growth Hacking community
 and it's explained well in this book [Hacking Growth: Fastest Growing Companies Breakout](https://www.amazon.com/Hacking-Growth-Fastest-Growing-Companies-Breakout/dp/045149721X)
 
-![Cover of the mentioned book](images/growthhacking.png)
+![Cover of the mentioned book](images/growthhackingsmall.jpg)
 
 TODO Visually list the skills cross-functional team member should aim at acquiring
 
