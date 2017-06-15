@@ -77,6 +77,8 @@ barriers to start writing code.
 
 _We think that the code we write should be beautiful, meaningful, and simple_
 
+To learn more and share your thoughts go to our Medium publication [Learn ViewsDX](https://learn.viewsdx.com/) or join our [Slack Community](slack.viewsdx.com)
+
 
 ## Using Views in your project
 For now, Views morphs to the web and desktop through React DOM and to iOS and
