@@ -60,7 +60,7 @@ and it's explained well in this book [Hacking Growth: Fastest Growing Companies 
 
 ![Cover of the mentioned book](images/growthhackingsmall.jpg)
 
-TODO Visually list the skills cross-functional team member should aim at acquiring
+TODO Visually list the skills that cross-functional team member acquires in the process
 
 Views helps build fast experiments that can be expanded to fully featured products
 and don't end-up thrown away after testing, like it's in a case of prototypes.
