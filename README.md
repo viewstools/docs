@@ -148,6 +148,17 @@ text Hello World
 A block is defined by its type. In the example above we use `Text` type of block
 to render text in the view.
 
+Additionally, a block can have a name:
+```views
+Greeting is Text
+text Hello World
+```
+It's a good DX([Designer-Developer Experience](https://learndx.com/)) practice to name your blocks. It helps others to understand and find them faster.
+
+💩 The type is required and it's always specified by pattern `Macintosh is Apple`
+
+![Macintosh is Apple](images/apples.jpg)
+
 ### The types of blocks
 In Views, we distinguish three types of blocks: Containers, Content and
 Custom blocks.
