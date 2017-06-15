@@ -124,7 +124,7 @@ You will want to add this to your `.gitignore` file:
 
 [Here's a video with the most recent overview of sample project installation and use](https://learn.viewsdx.com/june-2017-overview-update-5843a2142308).
 
-## Composition Elements
+## Composition Pattern
 
 Views uses [Atomic Design Composition Pattern](http://patternlab.io/) to ensure
 interface consistency across all views.
@@ -137,6 +137,9 @@ We distinguish three types of composition elements:
 3. Views - groups of Blocks
 
 ![How Atomic maps to Views?](images/mapping-atomic-to-views.jpg)
+
+TODO Map concept of embedded views to variables with an example of updating
+font family across the application
 
 ## Blocks
 
