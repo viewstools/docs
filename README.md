@@ -40,8 +40,7 @@ Views in practical terms.
 Of course, we use it to build things too. The docs app in this repo is an example
 of it. We'll be open sourcing more apps soon to showcase different uses of Views.
 
-
-## title is Views, exactly?
+## What is Views, exactly?
 Views is a simplified front-end language to describe user interfaces (UI) and
 their interactions (UX).
 
@@ -76,6 +75,11 @@ grasp than in a typical HTML, CSS, JS stack, non-technical team members have few
 barriers to start writing code.
 
 _We think that the code we write should be beautiful, meaningful, and simple_
+
+As a collaboration platform Views removes silos and brings down the walls between
+development and the rest of the organization.
+
+_We cherish openness, learning, and frequent shipping_
 
 To learn more and share your thoughts go to our Medium publication [Learn ViewsDX](https://learn.viewsdx.com/) or join our [Slack Community](slack.viewsdx.com)
 
@@ -116,7 +120,7 @@ You will want to add this to your `.gitignore` file:
 
 [Here's a video with the most recent overview of sample project installation and use](https://learn.viewsdx.com/june-2017-overview-update-5843a2142308).
 
-# Composition Pattern
+# Composition model
 
 Views uses [Atomic Design Composition Pattern](http://patternlab.io/) to ensure
 interface consistency across all views.
@@ -138,6 +142,12 @@ font family across the application
 ## Properties
 
 TODO Explain the difference between internal and external props, and camel case
+
+## States
+
+TODO Implement States, as shown at the end of this brainstorming session:
+
+[Rethinking States in Views](https://www.youtube.com/watch?v=dsaAF7cX5xc)
 
 ## Blocks
 
