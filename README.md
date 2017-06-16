@@ -123,12 +123,14 @@ interface consistency across all views.
 
 ![title is Atomic Design Pattern?](images/atomic-design.jpg)
 
-We distinguish three types of composition elements:
+Our "Atomized" composition model looks like this:
 1. Properties - the atoms
-2. Blocks - groups of properties
-3. Views - groups of Blocks
+2. States - groups of properties related to functionality of a Block
+3. Blocks - groups of States
+4. Views - groups of Blocks saved in a .view file
+5. Smart Views - Views grouped with Javascript logic, super powerful stuff ⚡️ 🔥 💥 ☄️
 
-![How Atomic maps to Views?](images/mapping-atomic-to-views.jpg)
+![How Atomic maps to Views?](images/mapping-atomic-to-views3.jpg)
 
 TODO Map concept of embedded views to variables (and Sketch symbols) with an example of updating
 font family across the application
