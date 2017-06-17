@@ -1,27 +1,4 @@
 # Views Docs
-* [How can you benefit from what we are doing?](#how-can-you-benefit-from-what-we-are-doing)
-* [Is someone else using it successfully?](#is-someone-else-using-it-successfully)
-* [what is it?](#what-is-it)
-* [Why Views?](#why-views)
-* [Using Views in your project](#using-views-in-your-project)
-    * [with create-react-app](#with-create-react-app)
-    * [with create-react-native-app](#with-create-react-native-app)
-    * [with an existing project](#with-an-existing-project)
-    * [in a sample project](#in-a-sample-project)
-* [Blocks](#blocks)
-    * [The types of blocks](#the-types-of-blocks)
-    * [Naming blocks](#naming-blocks)
-    * [Proximity nesting](#proximity-nesting)
-* [.view.tests](#viewtests)
-* [.view.logic](#viewlogic)
-* [.data](#data)
-* [animations](#animations)
-* [states/better ternaries :)](#statesbetter-ternaries-)
-* [routes and teleports](#routes-and-teleports)
-* [Views and your React components](#views-and-your-react-components)
-* [Syntax highlighting](#syntax-highlighting)
-* [I ran views-morph on my project and it created a bunch of other files, what's going on?](#i-ran-views-morph-on-my-project-and-it-created-a-bunch-of-other-files-whats-going-on)
-* [Contributing to the docs app](#contributing-to-the-docs-app)
 
 ## How can you benefit from what we are doing?
 👋 Today Views allows teams to become more cross-functional by the use of a clean,
@@ -30,6 +7,7 @@ simple, and meaningful code.
 As a result, small learning curve opens new possibilities of contribution, even for
 non-technical members, like designers or business analysts.
 
+TODO Put the final index here
 
 ## Is someone else using it successfully?
 Yes! 🚀 We currently have a strategic partner using Views to deliver their core
@@ -136,12 +114,11 @@ Our "Atomized" composition model looks like this:
 
 ![How Atomic maps to Views?](images/mapping-atomic-to-views3.jpg)
 
-TODO Map concept of embedded views to variables (and Sketch symbols) with an example of updating
-font family across the application
 
 ## Properties
 
 TODO Explain the difference between internal and external props, and camel case
+TODO explain toggles `onClick toggle props.stuff`
 
 ## States
 
@@ -165,13 +142,17 @@ Additionally, a block can have a name:
 Greeting is Text
 text Hello World
 ```
-It's a good DX([Designer-Developer Experience](https://learndx.com/)) practice to name your blocks. It helps others to understand and find them faster.
+It's a good DX([Designer-Developer Experience](https://learndx.com/)) practice
+to name your blocks. It helps others to understand and find them faster. This is
+also a super handy pattern for QA team, which can now access the elements using
+data attributes.
 
-💩 The type is required and it's always specified by pattern `Macintosh is Apple`
+💩 The type is required and it's always specified by pattern `Name is BlockType`
 
-![Macintosh is Apple](images/apples.jpg)
+[Here's, around minute 52, Tom explains how to save blocks as a view and use it in another view)](https://youtu.be/S-5rbcnXWtI?t=51m38s)
 
-### The types of blocks
+
+### BlockType
 In Views, we distinguish three types of blocks: Containers, Content and
 Custom blocks.
 
@@ -232,10 +213,10 @@ text item.name
 
 *Content* blocks let you, well, show stuff. You met one before, `Text`, let's
 meet all of them:
-* `Capture`
+* `Text`
 * `Image`
 * `Svg`
-* `Text`
+* `Capture`
 
 `Text` is probably the block you'll use the most. Its most important prop is,
 wait for it... are you ready?!? 👉 `text`. 😱. Yeah, I know, you saw that one
@@ -311,29 +292,22 @@ stroke deepskyblue
 
 It's certainly more fun that have that done automatically for you 😇. You can
 run `views-morph file.svg` and 💥! You'll get a ready to go Views Svg!
+
 [Here's a little video on how you can use it in your project today](https://learn.viewsdx.com/from-svg-to-view-in-1-2-3-79cf8d771485).
 
-TODO `onClick toggle props.stuff`
+`Capture` TODO
 
-### Naming blocks
-You can name a block by doing something like this:
-
-```views
-MyBlock is Vertical
-```
-
-It's something along the lines of `Name is BlockType`.
-
-[Here's an elegant trick to make your code even more readable and reusable
-through naming blocks](https://youtu.be/S-5rbcnXWtI?t=51m38s)
-
-This is a super handy pattern for QA, which can now access the elements using
-data attributes TODO.
 
 ### Proximity nesting
 [See this bit of this video for now](https://www.youtube.com/watch?v=S-5rbcnXWtI&feature=youtu.be&t=37m54s)
 
-## .view.tests
+## States
+
+### Contract between .view and view.tests files
+
+
+
+### .view.tests
 ✨
 We all want our UIs to be tested. It's hard to do that though. UI in particular
 changes often and it's a bit painful to keep your tests updated at all times.
@@ -344,7 +318,7 @@ Views at different stages. Soon enough, they will automatically create unit
 tests for your views to ensure that any future changes are being consciously
 applied and that unwanted regressions are caught in time.
 
-It kind of works like this. Saw we have a View that shows a list of people:
+It works like this. Say we have a View that shows a list of people:
 ```views
 People is Vertical
 List
@@ -353,6 +327,10 @@ Text
 text item.name
 ```
 TODO
+
+## Views
+TODO Map concept of embedded views to variables (and Sketch symbols) with an example of updating
+font family across the application
 
 ## .view.logic
 TODO
