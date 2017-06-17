@@ -117,7 +117,8 @@ Our "Atomized" composition model looks like this:
 
 ## Properties
 
-TODO Explain the difference between internal and external props, and camel case
+
+TODO Explain the difference between internal and external props (that means that some data service or back-end will provide it), and camel case
 TODO explain toggles `onClick toggle props.stuff`
 TODO Introduce Alfa Release of Animations
 
@@ -334,6 +335,7 @@ text item.name
 TODO
 
 ## View
+### Easy in, Easy out
 There is no View without .view file.
 
 Each saved View will be morphed (compiled) to production quality Javascript and
@@ -342,24 +344,83 @@ saved as .view.js file.
 If on some point you decide you don't need ViewsDX anymore you can always use
 generated components .view.js files in another Javascript environment.
 
-### UI Variables === embedded Views
-Views can be embedded in other Views. To embed View refer to its file name somewhere
-within another .view file. That way you can create your custom variables that will
-inject the content of mentioned View.
+### UI Variable === embedded View
+Each View filename can be used as an variable from within another View.
+That way, Views can be embedded in other Views as parts. That way you can create
+your custom variables that will inject the content of mentioned View.
 ![Views can be embedded in ](images/embedingViews.jpg)
 
-Example, say you want to choose different font family for one of your app's button.
+For example, say you want to choose different font size for one of your app's button.
 You will want to change it in one place instead of in every place of use.
-1. Extract the button code to separate .view file and call its file name
-starting with capital letter
+1. Extract the button code to separate .view file and save it as file
+starting with a capital letter
 2. Replace the button code from any other View it's being hardcoded at the moment
 to the new button `filename.view`
-3. Go back to `filemname.view` with your button code and change the font family there
+3. Go back to `filemname.view` and change the font size there
 to see it being updated across your app.
 
+This is how your code should look like BEFORE using custom variable:
+```views
+Text
+text Button Label
+fontSize 20
+color #f7941e
+```
+
+And here's how it should look like AFTER using a custom variable:
+```views
+Filename
+```
+
+Calling UI Variables by the `Filename` requires the `filename.view` in src
+folder with the extracted code. In the example above, `filename.view` should have:
+
+```views
+Text
+text Button Label
+fontSize 20
+color #f7941e
+```
+
+UI Variables are capable of storing Properties, States, and Blocks, and even
+another Views or Smart Views.
+
+What if you want to change the Button's Label dynamically depending on the View
+the button is being used?
+1. Replace value you want to make dynamic with `props.anyName`
+2. Pass the value in Tests or at the point of use with `anyName Value`
+
+BEFORE replacing the Label value with dynamic value:
+```views
+Text
+text Button Label
+fontSize 20
+color #f7941e
+```
+
+AFTER replacing making the value dynamic:
+```views
+Text
+text props.buttonLabel
+fontSize 20
+color #f7941e
+```
+
+At that point you have two choices for setting the value, and it depends on if it the value
+for the label is set by you or by the user of your app:
+- Let buttonLabel to remain an external prop and provide it in .view.tests to see
+rendered result during your design process
+- Set value of buttonLabel at the point of use, directly below UI Variable name.
+
+Here's how you set it up on the point of use:
+```views
+Filename
+buttonLabel Buy Now!
+```
 
 ## .view.logic === Smart View
-TODO
+Any View file can be also wrapped with Javascript logic to make a Smart View.
+TODO Example
 
 ## .data
 TODO 💾
