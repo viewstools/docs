@@ -333,11 +333,32 @@ text item.name
 ```
 TODO
 
-## Views
-TODO Map concept of embedded views to variables (and Sketch symbols) with an example of updating
-font family across the application
+## View
+There is no View without .view file.
 
-## .view.logic
+Each saved View will be morphed (compiled) to production quality Javascript and
+saved as .view.js file.
+
+If on some point you decide you don't need ViewsDX anymore you can always use
+generated components .view.js files in another Javascript environment.
+
+### UI Variables === embedded Views
+Views can be embedded in other Views. To embed View refer to its file name somewhere
+within another .view file. That way you can create your custom variables that will
+inject the content of mentioned View.
+[Views can be embedded in ](images/embedingViews.jpg)
+
+Example, say you want to choose different font family for one of your app's button.
+You will want to change it in one place instead of in every place of use.
+1. Extract the button code to separate .view file and call its file name
+starting with capital letter
+2. Replace the button code from any other View it's being hardcoded at the moment
+to the new button `filename.view`
+3. Go back to `filemname.view` with your button code and change the font family there
+to see it being updated across your app.
+
+
+## .view.logic === Smart View
 TODO
 
 ## .data
