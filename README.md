@@ -119,6 +119,7 @@ Our "Atomized" composition model looks like this:
 
 TODO Explain the difference between internal and external props, and camel case
 TODO explain toggles `onClick toggle props.stuff`
+TODO Introduce Alfa Release of Animations
 
 ## States
 
