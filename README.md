@@ -346,7 +346,7 @@ generated components .view.js files in another Javascript environment.
 Views can be embedded in other Views. To embed View refer to its file name somewhere
 within another .view file. That way you can create your custom variables that will
 inject the content of mentioned View.
-[Views can be embedded in ](images/embedingViews.jpg)
+![Views can be embedded in ](images/embedingViews.jpg)
 
 Example, say you want to choose different font family for one of your app's button.
 You will want to change it in one place instead of in every place of use.
