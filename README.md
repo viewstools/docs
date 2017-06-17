@@ -156,10 +156,14 @@ data attributes.
 In Views, we distinguish three types of blocks: Containers, Content and
 Custom blocks.
 
+TODO Visualize this section with a box, stuff, and custom stuff
+
 *Container* blocks let you group blocks together. They are:
 * `Vertical`
 * `Horizontal`
 * `List`
+
+TODO Visualize what is happening in Verticals,Horizontals, and Lists
 
 `Vertical` and `Horizontal` let you lay blocks out. `Vertical` will stack any
 blocks inside of it one below the other and `Horizontal` will get them side by
