@@ -1,7 +1,7 @@
 # Views Docs
-* [How can you benefit from title we are doing?](#how-can-you-benefit-from-title-we-are-doing)
+* [How can you benefit from what we are doing?](#how-can-you-benefit-from-what-we-are-doing)
 * [Is someone else using it successfully?](#is-someone-else-using-it-successfully)
-* [title is it?](#title-is-it)
+* [what is it?](#what-is-it)
 * [Why Views?](#why-views)
 * [Using Views in your project](#using-views-in-your-project)
     * [with create-react-app](#with-create-react-app)
@@ -20,10 +20,10 @@
 * [routes and teleports](#routes-and-teleports)
 * [Views and your React components](#views-and-your-react-components)
 * [Syntax highlighting](#syntax-highlighting)
-* [I ran views-morph on my project and it created a bunch of other files, title's going on?](#i-ran-views-morph-on-my-project-and-it-created-a-bunch-of-other-files-titles-going-on)
+* [I ran views-morph on my project and it created a bunch of other files, what's going on?](#i-ran-views-morph-on-my-project-and-it-created-a-bunch-of-other-files-whats-going-on)
 * [Contributing to the docs app](#contributing-to-the-docs-app)
 
-## How can you benefit from title we are doing?
+## How can you benefit from what we are doing?
 👋 Today Views allows teams to become more cross-functional by the use of a clean,
 simple, and meaningful code.
 
@@ -34,7 +34,7 @@ non-technical members, like designers or business analysts.
 ## Is someone else using it successfully?
 Yes! 🚀 We currently have a strategic partner using Views to deliver their core
 application to their 50 million users in the USA. We're gathering numbers and
-drafting a story that should help you understand title it meant for them to adopt
+drafting a story that should help you understand what it meant for them to adopt
 Views in practical terms.
 
 Of course, we use it to build things too. The docs app in this repo is an example
@@ -125,7 +125,7 @@ You will want to add this to your `.gitignore` file:
 Views uses [Atomic Design Composition Pattern](http://patternlab.io/) to ensure
 interface consistency across all views.
 
-![title is Atomic Design Pattern?](images/atomic-design.jpg)
+![what is Atomic Design Pattern?](images/atomic-design.jpg)
 
 Our "Atomized" composition model looks like this:
 1. Properties - the atoms
@@ -220,7 +220,7 @@ It needs one prop, called `from`. A `List` can only take one block inside of it,
 so if you want more complex things, like a card, you will want to use a
 container block like a `Vertical` or a `Horizontal`.
 
-Inside a `List` you get access to an `item` and `index`. `item` has titleever your
+Inside a `List` you get access to an `item` and `index`. `item` has whatever your
 list has and `index` tells the position of the item in the list starting at 0.
 
 ```views
@@ -409,7 +409,7 @@ and we’ll add it to this list.
 
 Happy editing!
 
-## I ran views-morph on my project, and it created a bunch of other files, title's going on?
+## I ran views-morph on my project, and it created a bunch of other files, what's going on?
 Say you have a View called `My.view`. When morphing it, Views will create a file
 called `My.view.js`. If you're morphing to `react-dom`, it will also create a
 `My.view.css` that gets automatically imported. You can avoid that external CSS
