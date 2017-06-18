@@ -2,7 +2,7 @@
 
 ## How can you benefit from what we are doing?
 👋 We want the same as you do: write clean, simple, meaningful, and accessible code.
-And to be productive at it! Or at least we hope you want that...
+And to be productive at it! Or at least we hope that is what you want...
 
 We've proofed, that if you give access to production code for non-technical members
 of your team, like designers or business analysts, the team will become more
