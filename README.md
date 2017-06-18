@@ -1,11 +1,16 @@
 # Views Docs - Productive way of creating interfaces
 
 ## How can you benefit from what we are doing?
-👋 Today Views allows teams to become more cross-functional by the use of a clean,
-simple, and meaningful code.
+👋 We want the same as you do: write clean, simple, meaningful, and accessible code.
+And to be productive at it! Or at least we hope you want that...
 
-As a result, small learning curve opens new possibilities of contribution, even for
-non-technical members, like designers or business analysts.
+We've proofed, that if you give access to production code for non-technical members
+of your team, like designers or business analysts, the team will become more
+cross-functional and productive in a very short time.
+
+Since programming is hard for those who don't do it, we devote all our efforts
+to make the Views learning curve as small as possible, syntax as beautiful as it
+gets, and as powerful as possible. [Check out new animations](## animations)
 
 TODO Put the final index here
 
