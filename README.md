@@ -116,7 +116,38 @@ Our "Atomized" composition model looks like this:
 
 
 ## Properties
+Say, you want to change the Button's Label dynamically depending on the View
+where the button is being used in?
+1. Replace value you want to turn into dynamic with `props.anyName`
+2. Pass the value in Tests or at the point of use with `anyName Value`
 
+BEFORE replacing the Label value with dynamic value:
+```views
+Text
+text Button Label
+fontSize 20
+color #f7941e
+```
+
+AFTER replacing making the value dynamic:
+```views
+Text
+text props.buttonLabel
+fontSize 20
+color #f7941e
+```
+
+At that point you have two choices for setting the value, and it depends on if it the value
+for the label is set by you or by the user of your app:
+- Let buttonLabel to remain an external prop and provide it in .view.tests to see
+rendered result during your design process
+- Set value of buttonLabel at the point of use, directly below UI Variable name.
+
+Here's how you set it up on the point of use:
+```views
+Filename
+buttonLabel Buy Now!
+```
 
 TODO Explain the difference between internal and external props (that means that some data service or back-end will provide it), and camel case
 TODO explain toggles `onClick toggle props.stuff`
@@ -344,22 +375,22 @@ saved as .view.js file.
 If on some point you decide you don't need ViewsDX anymore you can always use
 generated components .view.js files in another Javascript environment.
 
-### UI Variable === embedded View
+### Variable === embedded View
 Each View filename can be used as an variable from within another View.
-That way, Views can be embedded in other Views as parts. That way you can create
-your custom variables that will inject the content of mentioned View.
+That way, Views can be embedded in other Views as parts by injecting content of
+the mentioned View.
 ![Views can be embedded in ](images/embedingViews.jpg)
 
 For example, say you want to choose different font size for one of your app's button.
 You will want to change it in one place instead of in every place of use.
 1. Extract the button code to separate .view file and save it as file
 starting with a capital letter
-2. Replace the button code from any other View it's being hardcoded at the moment
-to the new button `filename.view`
-3. Go back to `filemname.view` and change the font size there
-to see it being updated across your app.
+2. Replace the previous button code with only the name of the extracted View
+3. From now `Filename.view` is the value of the variable and when you make a
+style change in it you will see it being updated across your app, in every View
+that will be going to use it.
 
-This is how your code should look like BEFORE using custom variable:
+This is a simple View with one Text Block BEFORE using it custom variable:
 ```views
 Text
 text Button Label
@@ -367,13 +398,13 @@ fontSize 20
 color #f7941e
 ```
 
-And here's how it should look like AFTER using a custom variable:
+And here's how it should look like AFTER turning Text Block into a custom variable/part:
 ```views
 Filename
 ```
 
-Calling UI Variables by the `Filename` requires the `filename.view` in src
-folder with the extracted code. In the example above, `filename.view` should have:
+Calling Variables by the `Filename` requires the `Filename.view` in src
+folder with the extracted code. In the example above, `Filename.view` should have:
 
 ```views
 Text
@@ -382,41 +413,11 @@ fontSize 20
 color #f7941e
 ```
 
-UI Variables are capable of storing Properties, States, and Blocks, and even
+Parts/Variables are capable of storing Properties, States, and Blocks, and even
 another Views or Smart Views.
 
-What if you want to change the Button's Label dynamically depending on the View
-the button is being used?
-1. Replace value you want to make dynamic with `props.anyName`
-2. Pass the value in Tests or at the point of use with `anyName Value`
-
-BEFORE replacing the Label value with dynamic value:
-```views
-Text
-text Button Label
-fontSize 20
-color #f7941e
-```
-
-AFTER replacing making the value dynamic:
-```views
-Text
-text props.buttonLabel
-fontSize 20
-color #f7941e
-```
-
-At that point you have two choices for setting the value, and it depends on if it the value
-for the label is set by you or by the user of your app:
-- Let buttonLabel to remain an external prop and provide it in .view.tests to see
-rendered result during your design process
-- Set value of buttonLabel at the point of use, directly below UI Variable name.
-
-Here's how you set it up on the point of use:
-```views
-Filename
-buttonLabel Buy Now!
-```
+Since any existing .view is a variable anyone can create, manage, and delete files.
+It makes the composition pattern accessible to designers and non-technical team members.
 
 ## .view.logic === Smart View
 Any View file can be also wrapped with Javascript logic to make a Smart View.
