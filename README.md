@@ -1,4 +1,4 @@
-# Views Docs
+# Views Docs - Productive way of creating interfaces
 
 ## How can you benefit from what we are doing?
 👋 Today Views allows teams to become more cross-functional by the use of a clean,
@@ -116,6 +116,15 @@ Our "Atomized" composition model looks like this:
 
 
 ## Properties
+Everything that matters in Views is a prop!
+
+Properties define the style and type of all States, Blocks and Views.
+
+There are two kinds of properties:
+- Internal - value is defined in the same .view file - Example: `text Button Label`
+- External - value comes from somewhere else (.data file, .view.tests file, service,
+  back-end) - Example: `text props.buttonLabel`
+
 Say, you want to change the Button's Label dynamically depending on the View
 where the button is being used in?
 1. Replace value you want to turn into dynamic with `props.anyName`
@@ -149,7 +158,6 @@ Filename
 buttonLabel Buy Now!
 ```
 
-TODO Explain the difference between internal and external props (that means that some data service or back-end will provide it), and camel case
 TODO explain toggles `onClick toggle props.stuff`
 TODO Introduce Alfa Release of Animations
 
