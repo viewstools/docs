@@ -392,6 +392,7 @@ generated components .view.js files in another Javascript environment.
 Each View filename can be used as an variable from within another View.
 That way, Views can be embedded in other Views as parts by injecting content of
 the mentioned View.
+
 ![Views can be embedded in ](images/embedingViews.jpg)
 
 For example, say you want to choose different font size for one of your app's button.
