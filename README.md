@@ -386,7 +386,7 @@ Each saved View will be morphed (compiled) to production quality Javascript and
 saved as .view.js file.
 
 If on some point you decide you don't need ViewsDX anymore you can always use
-generated components .view.js files in another Javascript environment.
+generated components located in .view.js files without rewriting any code.
 
 ### Variable === embedded View
 Each View filename can be used as an variable from within another View.
