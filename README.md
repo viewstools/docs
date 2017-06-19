@@ -404,7 +404,7 @@ generated components located in .view.js files without rewriting any code.
 
 ### Embedding Views
 Any View can be embedded in another View by its filename as a dynamically injected
-Part/Component.
+Custom Block.
 
 ![Views can be embedded in ](images/embedingViews.jpg)
 
@@ -415,7 +415,7 @@ place instead of in every place of use.
 starting with a capital letter
 2. Replace the previous button code with only the name of the extracted View,
 in our example it's `Filename`
-3. From now on `Filename.view` is your Custom Block/Component/View and you will
+3. From now on `Filename.view` is your Custom Block and you will
 see it being updated across your app upon any new changes.
 
 This is a simple View with one Text Block BEFORE using it as a Custom Block:
