@@ -354,10 +354,6 @@ run `views-morph file.svg` and 💥! You'll get a ready to go Views Svg!
 ## States
 
 ### Contract between .view and view.tests files
-
-
-
-### .view.tests
 ✨
 We all want our UIs to be tested. It's hard to do that though. UI in particular
 changes often and it's a bit painful to keep your tests updated at all times.
@@ -376,7 +372,25 @@ from props.people
 Text
 text item.name
 ```
-TODO
+
+Without passing any data to `item.name` the list won't render in the preview.
+
+Tests allow us to pass temporary data to the View that has external properties defined.
+Here's an example of .view.tests file for our List block above:
+
+```views
+Main is Test
+people
+item
+name Tom
+item
+name Dario
+```
+
+
+### .view.tests
+
+TODO Give functional examples
 
 ## View
 ### Easy in, Easy out
@@ -388,23 +402,23 @@ saved as .view.js file.
 If on some point you decide you don't need ViewsDX anymore you can always use
 generated components located in .view.js files without rewriting any code.
 
-### Variable === embedded View
-Each View filename can be used as an variable from within another View.
-That way, Views can be embedded in other Views as parts by injecting content of
-the mentioned View.
+### Embedding Views
+Any View can be embedded in another View by its filename as a dynamically injected
+Part/Component.
 
 ![Views can be embedded in ](images/embedingViews.jpg)
 
-For example, say you want to choose different font size for one of your app's button.
-You will want to change it in one place instead of in every place of use.
+Common use case: Say you have a View that contains a button with a text label and
+you want to choose different font size for it. You will want to change it in one
+place instead of in every place of use.
 1. Extract the button code to separate .view file and save it as file
 starting with a capital letter
-2. Replace the previous button code with only the name of the extracted View
-3. From now `Filename.view` is the value of the variable and when you make a
-style change in it you will see it being updated across your app, in every View
-that will be going to use it.
+2. Replace the previous button code with only the name of the extracted View,
+in our example it's `Filename`
+3. From now on `Filename.view` is your Custom Block/Component/View and you will
+see it being updated across your app upon any new changes.
 
-This is a simple View with one Text Block BEFORE using it custom variable:
+This is a simple View with one Text Block BEFORE using it as a Custom Block:
 ```views
 Text
 text Button Label
@@ -412,13 +426,13 @@ fontSize 20
 color #f7941e
 ```
 
-And here's how it should look like AFTER turning Text Block into a custom variable/part:
+And here's how it should look like AFTER turning Text Block into a Custom Block:
 ```views
 Filename
 ```
 
-Calling Variables by the `Filename` requires the `Filename.view` in src
-folder with the extracted code. In the example above, `Filename.view` should have:
+Calling Views by the `Filename` requires the `Filename.view` in src
+folder with the code you want to inject. In the example above, `Filename.view` should have:
 
 ```views
 Text
@@ -427,11 +441,12 @@ fontSize 20
 color #f7941e
 ```
 
-Parts/Variables are capable of storing Properties, States, and Blocks, and even
+Custom Blocks are capable of storing Properties, States, and Blocks, and even
 another Views or Smart Views.
 
-Since any existing .view is a variable anyone can create, manage, and delete files.
-It makes the composition pattern accessible to designers and non-technical team members.
+Since any existing .view file is a Custom Block by default anyone can create, manage,
+and delete them. It makes the composition pattern accessible to designers and
+non-technical team members.
 
 ## .view.logic === Smart View
 Any View file can be also wrapped with Javascript logic to make a Smart View.
