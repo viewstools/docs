@@ -14,4 +14,6 @@ const getChapter = props => {
   return pathData.list.find(item => item.id === chapter)
 }
 
-export default props => <Chapter {...props} {...getChapter(props)} />
+const ChapterLogic = props => <Chapter {...props} {...getChapter(props)} />
+
+export default ChapterLogic

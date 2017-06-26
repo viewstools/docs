@@ -1,0 +1,22 @@
+Empty is Test
+
+Main is Test
+before red
+color green
+after blue
+goBefore Before
+goAfter After
+
+Before is Test
+before green
+color blue
+after red
+goBefore After
+goAfter Main
+
+After is Test
+before blue
+color red
+after green
+goBefore Main
+goAfter Before

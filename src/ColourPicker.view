@@ -1,0 +1,32 @@
+ColourPicker is Horizontal
+justifyContent space-around
+margin 10
+width 200
+Before is Vertical
+backgroundColor props.before
+borderRadius 4
+cursor pointer
+onClick props.goBefore
+height 50
+opacity 0.75
+opacityHover 1
+width 50
+
+
+Choice is Vertical
+backgroundColor props.color
+border 2px solid black
+borderRadius 4
+height 50
+width 50
+
+
+After is Vertical
+backgroundColor props.after
+borderRadius 4
+cursor pointer
+onClick props.goAfter
+height 50
+opacity 0.75
+opacityHover 1
+width 50
