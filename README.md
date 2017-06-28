@@ -493,7 +493,8 @@ TODO
 ## Syntax highlighting
 We’ve created the following packages to help you understand `.view` files better:
 * [VIM](https://github.com/viewsdx/syntax-vim),
-* [Atom](http://atom.io/packages/language-views), and
+* [Atom](http://atom.io/packages/language-views),
+* [VSCode](https://marketplace.visualstudio.com/items?itemName=uxtemple.views), and
 * [Sublime](https://github.com/viewsdx/syntax-sublime).
 
 We currently highlight block names, margins, paddings, code, and property values. Our highlighters
