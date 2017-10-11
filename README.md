@@ -1,90 +1,47 @@
 # Views Docs - Productive way of creating interfaces
 
-## How can you benefit from what we are doing?
-👋 We want the same as you do: write clean, simple, meaningful, and accessible code.
-And to be productive at it! Or at least we hope that is what you want...
+## 👋 How can you benefit from what we are doing?
+Views language is simple. There is no divs, classes, ids. We use blocks to compose interfaces.
+Blocks make the composition easy to undersand even for non-technical professionals.
 
-We've proofed, that if you give access to production code for non-technical members
-of your team, like designers or business analysts, the team will become more
-cross-functional and productive in a very short time.
+Views makes teams productive. Designers contribute directly to production build.
+Views improves build quality. Designers can tweak styling without wasting dev time.
+Views compiles to React and React Native. No manual work is required in the compilation process.
+Views comes with a creative toolset. For designers who don't like to code.
 
-Since programming is hard for those who don't do it, we devote all our efforts
-to make the Views learning curve as small as possible, syntax as beautiful as it
-gets, and as powerful as possible. [Check out new animations](## animations)
+You can speed up your development.
+Perform faster revision loops.
+Test innovative ideas.
 
-TODO Put the final index here
+## 🚀 Is someone else using it successfully?
+Yes! We currently have a strategic partner using Views to deliver their core
+application to their 50 million users in the USA. 
 
-## Is someone else using it successfully?
-Yes! 🚀 We currently have a strategic partner using Views to deliver their core
-application to their 50 million users in the USA. We're gathering numbers and
-drafting a story that should help you understand what it meant for them to adopt
-Views in practical terms.
-
-Of course, we use it to build things too. The docs app in this repo is an example
-of it. We'll be open sourcing more apps soon to showcase different uses of Views.
-
-## What is Views, exactly?
-Views is a simplified front-end language to describe user interfaces (UI) and
-their interactions (UX).
-
-Views compiles to production quality Javascript.
-
-Does this mean that Views replaces tools like Illustrator, InVision, Sketch or
-the good old pen and paper? Only for those who want their interfaces to become
-functional and fully interactive during the design process.
-
-In our experience, the sooner we get a fully functional application in front of
-real users the better is the quality of testing data.
-
-## Views is a knowledge transfer platform!
-The value of cross-functional teams is very well known to Growth Hacking community
-and it's explained well in this book [Hacking Growth: Fastest Growing Companies Breakout](https://www.amazon.com/Hacking-Growth-Fastest-Growing-Companies-Breakout/dp/045149721X)
-
-![Cover of the mentioned book](images/growthhackingsmall.jpg)
-
-TODO Visually list the skills that cross-functional team member acquires in the process
-
-Views helps build fast experiments that can be expanded to fully featured products
-and don't end up thrown away after testing, like it's in a case of prototypes.
-
-Every team that introduced non-technical members using Views on an early stage of
-product development noticed massive spikes in productivity, motivation, and cross-domain
-knowledge transfer.
-
-_We learn the best from each other and on the job_
-
-Because Views syntax, composition, state and logic concepts are much easier to
-grasp than in a typical HTML, CSS, JS stack, non-technical team members have fewer
-barriers to start writing code.
-
-_We think that the code we write should be beautiful, meaningful, and simple_
-
-As a collaboration platform Views removes silos and brings down the walls between
-development and the rest of the organization.
-
-_We cherish openness, learning, and frequent shipping_
-
-To learn more and share your thoughts go to our Medium publication [Learn ViewsDX](https://learn.viewsdx.com/) or join our [Slack Community](slack.viewsdx.com)
-
+Interface of our toolset is fully build in Views (using [React DOM app](https://github.com/facebookincubator/create-react-app) wrapped in [Electron](https://electron.atom.io/)).
 
 ## Using Views in your project
 For now, Views morphs to the web and desktop through React DOM and to iOS and
-Android through React Native.
+Android through React Native. 
 
-Feel free to reach out if you want to learn how to make your own morpher to, say
-Angular, Vue, etc. 👌
+You can start new React project with Create-React-App and [Use Views](https://github.com/viewsdx/use) commands.
 
 ### with create-react-app
 ```
-yarn add views-morph
-views-morph src --watch --as react-dom
+yarn install --global create-react-app use-views
+create-react-app my-app
+cd my-app
+use-views
+yarn start
 ```
 
 ### with create-react-native-app
 ```
-yarn add views-morph
-views-morph . --watch --as react-native
+yarn install --global create-react-native-app use-views
+create-react-native-app my-native-app
+cd my-native-app
+use-views
 ```
+
 ### with an existing project
 ```
 yarn add views-morph
@@ -115,19 +72,19 @@ Our "Atomized" composition model looks like this:
 2. States - groups of properties related to functionality of a Block
 3. Blocks - groups of States
 4. Views - groups of Blocks saved in a .view file
-5. Smart Views - Views grouped with Javascript logic, super powerful stuff ⚡️ 🔥 💥 ☄️
+5. Smart Views - Views grouped with Javascript logic, super powerful stuff. ⚡️ 🔥 💥 ☄️ 
 
 ![How Atomic maps to Views?](images/mapping-atomic-to-views3.jpg)
 
 
 ## Properties
-Everything that matters in Views is a prop!
+Props are all that matters in Views!
 
 Properties define the style and type of all States, Blocks and Views.
 
 There are two kinds of properties:
-- Internal - value is defined in the same .view file - Example: `text Button Label`
-- External - value comes from somewhere else (.data file, .view.tests file, service,
+- Internal - value is defined in the same .view file - Example: `text Buy Now`
+- External - value comes from somewhere else (.view.tests file, service,
   back-end) - Example: `text props.buttonLabel`
 
 Say, you want to change the Button's Label dynamically depending on the View
@@ -168,9 +125,19 @@ TODO Introduce Alfa Release of Animations
 
 ## States
 
-TODO Implement States, as shown at the end of this brainstorming session:
+Blocks and Views can have many states driven by `when` statments.
+Example:
+```
+Text
+when props.error
+text This is wrong...
 
-[Rethinking States in Views](https://www.youtube.com/watch?v=dsaAF7cX5xc)
+Text
+when !props.error
+text This is ok :)
+```
+
+TODO Implement Improved States, more deatils in the [roadmap](https://trello.com/b/NhIKKbol/views-roadmap)
 
 ## Blocks
 
@@ -185,7 +152,7 @@ to render text in the view.
 
 Additionally, a block can have a name:
 ```views
-Greeting is Text
+Greeting Text
 text Hello World
 ```
 It's a good DX([Designer-Developer Experience](https://learndx.com/)) practice
@@ -193,7 +160,7 @@ to name your blocks. It helps others to understand and find them faster. This is
 also a super handy pattern for QA team, which can now access the elements using
 data attributes.
 
-💩 The type is required and it's always specified by pattern `Name is BlockType`
+💩 The type is required and it's always specified by pattern `Name BlockType`
 
 [Here's, around minute 52, Tom explains how to save blocks as a view and use it in another view)](https://youtu.be/S-5rbcnXWtI?t=51m38s)
 
@@ -209,7 +176,7 @@ TODO Visualize this section with a box, stuff, and custom stuff
 * `Horizontal`
 * `List`
 
-TODO Visualize what is happening in Verticals,Horizontals, and Lists
+TODO Visualize what is happening in Verticals, Horizontals, and Lists
 
 `Vertical` and `Horizontal` let you lay blocks out. `Vertical` will stack any
 blocks inside of it one below the other and `Horizontal` will get them side by
@@ -218,8 +185,6 @@ side.
 Views uses a thing call Flexible Box, or flexbox, to lay out your blocks in the
 UI. It's a layout mode intended to accommodate different screen sizes and
 different display devices without much effort.
-Tom wrote a great post a while back explaining our approach at a simplified
-flexbox, [check it out here](https://learn.viewsdx.com/simplified-flexbox-for-designers-7adc79aebf55).
 [If you're curious about you can read more about flexbox here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes).
 
 In CSS terms, `Vertical` is a shortcut for `flex-direction: row`
@@ -512,6 +477,34 @@ called `My.view.js`. If you're morphing to `react-dom`, it will also create a
 file altogether by running the morpher like `views-morph My.view --as react-dom
 --inlineStyles`. You can safely ignore these files as they'll be created on the
 fly when the morpher runs.
+
+## Views is a knowledge transfer platform!
+The value of cross-functional teams is very well known to Growth Hacking community
+and it's explained well in this book [Hacking Growth: Fastest Growing Companies Breakout](https://www.amazon.com/Hacking-Growth-Fastest-Growing-Companies-Breakout/dp/045149721X)
+
+![Cover of the mentioned book](images/growthhackingsmall.jpg)
+
+Views helps build fast experiments that can be expanded to fully featured products
+and don't end up thrown away after testing, like it's in a case of prototypes.
+
+Every team that introduced non-technical members using Views on an early stage of
+product development noticed massive spikes in productivity, motivation, and cross-domain
+knowledge transfer.
+
+_We learn the best from each other and on the job_
+
+Because Views syntax, composition, state and logic concepts are much easier to
+grasp than in a typical HTML, CSS, JS stack, non-technical team members have fewer
+barriers to start writing code.
+
+_We think that the code we write should be beautiful, meaningful, and simple_
+
+As a collaboration platform Views removes silos and brings down the walls between
+development and the rest of the organization.
+
+_We cherish openness, learning, and frequent shipping_
+
+To learn more and share your thoughts go to our Medium publication [Learn ViewsDX](https://learn.viewsdx.com/) or join our [Slack Community](slack.viewsdx.com)
 
 ## Contributing to the docs app
 Install the dependencies with:
