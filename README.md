@@ -67,16 +67,19 @@ interface consistency across all views.
 
 ![what is Atomic Design Pattern?](images/atomic-design.jpg)
 
-Views composition model is a collection of nested blocks
+Views composition model is a collection of embeddable blocks
 
-![composition model](images/BlocksComposition.jpg)
+![composition model1 - embeddable](images/BlocksComposition1.jpg)
 
-Looking at View syntax architecture we recognise these elements:
-1. Properties - the lowest level element, ie. `backgroundColor`
-2. States - groups of properties related to functionality of a Block, enabled by `when`
-3. Blocks - groups of States
-4. Views - groups of Blocks saved in a .view file
-5. Smart Views/ Logic - Views grouped with Javascript logic, super powerful stuff. ⚡️ 🔥 💥 ☄️ 
+Every `.view` file is a self contained component with a top level container block and content blocks.
+As a component it can be used inside of any other `.view` file and styled at that point of use
+
+![composition model2 - point of use](images/BlocksComposition2.jpg)
+
+The power of atomised composition model allows components to become reusable templates as the app's functionality
+and the design system grows.
+
+Views is perfect for building application's interfaces.
 
 
 ## Properties
