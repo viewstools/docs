@@ -78,8 +78,6 @@ Looking at View syntax architecture we recognise these elements:
 4. Views - groups of Blocks saved in a .view file
 5. Smart Views/ Logic - Views grouped with Javascript logic, super powerful stuff. ⚡️ 🔥 💥 ☄️ 
 
-![How Atomic maps to Views?](images/mapping-atomic-to-views3.jpg)
-
 
 ## Properties
 Props are all that matters in Views!
