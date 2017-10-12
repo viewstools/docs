@@ -1,4 +1,4 @@
-# Views Docs - Productive way of creating interfaces
+# Views Docs - Productive framework for creating production quality interfaces
 
 ## 👋 How can you benefit from what we are doing?
 Views language is simple. There is no divs, classes, ids. We use blocks to compose interfaces.
@@ -67,12 +67,16 @@ interface consistency across all views.
 
 ![what is Atomic Design Pattern?](images/atomic-design.jpg)
 
-Our "Atomized" composition model looks like this:
-1. Properties - the atoms
-2. States - groups of properties related to functionality of a Block
+Views composition model is a collection of nested blocks
+
+![composition model](images/BlocksComposition.jpg)
+
+Looking at View syntax architecture we recognise these elements:
+1. Properties - the lowest level element, ie. `backgroundColor`
+2. States - groups of properties related to functionality of a Block, enabled by `when`
 3. Blocks - groups of States
 4. Views - groups of Blocks saved in a .view file
-5. Smart Views - Views grouped with Javascript logic, super powerful stuff. ⚡️ 🔥 💥 ☄️ 
+5. Smart Views/ Logic - Views grouped with Javascript logic, super powerful stuff. ⚡️ 🔥 💥 ☄️ 
 
 ![How Atomic maps to Views?](images/mapping-atomic-to-views3.jpg)
 
