@@ -1,17 +1,17 @@
-# Views Docs - Productive framework for creating production quality interfaces
+# Views Docs - Productive framework for creating production-quality interfaces
 
 ## 👋 How can you benefit from what we are doing?
 Views language is simple. There is no divs, classes, ids. We use blocks to compose interfaces.
-Blocks make the composition easy to undersand even for non-technical professionals.
+Blocks make the composition easy to understand even for non-technical professionals.
 
-Views makes teams productive. Designers contribute directly to production build.
-Views improves build quality. Designers can tweak styling without wasting dev time.
-Views compiles to React and React Native. No manual work is required in the compilation process.
-Views comes with a creative toolset. For designers who don't like to code.
+Views make teams productive. Designers contribute directly to production build.</br>
+Views improve build quality. Designers can tweak styling without wasting dev time.</br>
+Views compile to React and React Native. No manual work is required in the compilation process.</br>
+Views come with a creative toolset. For designers who don't like to code.
 
-You can speed up your development.
-Perform faster revision loops.
-Test innovative ideas.
+You can speed up your development.</br>
+Perform faster revision loops.</br>
+Test innovative ideas.</br>
 
 ## 🚀 Is someone else using it successfully?
 Yes! We currently have a strategic partner using Views to deliver their core
