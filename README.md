@@ -7,7 +7,7 @@ Blocks make the composition easy to understand even for non-technical profession
 Views make teams productive. Designers contribute directly to production build.</br>
 Views improve build quality. Designers can tweak styling without wasting dev time.</br>
 Views compile to React and React Native. No manual work is required in the compilation process.</br>
-Views come with a creative toolset. For designers who don't like to code.
+Views come with a creative toolset. For designers who prefer tweak over building from skratch.
 
 You can speed up your development.</br>
 Perform faster revision loops.</br>
