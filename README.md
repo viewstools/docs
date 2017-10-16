@@ -81,6 +81,8 @@ and the design system grows.
 
 Views is perfect for building application's interfaces.
 
+![composition model - containers poster](images/PosterContainers.jpg)
+
 
 ## Properties
 Props are all that matters in Views!
@@ -244,6 +246,8 @@ like `fontFamily`, `fontSize`, `fontWeight`, `lineHeight`, `letterSpacing`,
 etc. And colours. Oh yeah, `deepskyblue` and `deeppink`. Now we're talking.
 For the Irish, British and Australians in the world, remember that the prop is
 `color` and not `colour`. 🤐.
+
+![composition model - content blocks poster](images/PosterContentBlocks.jpg)
 
 We all know everyone loves web fonts. You can use those here too. Yeah, Google
 fonts, Typekit, even that piece of art you have sitting in that custom woff file
