@@ -42,6 +42,14 @@ cd my-native-app
 use-views
 ```
 
+Running the iOS simulator
+
+```npm run ios```
+
+Running the Android simulator
+
+```npm run android```
+
 ### with an existing project
 ```
 yarn add views-morph
