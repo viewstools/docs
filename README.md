@@ -1,4 +1,4 @@
-# Views Docs - Productive framework for creating production-quality interfaces
+# Views Docs - Effective framework for creating production-quality interfaces 
 
 ## 👋 How can you benefit from what we are doing?
 Views language is simple. There is no divs, classes, ids. We use blocks to compose interfaces.
