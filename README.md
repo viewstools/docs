@@ -239,6 +239,8 @@ Text
 text item.name
 ```
 
+![composition model - list poster](images/PosterLists.jpg)
+
 *Content* blocks let you, well, show stuff. You met one before, `Text`, let's
 meet all of them:
 * `Text`
