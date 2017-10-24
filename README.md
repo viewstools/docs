@@ -293,18 +293,18 @@ but if you want to do more crazy stuff with them, like animating parts of it
 or changing how it looks like on the fly, you're better off using an `Svg`
 block. Inside it, you can use a these specific blocks:
 
-* `Circle`
-* `Ellipse`
-* `G`
-* `LinearGradient`
-* `RadialGradient`
-* `Line`
-* `Path`
-* `Polygon`
-* `Polyline`
-* `Rect`
-* `Symbol`
-* `SvgText`
+* `SvgCircle`
+* `SvgEllipse`
+* `SvgGroup`
+* `SvgLinearGradient`
+* `SvgRadialGradient`
+* `SvgLine`
+* `SvgPath`
+* `SvgPolygon`
+* `SvgPolyline`
+* `SvgRect`
+* `SvgSymbol`
+* `SvgSvgText`
 * `Use`
 * `Defs`
 * `Stop`
@@ -315,7 +315,7 @@ Svg
 viewBox 0 0 20 20
 width 20
 height 20
-Circle
+SvgCircle
 cx 10
 cy 10
 r 5
