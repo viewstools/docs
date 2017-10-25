@@ -1,5 +1,5 @@
 # Views
-**An effective framework for creating production-quality interfaces**
+**An effective framework for creating production quality interfaces**
 
 Views is a simplified language to describe user interfaces (UI) and their interactions (UX).
 This is what it looks like:
@@ -78,7 +78,7 @@ Views composition model is a collection of embeddable blocks.
 ![composition model1 - embeddable](images/BlocksComposition1.jpg)
 
 Every `.view` file is a self contained component with a top level container block and content blocks.
-As a component it can be used inside of any other `.view` file and styled at that point of use
+As a component it can be used inside of any other `.view` file and styled at point of use.
 
 ![composition model2 - point of use](images/BlocksComposition2.jpg)
 
@@ -140,8 +140,8 @@ Text
 text Hello World
 ```
 
-A block is defined by its type. In the example above we use `Text` type of block
-to render text in the view.
+A block is defined by its type. In the example above we use `Text` type to render
+text in the view.
 
 Additionally, a block can have a name:
 ```views
@@ -149,18 +149,20 @@ Greeting Text
 text Hello World
 ```
 It's a good DX([Designer-Developer Experience](https://learndx.com/)) practice
-to name your blocks. It helps others to understand and find them faster. This is
-also a super handy pattern for QA team, which can now access the elements using
-data attributes.
+to name your blocks. It helps you and your team to understand and find the
+blocks faster. They are also the way to reference specific view elements for
+automated QA testing.
 
-The type is required and it's always specified by pattern `Name BlockType`
+The type is required, if you're using a name, it's always defined after the
+name `Name BlockType`.
 
-[Here's, around minute 52, Tom explains how to save blocks as a view and use it in another view)](https://youtu.be/S-5rbcnXWtI?t=51m38s)
+[Here's, around minute 52, Tom explains how to save blocks as a view and use it in another view in code)](https://youtu.be/S-5rbcnXWtI?t=51m38s).
+This process is greatly simplified and more straight forward in the toolset.
 
 
 ### Block Type
-In Views, we distinguish three types of blocks: Containers, Content and
-Custom blocks.
+In Views, we distinguish three types of blocks: `Containers`, `Content` and
+`Custom blocks`.
 
 ![Block types in Views](images/BlockTypes.jpg)
 
@@ -173,29 +175,28 @@ Custom blocks.
 blocks inside of it one below the other and `Horizontal` will get them side by
 side.
 
-Views uses a thing call Flexible Box, or flexbox, to lay out your blocks in the
-UI. It's a layout mode intended to accommodate different screen sizes and
-different display devices without much effort.
+Views uses flexbox to lay out your blocks in the UI. It's a layout mode intended
+to accommodate different screen sizes and different display devices without much effort.
 [If you're curious about you can read more about flexbox here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes).
 
-In CSS terms, `Vertical` is a shortcut for `flex-direction: row`
+In CSS terms, `Vertical` is a shortcut for `flex-direction: row`.
 
 If you've been doing Web development for a while, you might be wondering why
 we chose it over the default block mode of that CSS has. The main reasons are
 that it's more predictable, meaning it's easier to use for newcomers than
-display block, and also that it works across platforms thanks to Facebook's
-[Yoga layout engine](https://github.com/facebook/yoga).
+`display: block`, and also that it works across platforms in native apps thanks
+to Facebook's [Yoga layout engine](https://github.com/facebook/yoga).
 
 By the way, that doesn't mean that you can't use other `display` values. See
 the [quirks](QUIRKS.md) for a few cases in which we've spotted flex wasn't
 cutting it for us.
 
 `Vertical` and `Horizontal` are also actionable blocks, which is a fancy way to
-say that they take click or press events. That's how you make buttons for
-example.
+say that they can take click or press events. *That's how you make buttons in
+Views*, for example:
 
-```views
-Button is Vertical
+```
+Button Vertical
 onClick props.doSomeAction
 Text
 text click me
@@ -203,9 +204,9 @@ text click me
 
 
 `List` lets you repeat one item many times.
-It needs one prop, called `from`. A `List` can only take one block inside of it,
-so if you want more complex things, like a card, you will want to use a
-container block like a `Vertical` or a `Horizontal`.
+It needs one prop, called `from` which tells where the list gets its data from.
+A `List` can only take one block inside of it, so if you want more complex things,
+like a card, you will want to use a container block like a `Vertical` or a `Horizontal`.
 
 Inside a `List` you get access to an `item` and `index`. `item` has whatever your
 list has and `index` tells the position of the item in the list starting at 0.
@@ -217,6 +218,10 @@ Text
 text item.name
 ```
 
+You can style a `List` as you would with any other container. By default it
+stacks its elements like `Vertical` does. If you want it to stack them
+horizontally, add the prop `flexDirection row` to it.
+
 ![composition model - list poster](images/PosterLists.jpg)
 
 *Content* blocks let you, well, show stuff. You met one before, `Text`, let's
@@ -227,7 +232,7 @@ meet all of them:
 * `Capture`
 
 `Text` is probably the block you'll use the most. Its most important prop is,
-wait for it... are you ready?!? 👉 `text`. 😱. Yeah, I know, you saw that one
+wait for it... Are you ready?!? 👉 `text`. 😱. Yeah, I know, you saw that one
 coming... Sure.
 A `Text` block can take almost any CSS, more importantly it takes font styles,
 like `fontFamily`, `fontSize`, `fontWeight`, `lineHeight`, `letterSpacing`,
@@ -245,13 +250,21 @@ ease font loading and you're better off being specific so we don't have to load
 stuff unnecessarily and make your app slower. Remember that the more fonts you
 use, the more it will take for your app to load, so use them with caution. 🤓.
 
-Sorry for the unsolicited lecture 🙄, here's an example of how to use it:
+Here's an example of how to use it:
 ```views
 Text
-fontFamily Roboto, sans-serif
+fontFamily Roboto
 fontWeight 300
 text nananana nananana nananana Batmannnn!!!!!!! 🍀
 ```
+
+If you're using a Google Font, Views will automatically specify the right
+fallback (`sans-serif`, `serif`, etc) on web for you.
+
+There's a bit of legwork to get your fonts working in your app for now. For
+React Native see [this](https://docs.expo.io/versions/latest/sdk/font.html#content). For React DOM,
+use a `<link>` tag in your HTML like Google Fonts suggests or an `@import(...)`
+statement in `index.css`. We will automate this in Views at some stage.
 
 `Image` takes a `source` prop, it can be a URL or a local file. TODO
 
@@ -282,10 +295,10 @@ block. Inside it, you can use a these specific blocks:
 * `SvgPolyline`
 * `SvgRect`
 * `SvgSymbol`
-* `SvgSvgText`
-* `Use`
-* `Defs`
-* `Stop`
+* `SvgText`
+* `SvgUse`
+* `SvgDefs`
+* `SvgStop`
 
 While you can make an `Svg` by hand, like:
 ```
@@ -305,13 +318,65 @@ run `views-morph file.svg` and 💥! You'll get a ready to go Views Svg!
 
 [Here's a little video on how you can use it in your project today](https://learn.viewsdx.com/from-svg-to-view-in-1-2-3-79cf8d771485).
 
-`Capture` TODO
-
-
 ### Proximity nesting
-[See this bit of this video for now](https://www.youtube.com/watch?v=S-5rbcnXWtI&feature=youtu.be&t=37m54s)
+Proximity nesting is how we do composition inside a view. You can think about your
+view as a stack of blocks where new lines set blocks apart.
 
-_TODO Introduce alpha release of animations_
+```
+Top Vertical
+InsideTop Vertical
+Text
+```
+In the example above, the hierarchy is:
+* `Top`
+  * `InsideTop`
+    * `Text`
+
+What if we want to have the text at the same level of `InsideTop`? Our code
+would look like:
+
+```
+Top Vertical
+InsideTop Vertical
+
+Text
+```
+
+Our hierarchy now looks like:
+* `Top`
+  * `InsideTop`
+  * `Text`
+That new line before `Text` separates it from `InsideTop`.
+
+This is a rule that applies to almost all blocks except the following content
+blocks: `Image`, `Text`, `CaptureEmail`, `CaptureFile`, `CaptureNumber`, `CapturePhone`,
+`CaptureSecure`, `CaptureText`, `CaptureTextArea`, `Proxy`, `SvgCircle`, `SvgEllipse`, `SvgLine`,
+`SvgPath`, `SvgPolygon`, `SvgPolyline`, `SvgRect`, `SvgText`, `SvgStop`.
+
+With that in mind, if we want to have two `Text`s next to each other, we don't
+need a new line between them. The following code:
+```
+Top Vertical
+Text
+Text
+```
+
+Gives us the hierarchy we're after:
+* `Top`
+  * `Text`
+  * `Text`
+
+A view can only have one top level block. If you have more than one, only the
+first one will be displayed. E.g.:
+
+```
+Top Vertical
+Text
+
+Text
+```
+In the example above, the second `Text` is outside of the top level container
+therefore it won't be displayed.
 
 ## States
 
@@ -427,9 +492,53 @@ non-technical team members.
 
 ## .view.logic === Smart View
 Any View file can be also wrapped with JavaScript logic to make a Smart View.
-TODO Example
 
-## .data
+With `Counter.view` file like:
+```
+Text
+color black
+text props.number
+```
+
+We can add a `Counter.view.logic.js` file that would increment a number by one
+every second like this:
+```
+import Counter from './Counter.view.js'
+import React from 'react'
+
+export default class CounterLogic extends React.Component {
+  state = {
+    number: 0,
+  }
+
+  componentDidMount() {
+    this._interval = setInterval(this.increment, 1000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._interval)
+  }
+
+  increment = () => {
+    this.setState({
+      number: this.state.number + 1
+    })
+  }
+
+  render() {
+    return <Counter number={this.state.number} />
+  }
+}
+```
+
+A logic file is an extension to your view and Views imports that it if it's
+available. In other words, if you then use your `Counter` in other views, you
+will actually be using the `Counter.view.logic.js` instead.
+
+This is where you would add any intermediate state to your views or connect them
+to an external store of data.
+
+## .view.tests.json
 TODO 💾
 
 ## animations
@@ -465,16 +574,88 @@ text back
 ```
 
 ## Views and your React components
-TODO
+If you want to use an existing React component as is, you can import it by
+defining it as a `.js` file and adding a `// @views` pragma at the top.
+
+E.g., say you have a file called `Magic.js`:
+
+```
+// @view
+import React from 'react'
+
+export default props => props.word
+```
+
+You can now use that component as you would use any other view in your system:
+
+```
+Magic
+word hey!
+```
+
+We'll be working on bridging NPM modules at some stage, but for now you can
+bridge any external modules by hand. Here's an example with
+[react-google-maps](https://tomchentw.github.io/react-google-maps/).
+
+`GoogleMap.js`
+```
+// @view
+import { GoogleMap } from 'react-google-maps'
+export default ({ defaultCenterLat: lat, defaultCenterLng: lng, ...props }) => (
+  <GoogleMap defaultCenter={{ lat, lng }} {...props}>
+    {props.children}
+  </GoogleMap>
+)
+```
+
+`Marker.js`
+```
+// @view
+import { Marker } from 'react-google-maps'
+export default ({ positionLat: lat, positionLng: lng, ...props }) => (
+  <Marker position={{ lat, lng }} {...props} />
+)
+```
+
+Then in your view, following [the example from their docs](https://tomchentw.github.io/react-google-maps/#usage--configuration):
+
+```
+GoogleMap
+defaultZoom 0
+defaultCenterLat -34.397
+defaultCenterLng 150.644
+Marker
+positionLat -34.397
+positionLng 150.644
+when props.isMarkerShown
+```
+
+You will notice that we've renamed certain props and flattened them out. In
+order to reduce the complexity of the language we made a decision not to allow
+complex objects in views as props for now. This isn't set in stone though, so if
+you feel strong about it, let us know and we can work to enable a syntax like:
+```
+GoogleMap
+defaultZoom 0
+defaultCenter
+lat -34.397
+lng 150.644
+Marker
+position
+lat -34.397
+lng 150.644
+
+when props.isMarkerShown
+```
 
 ## Syntax highlighting
 We’ve created the following packages to help you understand `.view` files better:
-* [VIM](https://github.com/viewsdx/syntax-vim),
 * [Atom](http://atom.io/packages/language-views),
-* [VSCode](https://marketplace.visualstudio.com/items?itemName=uxtemple.views), and
-* [Sublime](https://github.com/viewsdx/syntax-sublime).
+* [Sublime](https://github.com/viewsdx/syntax-sublime),
+* [VIM](https://github.com/viewsdx/syntax-vim), and
+* [VSCode](https://marketplace.visualstudio.com/items?itemName=uxtemple.views).
 
-We currently highlight block names, margins, paddings, code, and property values. Our highlighters
+We currently highlight block names, numbers, props, and strings. Our highlighters
 aren’t perfect, but they should get us started. Feel free to submit fixes and suggestions!
 
 If you’re using other editors and come up with a syntax highlighter for it, reach out,
@@ -518,25 +699,16 @@ _We cherish openness, learning, and frequent shipping_
 
 To learn more and share your thoughts go to our Medium publication [Learn ViewsDX](https://learn.viewsdx.com/) or join our [Slack Community](slack.viewsdx.com)
 
-## Contributing to the docs app
-Install the dependencies with:
-```
-yarn
-```
+## 😍 How can I help?
+We're thrilled you want to help us make better UIs together 😀.
+You can contribute to the docs on [this repo](https://github.com/viewsdx/docs)
+and to [Views morphers here](https://github.com/viewsdx/morph).
 
-Run it:
-```
-yarn start
-```
-It should automatically open the browser for you.
+If you have any questions, you can always find us on:
+- Slack https://slack.viewsdx.com,
+- Email hi@viewsdx.com, and
+- Twitter [@viewsdx](https://twitter.com/viewsdx).
 
 
-All the code is in the `src` folder.
-
-To build the project, use:
-```
-yarn run build
-```
-It will create a `build` folder with the app ready to be deployed.
-
-[How to get syntax highlighting in Views?](https://learn.viewsdx.com/setup-views-in-your-editor-165d874e570f)
+License BSD-3-Clause.<br>
+Copyright 2017 by UXtemple Ltd.
