@@ -648,6 +648,20 @@ lng 150.644
 when props.isMarkerShown
 ```
 
+### .view.fake
+
+When you add a `.js` view, our toolset will let you define a `.view.fake` file
+that mocks your `.js` component. A `.js` component like our `Magic` or
+`GoogleMap` components above are external and as such can't be modified in
+Views. However, it's handy to have some kind of representation of them in your
+preview. That's when the `.view.fake` comes into play. Take `GoogleMap` for
+example, it's fake view could look like:
+
+```
+GoogleMapFake Image
+source ./google-map-fake.jpg
+```
+
 ## Syntax highlighting
 We’ve created the following packages to help you understand `.view` files better:
 * [Atom](http://atom.io/packages/language-views),
