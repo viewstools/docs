@@ -268,14 +268,25 @@ statement in `index.css`. We will automate this in Views at some stage.
 
 `Image` takes a `source` prop, it can be a URL or a local file. TODO
 
-`Capture` TODO
-`CaptureEmail`
-`CaptureFile`
-`CaptureInput`
-`CaptureNumber`
-`CapturePhone`
-`CaptureSecure`
-`CaptureText`
+`Capture` is your way to accept written input from a user. We have a few types
+defined for this:
+
+- `CaptureEmail`
+- `CaptureFile`
+- `CaptureInput`
+- `CaptureNumber`
+- `CapturePhone`
+- `CaptureSecure`
+- `CaptureText`
+- `CaptureTextArea`
+
+The docs for [React forms](https://reactjs.org/docs/forms.html) apply for React
+DOM. For native we're [doing a bit more for you](https://github.com/viewsdx/morph/blob/master/__tests__/__snapshots__/react.js.snap#L1682-L1697).
+This is still work in progress and we're loooking at integrating some of the
+concepts of [formik](https://github.com/jaredpalmer/formik) to easy form
+creation and management without dictating UI.
+
+_TODO Expand on captures and forms_
 
 
 _SVGs are amazing_. They let you do amazing graphics that scale like crazy.
@@ -430,10 +441,63 @@ item
 name Dario
 ```
 
+A good test will include all the possible states your view can be in. For
+example, a login form could be in 4 states: normal, logging in, error and ready.
 
-### .view.tests
+With `Login.view` like:
+```
+Login Vertical
+Form Vertical
+when !props.isLoggingIn && !props.isLoggedIn
+Username CaptureEmail
+Password CaptureSecure
+Login Vertical
+onClick props.login
+Text
+text login now
 
-_TODO Functional examples_
+
+LoggingIn Text
+text logging in... wait...
+when props.isLoggingIn
+LoggedIn Text
+text logged in!
+when props.isLoggedIn
+Error Text
+text props.error
+when props.error
+```
+
+`Login.view.tests` would look like:
+
+```
+Main Test
+
+LoggingIn Test
+isLoggingIn true
+
+Error Test
+error something went wrong
+
+Ready Test
+isLoggedIn true
+```
+
+The tests represent the possible transitions of our view based on the props it
+receives.
+
+If you want to simulate transitions within Views, you can specify the associated
+`onClick` in your tests to point to any test name. For example, if we want to
+mock going from `Main` to `Ready` when the `login now` button is clicked, we can
+modify our `Main` test to read:
+```
+Main Test
+login Ready
+```
+Because we have a test named `Ready`, it will be linked.
+
+In future versions of the tooling we will represent flows through links like
+those.
 
 ## View
 ### Easy in, Easy out
