@@ -1,8 +1,0 @@
-Back is Horizontal
-# TODO make teleport relative to current path
-teleportTo ..
-transformHover translate(-10px)
-transition all 0.15s ease-out
-Text
-fontSize 26
-text 👈

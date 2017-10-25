@@ -1,72 +1,70 @@
-# Views Docs - Effective framework for creating production-quality interfaces 
+# Views
+**An effective framework for creating production-quality interfaces**
 
-## 👋 How can you benefit from what we are doing?
-Views language is simple. There is no divs, classes, ids. We use blocks to compose interfaces.
+Views is a simplified language to describe user interfaces (UI) and their interactions (UX).
+This is what it looks like:
+
+```
+Text
+color deepskyblue
+text Hello Views!
+```
+
+There are no divs, classes or ids. We use blocks to compose interfaces.
 Blocks make the composition easy to understand even for non-technical professionals.
 
-Views make teams productive. Designers contribute directly to production build.</br>
-Views improve build quality. Designers can tweak styling without wasting dev time.</br>
-Views compile to React and React Native. No manual work is required in the compilation process.</br>
-Views come with a creative toolset. For designers who prefer tweak over building from skratch.
+Views lets you build web, iOS, Android and Desktop applications from the same codebase by
+morphing to React and React Native in JavaScript. It doesn't add a runtime
+overhead to your application.
+
+Views language and its morphers are open source.
+[You can contribute here](https://github.com/viewsdx/morph).
+
+We're also working on a toolset to enhance the design and development process
+even more. It is currently in closed beta and we're expecting to release
+the public beta by December 2017. Email us at hi@viewsdx.com and we'll let you
+know when its ready. [Here are some teasers in the meantime 😉](https://dribbble.com/shots/3849292-Views-DX-Editor-with-Composer/attachments/872202).
+
+## 👋 How can you benefit from it?
+_Views makes teams productive._ Designers contribute directly to the production build.</br>
+_Views improves build quality._ Designers can tweak styling without wasting dev time.</br>
+_Views compiles to React and React Native._ No manual work is required in the compilation process.</br>
+_Views comes with a creative toolset._ For designers who prefer tweak over building from scratch.
 
 You can speed up your development.</br>
 Perform faster revision loops.</br>
 Test innovative ideas.</br>
 
-## 🚀 Is someone else using it successfully?
-Yes! We currently have a strategic partner using Views to deliver their core
-application to their 50 million users in the USA. 
-
-Interface of our toolset is fully build in Views (using [React DOM app](https://github.com/facebookincubator/create-react-app) wrapped in [Electron](https://electron.atom.io/)).
+## 🚀 Who is using it successfully?
+- A strategic partner to deliver their core application to their 50 million users in the USA. _Web app_.
+- Views toolset. _Electron Desktop app_.
+- 2BFIT. _Mobile native app_ [App store](https://itunes.apple.com/us/app/2bfit/id1279427455?mt=8&ign-mpt=uo%3D4) [Play store](https://play.google.com/store/apps/details?id=com.viewsdx.app2bfit&hl=en)
+- Classuite. _Mobile native app_.
 
 ## Using Views in your project
-For now, Views morphs to the web and desktop through React DOM and to iOS and
-Android through React Native. 
+Views morphs to the web and desktop through React DOM and to iOS and Android through React Native.
+Views can support other morphing targets, if you're interested in implementing
+on Angular, Ember, Vue, etc, [let us know](https://github.com/viewsdx/morph/issues/new)!
 
-You can start new React project with Create-React-App and [Use Views](https://github.com/viewsdx/use) commands.
-
-### with create-react-app
+1. If you don't have an app, create a new one:
+_To make a new web or desktop app_ run:
 ```
-yarn install --global create-react-app use-views
+yarn global add create-react-app
 create-react-app my-app
+```
+
+_To make a new native app_ run:
+```
+yarn global add create-react-native-app
+create-react-native-app my-app
+```
+
+2. Add Views on it:
+
+```
 cd my-app
 use-views
-yarn start
 ```
-
-### with create-react-native-app
-```
-yarn install --global create-react-native-app use-views
-create-react-native-app my-native-app
-cd my-native-app
-use-views
-```
-
-Running the iOS simulator
-
-```npm run ios```
-
-Running the Android simulator
-
-```npm run android```
-
-### with an existing project
-```
-yarn add views-morph
-views-morph . --watch --as react-dom
-```
-
-You will want to add this to your `.gitignore` file:
-```
-# views
-**/*.data.js
-**/*.view.js
-**/*.view.css
-**/*.view.tests.js
-```
-### in a sample project
-
-[Here's a video with the most recent overview of sample project installation and use](https://learn.viewsdx.com/june-2017-overview-update-5843a2142308).
 
 # Composition model
 
@@ -75,7 +73,7 @@ interface consistency across all views.
 
 ![what is Atomic Design Pattern?](images/atomic-design.jpg)
 
-Views composition model is a collection of embeddable blocks
+Views composition model is a collection of embeddable blocks.
 
 ![composition model1 - embeddable](images/BlocksComposition1.jpg)
 
@@ -84,8 +82,8 @@ As a component it can be used inside of any other `.view` file and styled at tha
 
 ![composition model2 - point of use](images/BlocksComposition2.jpg)
 
-The power of atomised composition model allows components to become reusable templates as the app's functionality
-and the design system grows.
+The power of the atomised composition model allows components to become reusable templates as the
+app's functionality and the design system grows.
 
 Views is perfect for building application's interfaces.
 
@@ -95,64 +93,44 @@ Views is perfect for building application's interfaces.
 ## Properties
 Props are all that matters in Views!
 
-Properties define the style and type of all States, Blocks and Views.
+They define the style and type of all States, Blocks and Views.
 
 There are two kinds of properties:
-- Internal - value is defined in the same .view file - Example: `text Buy Now`, `color red`
-- External - value comes from somewhere else (.view.tests file, service,
-  back-end) - Example: `text props.buttonLabel`
+- _Internal_: value is defined in the same .view file.
+Example: `text Buy Now`, `color red`
+- _External_: value comes from somewhere else (.view.tests file, service, back-end).
+Example: `text props.buttonLabel`
 
 Say, you want to change the Button's Label dynamically depending on the View
 where the button is being used in?
-1. Replace value you want to turn into dynamic with `props.anyName`
-2. Pass the value in Tests or at the point of use with `anyName Value`
+1. Replace the value you want to make dynamic with `props.anyName`
+2. Pass the value in Tests and point of use like `anyName some value`
 
-BEFORE replacing the Label value with dynamic value:
-```views
+Here's an example of replacing `text` from `Button Label` to a dynamic value
+received through `props.label`.
+
+**before**:
+```
 Text
 text Button Label
 fontSize 20
 color #f7941e
 ```
 
-AFTER replacing making the value dynamic:
-```views
+**after**:
+```
 Text
-text props.buttonLabel
+text props.label
 fontSize 20
 color #f7941e
 ```
 
-At that point you have two choices for setting the value, and it depends on if it the value
-for the label is set by you or by the user of your app:
-- Let buttonLabel to remain an external prop and provide it in .view.tests to see
-rendered result during your design process
-- Set value of buttonLabel at the point of use, directly below UI Variable name.
-
-Here's how you set it up on the point of use:
-```views
-Filename
-buttonLabel Buy Now!
+Let's call that view `Button`. When you use it in another view, you will have to
+define the prop `label` like this:
 ```
-
-TODO explain toggles `onClick toggle props.stuff`
-TODO Introduce Alfa Release of Animations
-
-## States
-
-Blocks and Views can have many states driven by `when` statments.
-Example:
+Button
+label Buy Now!
 ```
-Text
-when props.error
-text This is wrong...
-
-Text
-when !props.error
-text This is ok :)
-```
-
-TODO Implement Improved States, more deatils in the [roadmap](https://trello.com/b/NhIKKbol/views-roadmap)
 
 ## Blocks
 
@@ -175,12 +153,12 @@ to name your blocks. It helps others to understand and find them faster. This is
 also a super handy pattern for QA team, which can now access the elements using
 data attributes.
 
-💩 The type is required and it's always specified by pattern `Name BlockType`
+The type is required and it's always specified by pattern `Name BlockType`
 
 [Here's, around minute 52, Tom explains how to save blocks as a view and use it in another view)](https://youtu.be/S-5rbcnXWtI?t=51m38s)
 
 
-### BlockType
+### Block Type
 In Views, we distinguish three types of blocks: Containers, Content and
 Custom blocks.
 
@@ -333,25 +311,43 @@ run `views-morph file.svg` and 💥! You'll get a ready to go Views Svg!
 ### Proximity nesting
 [See this bit of this video for now](https://www.youtube.com/watch?v=S-5rbcnXWtI&feature=youtu.be&t=37m54s)
 
+_TODO Introduce alpha release of animations_
+
 ## States
 
-### Contract between .view and view.tests files
-✨
-We all want our UIs to be tested. It's hard to do that though. UI in particular
-changes often and it's a bit painful to keep your tests updated at all times.
+Blocks and Views can have many states driven by `when` statements.
+Example:
+```
+Text
+when props.error
+text This is wrong...
 
-We want to help make testing easier, and we've done that in Views through a
-practical application. Right now, our tests help you design your
-Views at different stages. Soon enough, they will automatically create unit
-tests for your views to ensure that any future changes are being consciously
+Text
+when !props.error
+text This is OK :)
+```
+
+_TODO Implement [improved states through pattern matching](https://www.youtube.com/watch?v=dsaAF7cX5xc)._
+
+## ✨ Tests
+
+### Contract between .view and view.tests files
+We all want our UIs to be tested. It's hard to do that though. UIs in particular
+change often and it's a bit painful to keep your tests updated at all times.
+
+We want to help make testing easier, so we made it practical. By writing tests you're desigining
+your application in its different stages.
+
+We've also started experimenting with automated structural UI testing. [See
+automated-ui-testing.js](automated-ui-testing.js) for a reference implementation
+in Jest. ensure that any future changes are being consciously
 applied and that unwanted regressions are caught in time.
 
-It works like this. Say we have a View that shows a list of people:
+It works like this: say we have a view that shows a list of people:
 ```views
-People is Vertical
-List
+People List
 from props.people
-Text
+Person Text
 text item.name
 ```
 
@@ -361,7 +357,7 @@ Tests allow us to pass temporary data to the View that has external properties d
 Here's an example of .view.tests file for our List block above:
 
 ```views
-Main is Test
+Main Test
 people
 item
 name Tom
@@ -372,21 +368,20 @@ name Dario
 
 ### .view.tests
 
-TODO Give functional examples
+_TODO Functional examples_
 
 ## View
 ### Easy in, Easy out
-There is no View without .view file.
+There is no view without `.view` file.
 
-Each saved View will be morphed (compiled) to production quality Javascript and
-saved as .view.js file.
+Each saved view will be morphed (compiled) to production quality JavaScript and
+saved as `.view.js` file.
 
-If on some point you decide you don't need ViewsDX anymore you can always use
-generated components located in .view.js files without rewriting any code.
+If on some point you decide you don't need Views anymore you can always use
+generated components located in `.view.js` files without rewriting any code.
 
 ### Embedding Views
-Any View can be embedded in another View by its filename as a dynamically injected
-Custom Block.
+Views can be used in other views through their file name.
 
 ![Views can be embedded in ](images/embedingViews.jpg)
 
@@ -431,7 +426,7 @@ and delete them. It makes the composition pattern accessible to designers and
 non-technical team members.
 
 ## .view.logic === Smart View
-Any View file can be also wrapped with Javascript logic to make a Smart View.
+Any View file can be also wrapped with JavaScript logic to make a Smart View.
 TODO Example
 
 ## .data
@@ -446,9 +441,9 @@ TODO
 ## routes and teleports
 TODO
 ```
-App is Vertical
+App Vertical
 
-Home is Vertical
+Home Vertical
 at /
 Text
 text main
@@ -458,7 +453,7 @@ Text
 text go to page
 
 
-Page is Vertical
+Page Vertical
 at /page
 Text
 text some page
@@ -517,7 +512,7 @@ barriers to start writing code.
 _We think that the code we write should be beautiful, meaningful, and simple_
 
 As a collaboration platform Views removes silos and brings down the walls between
-development and the rest of the organization.
+development and the rest of the organisation.
 
 _We cherish openness, learning, and frequent shipping_
 
