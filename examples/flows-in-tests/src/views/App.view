@@ -1,0 +1,13 @@
+App is Vertical
+alignItems center
+flex 1
+justifyContent center
+transform props.transform
+height props.height
+width props.width
+Button Vertical
+border 1px solid blue
+onClick props.clickMe
+Text
+fontSize 18
+text props.text
