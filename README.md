@@ -62,6 +62,7 @@ create-react-native-app my-app
 2. Add Views on it:
 
 ```
+yarn global add use-views
 cd my-app
 use-views
 ```
@@ -639,7 +640,7 @@ text back
 
 ## Views and your React components
 If you want to use an existing React component as is, you can import it by
-defining it as a `.js` file and adding a `// @views` pragma at the top.
+defining it as a `.js` file and adding a `// @view` pragma at the top.
 
 E.g., say you have a file called `Magic.js`:
 
