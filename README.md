@@ -10,7 +10,7 @@ color deepskyblue
 text Hello Views!
 ```
 
-There are no divs, classes or ids. We use blocks to compose interfaces.
+There are no divs, classes or ids. We use styled blocks to compose interfaces.
 Blocks make the composition easy to understand even for non-technical professionals.
 
 Views lets you build web, iOS, Android and Desktop applications from the same codebase by
