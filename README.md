@@ -1,8 +1,8 @@
 # Views
 **An effective framework for creating production quality interfaces**
 
-Views is a simplified language to define and build user interfaces.
-View syntax is clean, intuitive, and functional. Here's a sample:
+Views is an intuitive language to define and build complex user interfaces.
+Views syntax is clean, intuitive, and functional. Here's a sample:
 
 ```
 Text
