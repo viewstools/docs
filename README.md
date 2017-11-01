@@ -34,6 +34,7 @@ _Views comes with a creative toolset._ For designers who prefer tweak over build
 You can speed up your development.</br>
 Perform faster revision loops.</br>
 Test innovative ideas.</br>
+Reduce the cost of design itterations.</br>
 
 ## 🚀 Who is using it successfully?
 - A strategic partner to deliver their core application to their 50 million users in the USA. _Web app_.
