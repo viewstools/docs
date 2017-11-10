@@ -240,7 +240,13 @@ A `Text` block can take almost any CSS, more importantly it takes font styles,
 like `fontFamily`, `fontSize`, `fontWeight`, `lineHeight`, `letterSpacing`,
 etc. And colours. Oh yeah, `deepskyblue` and `deeppink`. Now we're talking.
 For the Irish, British and Australians in the world, remember that the prop is
-`color` and not `colour`. 🤐.
+`color` and not `colour`. 🤐.  
+
+To embed props in a string use template literals, e.g.
+```
+Text
+text `Welcome ${props.username}`
+```
 
 ![composition model - content blocks poster](images/PosterContentBlocks.jpg)
 
