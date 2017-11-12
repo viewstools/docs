@@ -1,4 +1,3 @@
-import 'react-native-mock/mock'
 import { morph } from 'views-morph'
 import { shallow } from 'enzyme'
 import fs from 'fs'
@@ -22,6 +21,9 @@ paths.forEach(fileRaw => {
     const code = morph(fs.readFileSync(testsFile, 'utf8'), {
       as: 'tests',
       name: `${viewName}.view.tests`,
+      file: {
+        raw: testsFile,
+      },
     }).code.replace(/export const /g, 'out.')
 
     const out = {}
