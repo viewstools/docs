@@ -610,6 +610,26 @@ will actually be using the `Counter.view.logic.js` instead.
 This is where you would add any intermediate state to your views or connect them
 to an external store of data.
 
+## local state
+Like a react component, your view can have local state, which you can pass to your logic component.  
+For example, let's say you have a form with an input field and a submit button. On pressing the button you want to get the current value in the input field and pass that to your logic component. That would look like this:
+```
+Username CaptureText
+placeholder Username
+Button Horizontal
+onClick () => props.handleSubmit(state)
+Text
+text Submit
+```
+
+Then, in your view logic you would get the value like so:
+```
+ handleSubmit = state => {
+   this.setState({
+     username: state.username,
+   });
+```
+
 ## .view.tests.json
 TODO 💾
 
