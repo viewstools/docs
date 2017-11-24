@@ -288,6 +288,13 @@ defined for this:
 - `CaptureText`
 - `CaptureTextArea`
 
+To set content of a any capture field use `placeholder` property. Example:
+
+```
+Email CaptureEmail
+placeholder john@email.com
+```
+
 The docs for [React forms](https://reactjs.org/docs/forms.html) apply for React
 DOM. For native we're [doing a bit more for you](https://github.com/viewsdx/morph/blob/master/__tests__/__snapshots__/react.js.snap#L1682-L1697).
 This is still work in progress and we're loooking at integrating some of the
