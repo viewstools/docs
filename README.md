@@ -289,10 +289,15 @@ defined for this:
 - `CaptureTextArea`
 
 To set content of a any capture field use `placeholder` property. Example:
-
 ```
 Email CaptureEmail
 placeholder john@email.com
+```
+
+To auto focus in a Capture field use `autoFocus` property. Example:
+```
+CaptureTextArea
+autoFocus true
 ```
 
 The docs for [React forms](https://reactjs.org/docs/forms.html) apply for React
