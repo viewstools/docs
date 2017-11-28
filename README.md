@@ -519,6 +519,8 @@ Because we have a test named `Ready`, it will be linked.
 In future versions of the tooling we will represent flows through links like
 those.
 
+If you want to debug your process when running your tests run `node --inspect-brk node_modules/.bin/jest --runInBand`
+
 ## View
 ### Easy in, Easy out
 There is no view without `.view` file.
