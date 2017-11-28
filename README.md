@@ -242,10 +242,10 @@ etc. And colours. Oh yeah, `deepskyblue` and `deeppink`. Now we're talking.
 For the Irish, British and Australians in the world, remember that the prop is
 `color` and not `colour`. 🤐.  
 
-To embed props in a string use template literals, e.g.
+To embed props in a string, use template literals (backticks are not needed) e.g.
 ```
 Text
-text `Welcome ${props.username}`
+text Welcome ${props.username}
 ```
 
 ![composition model - content blocks poster](images/PosterContentBlocks.jpg)
