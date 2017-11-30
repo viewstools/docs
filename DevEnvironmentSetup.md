@@ -1,7 +1,7 @@
 
-**Follow these instructions if you feel adventurous to set up you dev environment?**
+** Follow these instructions if you feel adventurous to set up you dev environment? **
 
-##General, for React DOM and React Native##
+## General, for React DOM and React Native ##
 1. Install Xcode from App Store
 2. Open Xcode and follow installation steps to get all the modules (we need iOS simulator)
 3. Open terminal (in Applications/Utilities) and run `curl -L https://git.io/n-install | bash`
@@ -12,7 +12,7 @@
 8. You might be missing dependencies, so run `yarn`
 9. To start the project run `yarn start` - if it's a web project it will open in the browser
 
-##If you working on a React Native project (mobile) you need to also##
+## If you working on a React Native project (mobile) you need to also ##
 1. Run `brew install watchman`
 2. To get expo simulator for native run `yarn global add exp`
 3. To install expo ios `exp install:ios`
