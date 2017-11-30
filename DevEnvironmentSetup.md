@@ -1,6 +1,4 @@
 
-** Follow these instructions if you feel adventurous to set up you dev environment? **
-
 ## General, for React DOM and React Native ##
 1. Install Xcode from App Store
 2. Open Xcode and follow installation steps to get all the modules (we need iOS simulator)
