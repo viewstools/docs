@@ -1,6 +1,8 @@
 # Views
 **An effective framework for creating production quality interfaces**
 
+See [why do we use Views?](https://spectrum.chat/?t=277230be-ced3-4398-8b33-66fa379403ca) at Spectrum.
+
 Views is an intuitive language to define and build complex user interfaces.
 Views syntax is clean, intuitive, and functional. Here's a sample:
 
