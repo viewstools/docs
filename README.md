@@ -20,11 +20,11 @@ morphing to React and React Native in JavaScript. It doesn't add a runtime
 overhead to your application.
 
 Views language and its morphers are open source.
-[You can contribute here](https://github.com/viewsdx/morph).
+[You can contribute here](https://github.com/viewstools/morph).
 
 We're also working on a toolset to enhance the design and development process
 even more. It is currently in closed beta and we're expecting to release
-the public beta by December 2017. Email us at hi@viewsdx.com and we'll let you
+the public beta by Q1 2018. Email us at hi@views.tools and we'll let you
 know when its ready. [Here are some teasers in the meantime 😉](https://dribbble.com/shots/3849292-Views-DX-Editor-with-Composer/attachments/872202).
 
 ## 👋 How can you benefit from it?
@@ -47,7 +47,7 @@ Reduce the cost of design iterations.</br>
 ## Using Views in your project
 Views morphs to the web and desktop through React DOM and to iOS and Android through React Native.
 Views can support other morphing targets, if you're interested in implementing
-on Angular, Ember, Vue, etc, [let us know](https://github.com/viewsdx/morph/issues/new)!
+on Angular, Ember, Vue, etc, [let us know](https://github.com/viewstools/morph/issues/new)!
 
 1. If you don't have an app, create a new one:
 _To make a new web or desktop app_ run:
@@ -152,7 +152,7 @@ Additionally, a block can have a name:
 Greeting Text
 text Hello World
 ```
-It's a good DX([Designer-Developer Experience](https://learndx.com/)) practice
+It's a good DX([Designer-Developer Experience](https://medium.com/learndx)) practice
 to name your blocks. It helps you and your team to understand and find the
 blocks faster. They are also the way to reference specific view elements for
 automated QA testing.
@@ -303,7 +303,7 @@ autoFocus true
 ```
 
 The docs for [React forms](https://reactjs.org/docs/forms.html) apply for React
-DOM. For native we're [doing a bit more for you](https://github.com/viewsdx/morph/blob/master/__tests__/__snapshots__/react.js.snap#L1682-L1697).
+DOM. For native we're [doing a bit more for you](https://github.com/viewstools/morph/blob/master/__tests__/__snapshots__/react.js.snap#L1682-L1697).
 This is still work in progress and we're loooking at integrating some of the
 concepts of [formik](https://github.com/jaredpalmer/formik) to easy form
 creation and management without dictating UI.
@@ -349,7 +349,7 @@ stroke deepskyblue
 It's certainly more fun that have that done automatically for you 😇. You can
 run `views-morph file.svg` and 💥! You'll get a ready to go Views Svg!
 
-[Here's a little video on how you can use it in your project today](https://learn.viewsdx.com/from-svg-to-view-in-1-2-3-79cf8d771485).
+[Here's a little video on how you can use it in your project today](https://medium.com/viewsdx/from-svg-to-view-in-1-2-3-79cf8d771485).
 
 ### Proximity nesting
 Proximity nesting is how we do composition inside a view. You can think about your
@@ -773,8 +773,8 @@ source ./google-map-fake.jpg
 ## Syntax highlighting
 We’ve created the following packages to help you understand `.view` files better:
 * [Atom](http://atom.io/packages/language-views),
-* [Sublime](https://github.com/viewsdx/syntax-sublime),
-* [VIM](https://github.com/viewsdx/syntax-vim), and
+* [Sublime](https://github.com/viewstools/syntax-sublime),
+* [VIM](https://github.com/viewstools/syntax-vim), and
 * [VSCode](https://marketplace.visualstudio.com/items?itemName=uxtemple.views).
 
 We currently highlight block names, numbers, props, and strings. Our highlighters
@@ -819,18 +819,20 @@ development and the rest of the organisation.
 
 _We cherish openness, learning, and frequent shipping_
 
-To learn more and share your thoughts go to our Medium publication [Learn ViewsDX](https://learn.viewsdx.com/) or join our [Slack Community](slack.viewsdx.com)
+
 
 ## 😍 How can I help?
 We're thrilled you want to help us make better UIs together 😀.
-You can contribute to the docs on [this repo](https://github.com/viewsdx/docs)
-and to [Views morphers here](https://github.com/viewsdx/morph).
+You can contribute to the docs on [this repo](https://github.com/viewstools/docs)
+and to [Views morphers here](https://github.com/viewstools/morph).
 
 If you have any questions, you can always find us on:
-- Slack https://slack.viewsdx.com,
-- Email hi@viewsdx.com, and
-- Twitter [@viewsdx](https://twitter.com/viewsdx).
+- Slack https://slack.views.tools,
+- Email hi@views.tools,
+- Twitter [@viewstools](https://twitter.com/viewstools), and
+- [Spectrum](https://spectrum.chat/views).
 
+We sometimes write stuff on our [Medium publication](https://medium.com/viewsdx) too.
 
 License BSD-3-Clause.<br>
 Copyright 2017 by UXtemple Ltd.
