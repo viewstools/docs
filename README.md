@@ -578,7 +578,7 @@ Since any existing .view file is a Custom Block by default anyone can create, ma
 and delete them. It makes the composition pattern accessible to designers and
 non-technical team members.
 
-## .view.logic === Smart View
+## .view.logic.js === Smart View
 Any View file can be also wrapped with JavaScript logic to make a Smart View.
 
 With `Counter.view` file like:
