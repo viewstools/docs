@@ -411,21 +411,24 @@ Text
 In the example above, the second `Text` is outside of the top level container
 therefore it won't be displayed.
 
-## States
+## Scopes
 
-Blocks and Views can have many states driven by `when` statements.
+Blocks and Views can have many scopes driven by `when` statements.
 Example:
 ```
-Text
-when props.error
-text This is wrong...
-
-Text
-when !props.error
-text This is OK :)
+Button Vertical
+backgroundColor white
+onClick props
+when props.isClicked
+backgroundColor green
+Label Text
+color black
+text Click me
+when props.isClicked
+color green
+text I was clicked
 ```
 
-_TODO Implement [improved states through pattern matching](https://www.youtube.com/watch?v=dsaAF7cX5xc)._
 
 ## ✨ Tests
 
