@@ -502,87 +502,50 @@ isClicked true
 All the conditions above result in this interface:
 ![when conditions - ugly](images/whens-ugly.png)
 
+### Javascript ternaries are no longer supported
+With the simplification of `when` conditions, ternaries like:
+`text props.isClicked ? 'Nicely done!' : 'Go for it!'`
+are no longer supported.
+
+Read more about this point in our [Useful Conventions](#useful-conventions) section.
 
 ## ✨ Tests
 
 ### Contract between .view and view.tests files
-We all want our UIs to be tested. It's hard to do that though. UIs in particular
-change often and it's a bit painful to keep your tests updated at all times.
-
-We want to help make testing easier, so we made it practical. By writing tests you're desigining
-your application in its different stages.
-
-We've also started experimenting with automated structural UI testing. [See
-automated-ui-testing.js](automated-ui-testing.js) for a reference implementation
-in Jest. ensure that any future changes are being consciously
-applied and that unwanted regressions are caught in time.
-
-It works like this: say we have a view that shows a list of people:
+Tests allow us to pass temporary data to the view that has external properties (props) defined.
+In this simple example, `text` value is specified within the view file:
 ```views
-People List
-from props.people
-Person Text
-text item.name
-```
-
-Without passing any data to `item.name` the list won't render in the preview.
-
-Tests allow us to pass temporary data to the View that has external properties defined.
-Here's an example of .view.tests file for our List block above:
-
-```views
-Main Test
-people
-item
-name Tom
-item
-name Dario
-```
-
-A good test will include all the possible states your view can be in. For
-example, a login form could be in 4 states: normal, logging in, error and ready.
-
-With `Login.view` like:
-```views
-Login Vertical
-Form Vertical
-when !props.isLoggingIn && !props.isLoggedIn
-Username CaptureEmail
-Password CaptureSecure
-Login Vertical
-onClick props.login
 Text
-text login now
-
-
-LoggingIn Text
-text logging in... wait...
-when props.isLoggingIn
-LoggedIn Text
-text logged in!
-when props.isLoggedIn
-Error Text
-text props.error
-when props.error
+text Hello
 ```
+To make `text` value dynamic we need to turn it into a prop, like this:
+```views
+Text
+text props
+```
+At this point the Text block with disappear from the preview because the value
+for the `text` property is exposed as an external connection, but there is no
+value passed to it yet.
 
-`Login.view.tests` would look like:
-
+To bring back the `Hello` value to display in the preview create the `Text.view.tests`
+file in the same folder where `Text.view` file is saved. Inside of it write:
 ```
 Main Test
-
-LoggingIn Test
-isLoggingIn true
-
-Error Test
-error something went wrong
-
-Ready Test
-isLoggedIn true
+text Hello
 ```
+If you use Views Tools, use keyboard shortcut `CMD+d` to automatically open the
+tests file (if this file doesn't exist yet, Tools will create it for you).
 
-The tests represent the possible transitions of our view based on the props it
-receives.
+Now, you will see the `Hello` text back in the preview passed from tests to
+mock the real data.
+
+### Tests are not real!
+This is an important detail.
+
+
+
+
+### Toggle interactions using tests
 
 If you want to simulate transitions within Views, you can specify the associated
 `onClick` in your tests to point to any test name. For example, if we want to
@@ -865,6 +828,15 @@ called `My.view.js`. If you're morphing to `react-dom`, it will also create a
 file altogether by running the morpher like `views-morph My.view --as react-dom
 --inlineStyles`. You can safely ignore these files as they'll be created on the
 fly when the morpher runs.
+
+## Useful Conventions
+### Always name blocks
+### Extract blocks as view files
+### Don’t name props unless you absolutely have to
+### Keep props simple
+### Dont repeat blocks, use lists
+
+## Blocks Examples
 
 ## Views is a knowledge transfer platform!
 The value of cross-functional teams is very well known to Growth Hacking community
