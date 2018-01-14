@@ -542,25 +542,57 @@ mock the real data.
 ### Tests are not real!
 This is an important detail.
 
+All tests will be discarded at the point of running the React project.
+Tests are not included during the compilation process and each value should
+be either specified at the point of use within other view files, or come
+from the external source, like logic file, your back-end, or an API call.
 
+If you use Views Tools, and see the value in the preview, but cannot see it
+in the final build, it could mean couple of things:
+- You are not passing the props down the nesting tree. Solution: Trace the nesting path
+from the point of use down to the view that doesn't render. Make sure connections
+are made on every level. Check the naming and spelling.
+- The prop is not receiving the value from the state. Solution: Add the prop with
+the same name in the logic file.
+- The prop is visible but it has a wrong value. Solution: Check the conditions
+set by `when` properties.
 
+Tests might be tricky. Reach out with questions via our
+[Slack Questions Channel](https://slack.viewsdx.com/). Mention `@views-tom` or `@dario`
+to make sure that we get the notifications.
 
 ### Toggle interactions using tests
 
-If you want to simulate transitions within Views, you can specify the associated
-`onClick` in your tests to point to any test name. For example, if we want to
-mock going from `Main` to `Ready` when the `login now` button is clicked, we can
-modify our `Main` test to read:
+If you use Views Tools, and want to simulate transitions within Views, you need to:
+- have an `onClick props.login` property in the `Login` button to make the button actionable. Example:
+```views
+Button Vertical
+onClick props.login
+Text
+text Log In
+when props.loading
+text Loading...
+```
+- add two tests in `LoginButton.view.tests` file to read:
 ```
 Main Test
-login Ready
+login Loading
+loading false
+
+Loading Test
+login Main
+loading true
 ```
-Because we have a test named `Ready`, it will be linked.
+Now you can click on the button in the preview and the text will change from
+`Log In` to `Loading...`. This way you can test the interactivity of your interface
+during the design process.
 
-In future versions of the tooling we will represent flows through links like
-those.
+Toggling using tests is not routing, or swapping actual state of the component.
 
-If you want to debug your process when running your tests run `node --inspect-brk node_modules/.bin/jest --runInBand`
+You will not be able to use this toggling syntax in the production build
+since tests are being discarded from the final build.
+
+This only works in Views Tools.
 
 ## View
 ### Easy in, Easy out
