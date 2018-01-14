@@ -114,7 +114,7 @@ Here's an example of replacing `text` from `Button Label` to a dynamic value
 received through `props.label`.
 
 **before**:
-```
+```views
 Text
 text Button Label
 fontSize 20
@@ -122,12 +122,22 @@ color #f7941e
 ```
 
 **after**:
-```
+```views
 Text
 text props.label
 fontSize 20
 color #f7941e
 ```
+
+After changing a value to a dynamic prop it will disappear from the preview.
+To bring the text back you need to add `text Button Label` to the `Button.view.tests`
+like this:
+```
+Main Test
+text Button Label
+```
+If you using Views Tools, you can use keyboard shortcut `CMD+d` to open test file
+for the current view, or specify the value for the props in the text popup.
 
 Let's call that view `Button`. When you use it in another view, you will have to
 define the prop `label` like this:
@@ -334,7 +344,7 @@ block. Inside it, you can use a these specific blocks:
 * `SvgStop`
 
 While you can make an `Svg` by hand, like:
-```
+```views
 Svg
 viewBox 0 0 20 20
 width 20
@@ -415,7 +425,7 @@ therefore it won't be displayed.
 
 Blocks and Views can have many scopes driven by `when` statements.
 Basic example:
-```
+```views
 Button Vertical
 backgroundColor white
 onClick props
@@ -451,7 +461,7 @@ The `when` property doesn't have to be passed down to the custom view manually.
 It will apply automatically. So, this is also valid even tho Title view doesn't
 have the `when props.when` specified anywhere within the view.
 
-```
+```views
 Button Vertical
 backgroundColor white
 onClick props
@@ -471,7 +481,7 @@ text Nicely done!
 ```
 Where `SubTitle` view is saved as `SubTitle.view` file within the project and
 has:
-```
+```views
 SubTitle Text
 marginTop props
 color #ffaa00
@@ -533,7 +543,7 @@ A good test will include all the possible states your view can be in. For
 example, a login form could be in 4 states: normal, logging in, error and ready.
 
 With `Login.view` like:
-```
+```views
 Login Vertical
 Form Vertical
 when !props.isLoggingIn && !props.isLoggedIn
