@@ -41,8 +41,8 @@ Reduce the cost of design iterations.</br>
 ## 🚀 Who is using it successfully?
 - A strategic partner to deliver their core application to their 50 million users in the USA. _Web app_.
 - Views toolset. _Electron Desktop app_.
-- 2BFIT. _Mobile native app_ [App store](https://itunes.apple.com/us/app/2bfit/id1279427455?mt=8&ign-mpt=uo%3D4) [Play store](https://play.google.com/store/apps/details?id=com.viewsdx.app2bfit&hl=en)
-- Classuite. _Mobile native app_.
+- 2BFIT. _Mobile native app_ [AppStore](https://itunes.apple.com/us/app/2bfit/id1279427455?mt=8&ign-mpt=uo%3D4) [GooglePlay](https://play.google.com/store/apps/details?id=com.viewsdx.app2bfit&hl=en)
+- Classuite. _Mobile native app_. [AppStore](https://itunes.apple.com/us/app/classuite-workspaces/id1329983329?mt=8) [GooglePlay](https://play.google.com/store/apps/details?id=com.classuite.workspces)
 
 ## Using Views in your project
 Views morphs to the web and desktop through React DOM and to iOS and Android through React Native.
@@ -414,7 +414,7 @@ therefore it won't be displayed.
 ## Scopes
 
 Blocks and Views can have many scopes driven by `when` statements.
-Example:
+Basic example:
 ```
 Button Vertical
 backgroundColor white
@@ -425,9 +425,72 @@ Label Text
 color black
 text Click me
 when props.isClicked
-color green
+color white
 text I was clicked
 ```
+This comes handy when you want to change a block on interaction, or when you
+want to animate transitions.
+
+There is a specific structure to a block with `when` properties.
+
+Styling properties positioned directly below the name, and type, of a block become the
+base style. They can be changed based on passed props conditions. From the example above:
+`when props.isClicked` is a condition added to the Button wrapping the Text block.
+Above this `when` condition, and as a part of base style, you can position any
+styling properties, we use `backgroundColor white`.
+
+Below the `when` condition you can overwrite the conditions from the base styles.
+We change background color of the button to `green` using `backgroundColor green`.
+
+There can be any number of the `when` conditions within the block you need.
+After adding properties below each `when`, remember to add it also to the base
+style with a default value.
+
+`when` conditions can be triggered on any basic blocks and custom views.
+The `when` property doesn't have to be passed down to the custom view manually.
+It will apply automatically. So, this is also valid even tho Title view doesn't
+have the `when props.when` specified anywhere within the view.
+
+```
+Button Vertical
+backgroundColor white
+onClick props
+when props.isClicked
+backgroundColor green
+Label Text
+color black
+text Click me
+when props.isClicked
+color white
+text I was clicked
+SubTitle
+marginTop 5
+text Go for it!
+when props.isClicked
+text Nicely done!
+```
+Where `SubTitle` view is saved as `SubTitle.view` file within the project and
+has:
+```
+SubTitle Text
+marginTop props
+color #ffaa00
+fontFamily Montserrat
+fontSize 16
+text props
+```
+As you see, there is no `when` props in the custom view but the `text` values
+is changing based on the `isClicked` condition specified in `Button.view.test` file.
+Here's how we pass the temporary test mock data to the Button using tests:
+```
+Main Test
+isClicked false
+
+Clicked Test
+isClicked true
+```
+All the conditions above result in this interface:
+![when conditions - ugly](images/whens-ugly.png)
 
 
 ## ✨ Tests
@@ -653,9 +716,6 @@ Then, in your view logic you would get the value like so:
 TODO 💾
 
 ## animations
-TODO
-
-## states/better ternaries :)
 TODO
 
 ## routes and teleports
