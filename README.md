@@ -422,7 +422,19 @@ In the example above, the second `Text` is outside of the top level container
 therefore it won't be displayed.
 
 ## Scopes
+Setting one or multiple conditions on a block will define the way it will render.
+There are two ways you can take advantage of the scopes on any given block:
+1. To control how a block looks like when rendered in the view
+2. To show or hide a block from the view
 
+Scopes are defined in the logic files, back-end, or via service call.
+Each scope depends on the value passed to each prop.
+
+General syntax rules:
+`when` the `props.conditionName` is true, display
+`!props.conditionName` is a negation of the value passed to the prop
+
+### Control properties of blocks dynamically
 Blocks and Views can have many scopes driven by `when` statements.
 Basic example:
 ```views
@@ -502,6 +514,32 @@ isClicked true
 All the conditions above result in this interface:
 ![when conditions - ugly](images/whens-ugly.png)
 
+### Control when blocks are rendered/shown
+
+When you use the `when` condition at the last line of block's properties,
+it will act as a rendering switch.
+
+```views
+Popup Text
+text Yoohoo!
+when props.goesYoohoo
+```
+At this point `props.goesYoohoo` expects a boolean value and can be set
+as true or false in tests file. An example would look like:
+```
+WithPopup Test
+goesYoohoo true
+
+WithoutPopup Test
+goesYoohoo false
+```
+If you use Views Tools you will see two artboards in the preview with Popup block
+shown in the first one and not visible in the second.
+
+The Popup will be rendered in the view of the final production build based on the
+value of the `props.goesYoohoo` passed from the `Popup.view.logic.js` file, from
+the back-end, or via an API call. By default the Popup will not render.
+
 ### Javascript ternaries are no longer supported
 With the simplification of `when` conditions, ternaries like:
 `text props.isClicked ? 'Nicely done!' : 'Go for it!'`
@@ -564,7 +602,8 @@ to make sure that we get the notifications.
 ### Toggle interactions using tests
 
 If you use Views Tools, and want to simulate transitions within Views, you need to:
-- have an `onClick props.login` property in the `Login` button to make the button actionable. Example:
+- have an `onClick props.login` property in the `Login` button to make the button actionable.
+Example:
 ```views
 Button Vertical
 onClick props.login
