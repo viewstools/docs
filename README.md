@@ -516,8 +516,8 @@ All the conditions above result in this interface:
 
 ### Control when blocks are rendered/shown
 
-When you use the `when` condition at the last line of block's properties,
-it will act as a rendering switch.
+When you use the `when` condition as a last line of block's properties,
+it will act as a rendering switch, to show or hide the block.
 
 ```views
 Popup Text
@@ -595,10 +595,6 @@ the same name in the logic file.
 - The prop is visible but it has a wrong value. Solution: Check the conditions
 set by `when` properties.
 
-Tests might be tricky. Reach out with questions via our
-[Slack Questions Channel](https://slack.viewsdx.com/). Mention `@views-tom` or `@dario`
-to make sure that we get the notifications.
-
 ### Toggle interactions using tests
 
 If you use Views Tools, and want to simulate transitions within Views, you need to:
@@ -633,6 +629,20 @@ since tests are being discarded from the final build.
 
 This only works in Views Tools.
 
+### Naming convention
+
+To avoid errors, make sure your tests comply with these simple rules:
+1. Always start the test name with a capital letter: `Main Test`
+2. Always specify where the test starts by adding `Test` after name as a type.
+3. Don't start the test name with a number.
+4. Don't use any special characters like dashes or parenthesis.
+
+### Need help?
+
+Tests might be tricky. Reach out with questions via our
+[Slack Questions Channel](https://slack.viewsdx.com/). Mention `@views-tom` or `@dario`
+to make sure that we get the notifications.
+
 ## View
 ### Easy in, Easy out
 There is no view without `.view` file.
@@ -641,7 +651,7 @@ Each saved view will be morphed (compiled) to production quality JavaScript and
 saved as `.view.js` file.
 
 If on some point you decide you don't need Views anymore you can always use
-generated components located in `.view.js` files without rewriting any code.
+generated components located in `.view.js` files without redoing the interface.
 
 ### Embedding Views
 Views can be used in other views through their file name.
@@ -754,6 +764,275 @@ Then, in your view logic you would get the value like so:
    this.setState({
      username: state.username,
    });
+```
+## How to work with Flexbox properties
+Flexbox is a part of CSS standards. We use flexbox to manage layout composition
+of blocks, specifically, we use it to control:
+1. Sizing
+2. Alignment
+3. Distribution
+
+### Defaults
+Every block, by default, has `display flex` property enabled.
+Horizontals have `flexDirection` set to `row`, and Verticals to `column`.
+
+### Flex 1
+When you apply `flex 1` to a block, it will try to take as much space as it's
+possible in the view. Check how the examples below are affected by this property,
+and as a rule of thumb, add `flex 1` to blocks, when you need them to push
+other blocks away, or take more space.
+
+#### 001. No flex 1
+![Flex Not Used](images/Flex001.png)
+```views
+FlexTest Vertical
+backgroundColor #ffaa00
+Text
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content
+```
+
+#### 002. Flex on the Vertical only
+![Flex On The Vertical Only](images/Flex002.png)
+```views
+FlexTest Vertical
+flex 1
+backgroundColor #ffaa00
+Text
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content
+```
+#### 003. Flex on the Vertical and on the Text block
+![Flex On The Vertical and Text](images/Flex003.png)
+```views
+FlexTest Vertical
+flex 1
+backgroundColor #ffaa00
+Text
+flex 1
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content
+```
+
+#### 004. Flex on the Horizontal only
+![Flex On The Horizontal Only](images/Flex004.png)
+```views
+Horizontal
+flex 1
+backgroundColor #ffaa00
+Text
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content
+```
+
+#### 005. Flex on the Horizontal and Text
+![Flex On The Horizontal and Text](images/Flex005.png)
+```views
+Horizontal
+flex 1
+backgroundColor #ffaa00
+Text
+flex 1
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content
+```
+#### 006. No Flex 1 on the Vertical or on nested blocks
+![No Flex 1 on the Vertical on nested blocks](images/Flex006.png)
+```views
+Vertical
+backgroundColor #ffaa00
+Text
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content One
+Text
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content Two
+```
+
+#### 007. Flex only on the Vertical (with nested blocks)
+![Flex only on the Vertical with nested blocks](images/Flex007.png)
+```views
+Vertical
+flex 1
+backgroundColor #ffaa00
+Text
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content One
+Text
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content Two
+```
+
+#### 008. Flex on the Vertical and on nested blocks
+![Flex on the Vertical and on nested blocks](images/Flex008.png)
+```views
+Vertical
+flex 1
+backgroundColor #ffaa00
+Text
+flex 1
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content One
+Text
+flex 1
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content Two
+```
+
+#### 008A. Flex on the Vertical and on one nested block only
+![Flex on the Vertical and on one nested block only](images/Flex008A.png)
+```views
+Vertical
+flex 1
+backgroundColor #ffaa00
+Text
+flex 1
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content One
+Text
+backgroundColor #7aedff
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content Two
+```
+#### 009. No Flex 1 on the Horizontal or on nested blocks
+![No Flex 1 on the Horizontal or on nested blocks](images/Flex009.png)
+```views
+Horizontal
+backgroundColor #ffaa00
+Text
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content One
+Text
+backgroundColor #7aedff
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content Two
+```
+
+#### 010. Flex only on the Horizontal (with nested blocks)
+![Flex only on the Horizontal (with nested blocks)](images/Flex010.png)
+```views
+Horizontal
+flex 1
+backgroundColor #ffaa00
+Text
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content One
+Text
+backgroundColor #7aedff
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content Two
+```
+
+#### 011. Flex on the Horizontal and on nested blocks
+![Flex on the Horizontal and on nested blocks](images/Flex011.png)
+```views
+Horizontal
+flex 1
+backgroundColor #ffaa00
+Text
+flex 1
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content One
+Text
+flex 1
+backgroundColor #7aedff
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content Two
+```
+
+#### 011A. Flex on the Horizontal and on one nested block only
+![Flex on the Horizontal and on one nested block only](images/Flex011A.png)
+```views
+Horizontal
+flex 1
+backgroundColor #ffaa00
+Text
+flex 1
+backgroundColor #00fff7
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content One
+Text
+backgroundColor #7aedff
+color #323232
+fontFamily Montserrat
+fontSize 18
+fontWeight 400
+text Content Two
 ```
 
 ## .view.tests.json
