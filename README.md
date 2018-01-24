@@ -52,28 +52,9 @@ Reduce the cost of design iterations.</br>
 1. [Use Views in your project](UseViews/README.md)
 - Open source (code driven)
 - Using Views Tools (code and WYSIWYG editor for designers)
-2. Compose Views  
-
-Views uses [Atomic Design Composition Pattern](http://patternlab.io/) to ensure
-interface consistency across all views.
-
-![what is Atomic Design Pattern?](images/atomic-design.jpg)
-
-Views composition model is a collection of embeddable blocks.
-
-![composition model1 - embeddable](images/BlocksComposition1.jpg)
-
-Every `.view` file is a self contained component with a top level container block and content blocks.
-As a component it can be used inside of any other `.view` file and styled at point of use.
-
-![composition model2 - point of use](images/BlocksComposition2.jpg)
-
-The power of the atomised composition model allows components to become reusable templates as the
-app's functionality and the design system grows.
-
-Views is perfect for building application's interfaces.
-
-![composition model - containers poster](images/PosterContainers.jpg)
+2. [Compose Views](CompositionModel/README.md)
+- Atomic Design pattern
+- Containers and content blocks
 
 
 ## Properties
@@ -1170,9 +1151,10 @@ fly when the morpher runs.
 ### Extract blocks as view files
 ### Don’t name props unless you absolutely have to
 ### Keep props simple
-### Dont repeat blocks, use lists
+### Don't repeat blocks, use lists
 ### Design System folders
 ### Sensible Duplication
+### For readability, put the onWhen property as a first line below the block's name
 
 ## Blocks Examples
 
