@@ -1,15 +1,13 @@
 # Views
 **An effective framework for creating production quality interfaces**
 
-See [why do we use Views?](https://spectrum.chat/?t=277230be-ced3-4398-8b33-66fa379403ca) at Spectrum.
-
 Views is an intuitive language to define and build complex user interfaces.
 Views syntax is clean, intuitive, and functional. Here's a sample:
 
 ```
 Text
 color deepskyblue
-text Hello Views!
+text Hello. Don't be a stranger!
 ```
 
 There are no divs, classes or ids. We use styled blocks to compose interfaces.
@@ -25,7 +23,13 @@ Views language and its morphers are open source.
 We're also working on a toolset to enhance the design and development process
 even more. It is currently in closed beta and we're expecting to release
 the public beta by Q1 2018. Email us at hi@views.tools and we'll let you
-know when its ready. [Here are some teasers in the meantime 😉](https://dribbble.com/shots/3849292-Views-DX-Editor-with-Composer/attachments/872202).
+know when its ready. [Here is a quick (2:44s) overview 😉](https://vimeo.com/248484288).
+
+Join conversations:
+- [Spectrum Channel](https://spectrum.chat/?t=ba1ad612-c26e-446f-9aa3-76f0c7ca6c81)
+- [Slack Team](https://slack.viewsdx.com/)
+- [Medium Publication](https://medium.com/viewsdx)
+- [Roadmap](https://trello.com/b/NhIKKbol/views-roadmap)
 
 ## 👋 How can you benefit from it?
 _Views makes teams productive._ Designers contribute directly to the production build.</br>
@@ -44,33 +48,11 @@ Reduce the cost of design iterations.</br>
 - 2BFIT. _Mobile native app_ [AppStore](https://itunes.apple.com/us/app/2bfit/id1279427455?mt=8&ign-mpt=uo%3D4) [GooglePlay](https://play.google.com/store/apps/details?id=com.viewsdx.app2bfit&hl=en)
 - Classuite. _Mobile native app_. [AppStore](https://itunes.apple.com/us/app/classuite-workspaces/id1329983329?mt=8) [GooglePlay](https://play.google.com/store/apps/details?id=com.classuite.workspces)
 
-## Using Views in your project
-Views morphs to the web and desktop through React DOM and to iOS and Android through React Native.
-Views can support other morphing targets, if you're interested in implementing
-on Angular, Ember, Vue, etc, [let us know](https://github.com/viewstools/morph/issues/new)!
-
-1. If you don't have an app, create a new one:
-_To make a new web or desktop app_ run:
-```
-yarn global add create-react-app
-create-react-app my-app
-```
-
-_To make a new native app_ run:
-```
-yarn global add create-react-native-app
-create-react-native-app my-app
-```
-
-2. Add Views on it:
-
-```
-yarn global add use-views
-cd my-app
-use-views
-```
-
-# Composition model
+## Table of Contents
+1. [Use Views in your project](UseViews/README.md)
+- Open source (code driven)
+- Using Views Tools (code and WYSIWYG editor for designers)
+2. Compose Views  
 
 Views uses [Atomic Design Composition Pattern](http://patternlab.io/) to ensure
 interface consistency across all views.
@@ -421,18 +403,22 @@ Text
 In the example above, the second `Text` is outside of the top level container
 therefore it won't be displayed.
 
-## Scopes
+## Scope properties
 Setting one or multiple conditions on a block will define the way it will render.
 There are two ways you can take advantage of the scopes on any given block:
 1. To control how a block looks like when rendered in the view
 2. To show or hide a block from the view
 
 Scopes are defined in the logic files, back-end, or via service call.
-Each scope depends on the value passed to each prop.
+Each scope depends on the value passed to respective prop.
 
 General syntax rules:
-`when` the `props.conditionName` is true, display
-`!props.conditionName` is a negation of the value passed to the prop
+1. `when` the `props.conditionName` is true, display
+2. `!props.conditionName` is a negation of the value passed to the prop
+3. There is a base scope which includes all the properties of the block without
+leading `when` statement.
+4. Properties included in each scope have to also be used in the base scope
+with a default value.
 
 ### Control properties of blocks dynamically
 Blocks and Views can have many scopes driven by `when` statements.
@@ -516,21 +502,21 @@ All the conditions above result in this interface:
 
 ### Control when blocks are rendered/shown
 
-When you use the `when` condition as a last line of block's properties,
-it will act as a rendering switch, to show or hide the block.
+You can use `onWhen` condition as part of the base scope to act as a rendering
+switch, and show or hide the block.
 
 ```views
 Popup Text
 text Yoohoo!
-when props.goesYoohoo
+onWhen props.goesYoohoo
 ```
 At this point `props.goesYoohoo` expects a boolean value and can be set
-as true or false in tests file. An example would look like:
+as true or false in the Props block. An example would look like:
 ```
-WithPopup Test
+Props
+when Popup is visible
 goesYoohoo true
-
-WithoutPopup Test
+when Popup is not visible
 goesYoohoo false
 ```
 If you use Views Tools you will see two artboards in the preview with Popup block
@@ -1185,6 +1171,8 @@ fly when the morpher runs.
 ### Don’t name props unless you absolutely have to
 ### Keep props simple
 ### Dont repeat blocks, use lists
+### Design System folders
+### Sensible Duplication
 
 ## Blocks Examples
 
