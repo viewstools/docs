@@ -8,7 +8,7 @@ and as a rule of thumb, add `flex 1` to blocks, when you need them to push
 other blocks away, or take more space.
 
 #### 001. No flex 1
-![Flex Not Used](images/Flex001.png)
+![Flex Not Used](Flex001.png)
 ```views
 FlexTest Vertical
 backgroundColor #ffaa00
@@ -22,7 +22,7 @@ text Content
 ```
 
 #### 002. Flex on the Vertical only
-![Flex On The Vertical Only](images/Flex002.png)
+![Flex On The Vertical Only](lex002.png)
 ```views
 FlexTest Vertical
 flex 1
@@ -36,7 +36,7 @@ fontWeight 400
 text Content
 ```
 #### 003. Flex on the Vertical and on the Text block
-![Flex On The Vertical and Text](images/Flex003.png)
+![Flex On The Vertical and Text](Flex003.png)
 ```views
 FlexTest Vertical
 flex 1
@@ -52,7 +52,7 @@ text Content
 ```
 
 #### 004. Flex on the Horizontal only
-![Flex On The Horizontal Only](images/Flex004.png)
+![Flex On The Horizontal Only](Flex004.png)
 ```views
 Horizontal
 flex 1
@@ -67,7 +67,7 @@ text Content
 ```
 
 #### 005. Flex on the Horizontal and Text
-![Flex On The Horizontal and Text](images/Flex005.png)
+![Flex On The Horizontal and Text](Flex005.png)
 ```views
 Horizontal
 flex 1
@@ -82,7 +82,7 @@ fontWeight 400
 text Content
 ```
 #### 006. No Flex 1 on the Vertical or on nested blocks
-![No Flex 1 on the Vertical on nested blocks](images/Flex006.png)
+![No Flex 1 on the Vertical on nested blocks](Flex006.png)
 ```views
 Vertical
 backgroundColor #ffaa00
@@ -103,7 +103,7 @@ text Content Two
 ```
 
 #### 007. Flex only on the Vertical (with nested blocks)
-![Flex only on the Vertical with nested blocks](images/Flex007.png)
+![Flex only on the Vertical with nested blocks](Flex007.png)
 ```views
 Vertical
 flex 1
@@ -125,7 +125,7 @@ text Content Two
 ```
 
 #### 008. Flex on the Vertical and on nested blocks
-![Flex on the Vertical and on nested blocks](images/Flex008.png)
+![Flex on the Vertical and on nested blocks](Flex008.png)
 ```views
 Vertical
 flex 1
@@ -149,7 +149,7 @@ text Content Two
 ```
 
 #### 008A. Flex on the Vertical and on one nested block only
-![Flex on the Vertical and on one nested block only](images/Flex008A.png)
+![Flex on the Vertical and on one nested block only](Flex008A.png)
 ```views
 Vertical
 flex 1
@@ -171,7 +171,7 @@ fontWeight 400
 text Content Two
 ```
 #### 009. No Flex 1 on the Horizontal or on nested blocks
-![No Flex 1 on the Horizontal or on nested blocks](images/Flex009.png)
+![No Flex 1 on the Horizontal or on nested blocks](Flex009.png)
 ```views
 Horizontal
 backgroundColor #ffaa00
@@ -192,7 +192,7 @@ text Content Two
 ```
 
 #### 010. Flex only on the Horizontal (with nested blocks)
-![Flex only on the Horizontal (with nested blocks)](images/Flex010.png)
+![Flex only on the Horizontal (with nested blocks)](Flex010.png)
 ```views
 Horizontal
 flex 1
@@ -214,7 +214,7 @@ text Content Two
 ```
 
 #### 011. Flex on the Horizontal and on nested blocks
-![Flex on the Horizontal and on nested blocks](images/Flex011.png)
+![Flex on the Horizontal and on nested blocks](Flex011.png)
 ```views
 Horizontal
 flex 1
@@ -238,7 +238,7 @@ text Content Two
 ```
 
 #### 011A. Flex on the Horizontal and on one nested block only
-![Flex on the Horizontal and on one nested block only](images/Flex011A.png)
+![Flex on the Horizontal and on one nested block only](Flex011A.png)
 ```views
 Horizontal
 flex 1
