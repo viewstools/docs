@@ -19,6 +19,8 @@ As a component it can be used inside of any other `.view` file and styled at poi
 The power of the atomized composition model allows components to become reusable templates as the
 app's functionality and the design system grows.
 
+We use [Yoga layout engine](https://github.com/facebook/yoga)
+
 ## Containers and content blocks
 
 Containers wrap other blocks, displace, and align them.
@@ -36,7 +38,7 @@ Examples of final interface
 
 [More on containers](Blocks/README.md)
 
-### Content
+### Content blocks
 
 1. Capture block lets you capture user input as data.
 2. Image block displays graphic files, like JPGs, PNGs, GIFFs, and more
@@ -44,4 +46,69 @@ Examples of final interface
 4. SVG block renders vector graphics.
 ![Content blocks](CompositionModel/containersFinal.jpg)
 
-[More on content blocks](Blocks/README.md)
+[Examples of basic blocks](Blocks/README.md)
+
+## Composer (when you use Views Tools)
+
+
+
+## Proximity nesting (when you use code editor)
+
+Proximity nesting is how we do composition inside a view. You can think about your
+view as a stack of blocks where new lines set blocks apart.
+
+```
+Top Vertical
+InsideTop Vertical
+Text
+```
+In the example above, the hierarchy is:
+* `Top`
+  * `InsideTop`
+    * `Text`
+
+What if we want to have the text at the same level of `InsideTop`? Our code
+would look like:
+
+```
+Top Vertical
+InsideTop Vertical
+
+Text
+```
+
+Our hierarchy now looks like:
+* `Top`
+  * `InsideTop`
+  * `Text`
+That new line before `Text` separates it from `InsideTop`.
+
+This is a rule that applies to almost all blocks except the following content
+blocks: `Image`, `Text`, `CaptureEmail`, `CaptureFile`, `CaptureNumber`, `CapturePhone`,
+`CaptureSecure`, `CaptureText`, `CaptureTextArea`, `Proxy`, `SvgCircle`, `SvgEllipse`, `SvgLine`,
+`SvgPath`, `SvgPolygon`, `SvgPolyline`, `SvgRect`, `SvgText`, `SvgStop`.
+
+With that in mind, if we want to have two `Text`s next to each other, we don't
+need a new line between them. The following code:
+```
+Top Vertical
+Text
+Text
+```
+
+Gives us the hierarchy we're after:
+* `Top`
+  * `Text`
+  * `Text`
+
+A view can only have one top level block. If you have more than one, only the
+first one will be displayed. E.g.:
+
+```
+Top Vertical
+Text
+
+Text
+```
+In the example above, the second `Text` is outside of the top level container
+therefore it won't be displayed.
