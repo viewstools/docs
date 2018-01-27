@@ -1,8 +1,8 @@
 # All styling properties
 
-### F
-[flex](Flexbox.md)
-[flex-direction](Flexbox.md)
+## F
+[flex](flex.md)
+[flexDirection](flexDirection.md)
 
 
 
