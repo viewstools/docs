@@ -63,12 +63,6 @@ Reduce the cost of design iterations.</br>
 
 
 
-
-
-## ✨ Tests
-
-
-
 ### Need help?
 
 Tests might be tricky. Reach out with questions via our
@@ -85,50 +79,7 @@ saved as `.view.js` file.
 If on some point you decide you don't need Views anymore you can always use
 generated components located in `.view.js` files without redoing the interface.
 
-### Embedding Views
-Views can be used in other views through their file name.
 
-![Views can be embedded in ](images/embedingViews.jpg)
-
-Common use case: Say you have a View that contains a button with a text label and
-you want to choose different font size for it. You will want to change it in one
-place instead of in every place of use.
-1. Extract the button code to separate .view file and save it as file
-starting with a capital letter
-2. Replace the previous button code with only the name of the extracted View,
-in our example it's `Filename`
-3. From now on `Filename.view` is your Custom Block and you will
-see it being updated across your app upon any new changes.
-
-This is a simple View with one Text Block BEFORE using it as a Custom Block:
-```views
-Text
-text Button Label
-fontSize 20
-color #f7941e
-```
-
-And here's how it should look like AFTER turning Text Block into a Custom Block:
-```views
-Filename
-```
-
-Calling Views by the `Filename` requires the `Filename.view` in src
-folder with the code you want to inject. In the example above, `Filename.view` should have:
-
-```views
-Text
-text Button Label
-fontSize 20
-color #f7941e
-```
-
-Custom Blocks are capable of storing Properties, States, and Blocks, and even
-another Views or Smart Views.
-
-Since any existing .view file is a Custom Block by default anyone can create, manage,
-and delete them. It makes the composition pattern accessible to designers and
-non-technical team members.
 
 ## .view.logic.js === Smart View
 Any View file can be also wrapped with JavaScript logic to make a Smart View.

@@ -124,6 +124,9 @@ see it being updated across your app upon any new changes.
 ### Use case one - change text at the point of use
 
 This is a simple View with one Text block BEFORE using it as a Custom Block:
+
+![Button with Text block as part of it](reuse1.png)
+
 **before**
 ```views
 Button Vertical
@@ -154,6 +157,9 @@ text props
 
 And here's how it should look like AFTER saving `Text` as `Label.view` file
 and using it in the `Button.view` file:
+
+![Button with Text block used as a Custom Label block](reuse2.png)
+
 **after**
 ```views
 Button Vertical
@@ -167,6 +173,9 @@ text BUY NOW!
 
 Back to our example. To change the font size in all instances of `Button.view`
 change the `fontSize` value directly in the `Label`:
+
+![Button with Label block embedded from Label.view file and small font size](reuse3.png)
+
 **before**
 ```views
 Button Vertical
@@ -188,6 +197,9 @@ text props
 
 And here's how it should look like AFTER saving `Text` as `Label.view` file
 and using it in the `Button.view` file:
+
+![Button with Label block embedded from Label.view file and bigger font size](reuse3.png)
+
 **after**
 ```views
 Button Vertical
