@@ -22,7 +22,7 @@ text Content
 ```
 
 #### 002. Flex on the Vertical only
-![Flex On The Vertical Only](flex002.png)
+![Flex On The Vertical Only](Flex002.png)
 ```views
 FlexTest Vertical
 flex 1
