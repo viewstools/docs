@@ -1,33 +1,9 @@
 # All styling properties
 
-### F
-[flex](Flexbox.md)
-[flex-direction](Flexbox.md)
+## A
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## F
+[flex](flex.md)
 
 
 

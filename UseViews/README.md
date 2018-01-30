@@ -126,3 +126,12 @@ ANSWER:
 - We are planning media queries through scopes too.
 - Animations are done for React Web through CSS transitions.
 - In Native, you can use animated through JS and the implementation on the roadmap https://trello.com/b/NhIKKbol/views-roadmap.
+
+### .view.js is auto-generated and shouldn't be edited
+QUESTION: I ran views-morph on my project, and it created a bunch of other files, what's going on?
+
+ANSWER:
+Say you have a View called `My.view`. When morphing it, Views will create a file
+called `My.view.js`. You can safely ignore `.view.js` files as they'll be created on the
+fly when the morpher runs and your changes will be overwritten.
+
