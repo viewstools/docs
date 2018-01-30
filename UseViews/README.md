@@ -134,3 +134,4 @@ ANSWER:
 Say you have a View called `My.view`. When morphing it, Views will create a file
 called `My.view.js`. You can safely ignore `.view.js` files as they'll be created on the
 fly when the morpher runs and your changes will be overwritten.
+
