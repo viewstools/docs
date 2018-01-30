@@ -1,8 +1,9 @@
 # All styling properties
 
+## A
+
 ## F
 [flex](flex.md)
-[flexDirection](flexDirection.md)
 
 
 
