@@ -3,7 +3,7 @@
 ## A
 
 ## F
-[flex](flex.md)
+[flex](Flex.md)
 
 
 
