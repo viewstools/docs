@@ -54,7 +54,9 @@ Reduce the cost of design iterations.</br>
 1. [Use Views in your project](UseViews/README.md)
 
 ⋅⋅⋅Open source (code driven)
+
 ⋅⋅⋅Using Views Tools (code and WYSIWYG editor for designers)
+
 2. [Compose Views](CompositionModel/README.md)
 
 ⋅⋅⋅Atomic Design pattern
