@@ -89,7 +89,7 @@ ANSWER:
 QUESTION: Not clear what is the integration workflow (i.e., embedding Views-driven components into existing React app), is it a compiled version of component being added to the project? Is "Views" an all-or-nothing kind of thing?
 
 ANSWER:
-![Views Project Structure](UseViews/ProjectStructure.jpg)
+![Views Project Structure](ProjectStructure.jpg)
 
 ### Your project, your folder structure
 QUESTION: Synthetic limitations. Like one block in a file - sometimes, its rather convenient to define few private glamorous/styled-components/whatever-else-CSS-in-JS components right in the same file, those are getting composed into a single  export ed component then. You can then generalize/extract these sub-components at will without changing the original component's public contract.
