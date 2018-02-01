@@ -36,7 +36,7 @@ Containers wrap other blocks, displace, and align them.
 Examples of final interface
 ![Containers final interface representation](containersFinal.jpg)
 
-[More on containers](Blocks/README.md)
+[More on containers](../Blocks/README.md)
 
 ### Content blocks
 
@@ -46,7 +46,7 @@ Examples of final interface
 4. SVG block renders vector graphics.
 ![Content blocks](contentblocks.jpg)
 
-[Examples of basic blocks](Blocks/README.md)
+[Examples of basic blocks](../Blocks/README.md)
 
 
 ## Proximity nesting and Composer
