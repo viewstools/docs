@@ -94,7 +94,7 @@ are changing based on the `isClicked` condition specified in `FakeProps` of `But
 Here's how we pass the temporary test mock data to the Button using tests:
 
 Here's the visual result of the conditions above :
-![when conditions - ugly](whens-ugly.png)
+![when conditions - ugly](whens-ungly.png)
 
 ## Control when blocks are rendered/shown
 
@@ -177,7 +177,7 @@ With the simplification of `when` conditions, ternaries like:
 `text props.isClicked ? 'Nicely done!' : 'Go for it!'`
 are no longer supported.
 
-Read more about this point in our [Useful Conventions](Conventions/README.md) section.
+Read more about this point in our [Useful Conventions](../Conventions/README.md) section.
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
 Mention `@views-tom` or `@dario` to make sure that we get your notifications.
