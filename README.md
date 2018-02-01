@@ -52,11 +52,11 @@ Reduce the cost of design iterations.</br>
 
 ## Table of Contents
 1. [Use Views in your project](UseViews/README.md)
-- Open source (code driven)
-- Using Views Tools (code and WYSIWYG editor for designers)
+  - Open source (code driven)
+  - Using Views Tools (code and WYSIWYG editor for designers)
 2. [Compose Views](CompositionModel/README.md)
-- Atomic Design pattern
-- Containers and content blocks
+  - Atomic Design pattern
+  - Containers and content blocks
 3. [Examples of basic blocks](Blocks/README.md)
 4. [Use properties to style blocks](Properties/README.md)
 5. [Use scope properties ](Scopes/README.md)
