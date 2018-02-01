@@ -58,7 +58,7 @@ the first quarter of 2018.
 1. How my distributed teams can benefit from Views?
 2. What about other designers, those who don't have front-end experience, how can they contribute?
 
-[![Quick overview of how to implement a feature in Views](UseViews/FAQTools1.png)](https://vimeo.com/250934086 "Quick overview of how to implement a feature in Views")
+[![Quick overview of how to implement a feature in Views](FAQTools1.png)](https://vimeo.com/250934086 "Quick overview of how to implement a feature in Views")
 
 ### Out of experimental phase
 QUESTION: The topmost concern is that the entire thing looks rather experimental, implies certain workflows, and at the same time - rather opinionated and intrusive (both project-structure-wise and dev-workflow).
@@ -89,7 +89,7 @@ ANSWER:
 QUESTION: Not clear what is the integration workflow (i.e., embedding Views-driven components into existing React app), is it a compiled version of component being added to the project? Is "Views" an all-or-nothing kind of thing?
 
 ANSWER:
-![Views Project Structure](UseViews/ProjectStructure.jpg)
+![Views Project Structure](ProjectStructure.jpg)
 
 ### Your project, your folder structure
 QUESTION: Synthetic limitations. Like one block in a file - sometimes, its rather convenient to define few private glamorous/styled-components/whatever-else-CSS-in-JS components right in the same file, those are getting composed into a single  export ed component then. You can then generalize/extract these sub-components at will without changing the original component's public contract.
