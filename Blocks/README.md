@@ -215,7 +215,7 @@ userAvatar https://viewsdx.s3.amazonaws.com/userAvatar.png
 userName Joe Summers
 ```
 
-[More on Fake Props](Scopes/README.md)
+[More on Fake Props](../Scopes/README.md)
 
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
