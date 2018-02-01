@@ -52,28 +52,26 @@ Reduce the cost of design iterations.</br>
 
 ## Table of Contents
 1. [Use Views in your project](UseViews/README.md)
-
-⋅⋅⋅Open source (code driven)
-
-⋅⋅⋅Using Views Tools (code and WYSIWYG editor for designers)
+Open source (code driven)
+Using Views Tools (code and WYSIWYG editor for designers)
 
 2. [Compose Views](CompositionModel/README.md)
+Atomic Design pattern
+Containers and content blocks
 
-⋅⋅⋅Atomic Design pattern
-⋅⋅⋅Containers and content blocks
 3. [Examples of basic blocks](Blocks/README.md)
+Text, Image, Captures, Svgs
+Button, List of cards
 
-⋅⋅⋅Text, Image, Captures, Svgs
-⋅⋅⋅Button, List of cards
 4. [Use properties to style blocks](Properties/README.md)
+Internal (CSS)
+External (props)
 
-⋅⋅⋅Internal (CSS)
-⋅⋅⋅External (props)
 5. [Use scope properties to control the state of blocks](Scopes/README.md)
+Control states of blocks
+Control when blocks are rendered
+FakeProps
 
-⋅⋅⋅Control states of blocks
-⋅⋅⋅Control when blocks are rendered
-⋅⋅⋅FakeProps
 6. [Use logic to fully control views](Logic/README.md)
 7. [Route views with "at"](Routes/README.md)
 8. [Integrate React components](ReactComponents/README.md)
