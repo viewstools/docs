@@ -18,7 +18,7 @@ of blocks, specifically, we use it to control:
 2. Alignment
 3. Distribution
 
-[If you're curious about you can read more about flexbox here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes).
+[If you're curious about you can read more about flexbox here](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 See the [quirks](../QUIRKS.md) for a few cases in which we've spotted flex wasn't
 cutting it for us.
@@ -27,7 +27,7 @@ Every block, by default, has `display flex` property enabled.
 Horizontals have `flexDirection` set to `row`, and Verticals to `column`.
 
 ### All supported properties
-[Go to the list of all properties](AllStyingProperties.md)
+[Go to the list of all properties](AllStylingProperties.md)
 
 ## External properties
 Say, you want to change the label of a button dynamically depending on the View
