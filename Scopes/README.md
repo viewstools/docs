@@ -122,13 +122,6 @@ The Popup will be rendered in the view of the final production build based on th
 value of the `props.goesYoohoo` passed from the `Popup.view.logic.js` file, from
 the back-end, or via an API call. By default the Popup will not render.
 
-## Javascript ternaries are no longer supported
-With the simplification of `when` conditions, ternaries like:
-`text props.isClicked ? 'Nicely done!' : 'Go for it!'`
-are no longer supported.
-
-Read more about this point in our [Useful Conventions](Conventions/README.md) section.
-
 ## FakeProps
 
 Properties used in the `FakeProps` block give you access to pass temporary data
@@ -179,6 +172,12 @@ To avoid errors, make sure your fake props comply with these simple rules:
 1. Always start the scope name with a `when`
 2. The name of the scope can have spaces, but not special characters like dashes or parenthesis.
 
+## Javascript ternaries are no longer supported
+With the simplification of `when` conditions, ternaries like:
+`text props.isClicked ? 'Nicely done!' : 'Go for it!'`
+are no longer supported.
+
+Read more about this point in our [Useful Conventions](Conventions/README.md) section.
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
 Mention `@views-tom` or `@dario` to make sure that we get your notifications.

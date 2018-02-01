@@ -20,14 +20,14 @@ of blocks, specifically, we use it to control:
 
 [If you're curious about you can read more about flexbox here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes).
 
-See the [quirks](QUIRKS.md) for a few cases in which we've spotted flex wasn't
+See the [quirks](../QUIRKS.md) for a few cases in which we've spotted flex wasn't
 cutting it for us.
 
 Every block, by default, has `display flex` property enabled.
 Horizontals have `flexDirection` set to `row`, and Verticals to `column`.
 
 ### All supported properties
-[Go to the list of all properties](Properties/AllStyingProperties.md)
+[Go to the list of all properties](AllStyingProperties.md)
 
 ## External properties
 Say, you want to change the label of a button dynamically depending on the View

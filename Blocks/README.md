@@ -1,22 +1,20 @@
-# Examples of basic blocks
+# Examples of basic blocks - Content blocks
 
-## Content blocks
-
-### Basic Text block
+## Basic Text block
 
 ```views
 Text
 text Buy Now!
 ```
 
-### Named Text block
+## Named Text block
 
 ```views
 Label Text
 text Buy Now!
 ```
 
-### Text block with interpolated dynamic prop
+## Text block with interpolated dynamic prop
 
 To embed props inside a text value, use template literals (backticks are not needed) e.g.
 ```
@@ -27,7 +25,7 @@ text Welcome ${props.username}
 Given the `props.username` data (i.e. Joe Summers) will be passed to this block from logic,
 this text will render as: Welcome Joe Summers
 
-### Image
+## Image
 
 `Image` takes a `source` prop, it can be a URL or a local file.
 
@@ -36,7 +34,7 @@ UserAvatar Image
 source https://viewsdx.s3.amazonaws.com/userAvatar.png
 ```
 
-### Captures
+## Captures
 
 `Capture` is your way to accept written input from a user. We have a few types
 defined for this:
@@ -68,7 +66,7 @@ This is still work in progress and we're loooking at integrating some of the
 concepts of [formik](https://github.com/jaredpalmer/formik) to easy form
 creation and management without dictating UI.
 
-### Svgs
+## Svgs
 
 _SVGs are amazing_. They let you do amazing graphics that scale like crazy.
 Of course you can use an `Image` block to just show an SVG file as an image
@@ -111,14 +109,14 @@ run `views-morph file.svg` and 💥! You'll get a ready to go Views Svg!
 [Here's a little video on how you can use it in your project today](https://medium.com/viewsdx/from-svg-to-view-in-1-2-3-79cf8d771485).
 
 
-## Containers
+# Containers
 
 *Container* blocks let you group blocks together. They are:
 * `Vertical`
 * `Horizontal`
 * `List`
 
-### Button
+## Button
 
 Button with an icon on the side:
 ```views
@@ -147,7 +145,7 @@ d M24.5 9.7c-.2-.4-.5-.6-.9-.7l-7.1-1-3.2-6.4c-.3-.7-1.5-.7-1.8 0L8.4 8l-7 1c-.4
 Label Text
 text Buy Now!
 ```
-### List of cards
+## List of cards
 
 ![List with cards](People.png)
 
