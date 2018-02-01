@@ -51,23 +51,23 @@ Reduce the cost of design iterations.</br>
 - Classuite. _Mobile native app_. [AppStore](https://itunes.apple.com/us/app/classuite-workspaces/id1329983329?mt=8) [GooglePlay](https://play.google.com/store/apps/details?id=com.classuite.workspces)
 
 ## Table of Contents
-1. [Use Views in your project](UseViews/README.md)
+1. [Use Views in your project](UseViews/README.md)</br>
 Open source (code driven)</br>
 Using Views Tools (code and WYSIWYG editor for designers)</br>
 
-2. [Compose Views](CompositionModel/README.md)
+2. [Compose Views](CompositionModel/README.md)</br>
 Atomic Design pattern</br>
 Containers and content blocks</br>
 
-3. [Examples of basic blocks](Blocks/README.md)
+3. [Examples of basic blocks](Blocks/README.md)</br>
 Text, Image, Captures, Svgs</br>
 Button, List of cards</br>
 
-4. [Use properties to style blocks](Properties/README.md)
+4. [Use properties to style blocks](Properties/README.md)</br>
 Internal (CSS)</br>
 External (props)</br>
 
-5. [Use scope properties to control the state of blocks](Scopes/README.md)
+5. [Use scope properties to control the state of blocks](Scopes/README.md)</br>
 Control states of blocks</br>
 Control when blocks are rendered</br>
 FakeProps</br>
