@@ -58,7 +58,7 @@ the first quarter of 2018.
 1. How my distributed teams can benefit from Views?
 2. What about other designers, those who don't have front-end experience, how can they contribute?
 
-[![Quick overview of how to implement a feature in Views](UseViews/FAQTools1.png](https://vimeo.com/250934086 "Quick overview of how to implement a feature in Views")
+[![Quick overview of how to implement a feature in Views](UseViews/FAQTools1.png)](https://vimeo.com/250934086 "Quick overview of how to implement a feature in Views")
 
 ### Out of experimental phase
 QUESTION: The topmost concern is that the entire thing looks rather experimental, implies certain workflows, and at the same time - rather opinionated and intrusive (both project-structure-wise and dev-workflow).
@@ -134,4 +134,3 @@ ANSWER:
 Say you have a View called `My.view`. When morphing it, Views will create a file
 called `My.view.js`. You can safely ignore `.view.js` files as they'll be created on the
 fly when the morpher runs and your changes will be overwritten.
-
