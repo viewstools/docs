@@ -15,15 +15,28 @@ text Buy Now!
 ```
 
 ## Text block with interpolated dynamic prop
-_TODOreviewInterpolation_
-To embed props inside a text value, use template literals (backticks are not needed) e.g.
-```
+To embed dynamic values inside a text value, use a simple slot and pass the dynamic
+value from the `.view.logic.js`, like:
+```views
 Text
-text Welcome ${props.username}
+text <greeting
 ```
 
-Given the `props.username` data (i.e. Joe Summers) will be passed to this block from logic,
-this text will render as: Welcome Joe Summers
+Then in the `.view.logic.js` file use:
+
+`greeting={`Welcome ${props.username}`}`
+
+This will render in the view as `Welcome Joe`.
+
+Another way of doing it would be to split the Text into two Text blocks:
+```views
+Horizontal
+Text
+text Welcome
+
+Text
+text <username
+```
 
 ## Image
 
@@ -156,7 +169,8 @@ from <
 User
 ```
 
-List repeats one view. The item has to be saved as a `.view` file within your project.
+List repeats one view. The item has to be saved as a `.view` file within your project
+and it CANNOT be a basic block, like Text or Image.
 
 In this example `User.view` file looks like this:
 
