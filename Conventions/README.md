@@ -5,14 +5,14 @@ Based on extensive testing we've created these rules to help you optimize the wo
 This is better
 ```views
 Button Vetrical
-onClick props.buy
+onClick <buy
 Label Text
 text Buy Now!
 ```
 Than this
 ```views
 Vetrical
-onClick props.buy
+onClick <buy
 Text
 text Buy Now!
 ```
@@ -21,69 +21,69 @@ text Buy Now!
 This is better
 ```views
 Button
-onClick props.buy
+onClick <buy
 ```
 Than this
 ```views
 Button Vetrical
-onClick props.buy
+onClick <buy
 Label Text
 text Buy Now!
 ```
 Where `Button` is a `Button.view` file
 ```views
 Button Vetrical
-onClick props
+onClick <
 Label Text
 text Buy Now!
 ```
 
-## Don’t name props unless you absolutely have to
+## Don’t name slots unless you absolutely have to
 This is better
 ```views
 Label Text
-text props
+text < Buy Now
 ```
 Than this
 ```views
 Label Text
-text props.label
+text <label
 ```
-If you avoid naming props, you can use the properties by the same name at the point of use
+If you avoid naming slots, you can use the properties by the same name at the point of use
 ```views
 Label
 text Buy Now!
 ```
-Otherwise, you would have to remember what is the custom name of the prop
+Otherwise, you would have to remember what is the custom name of the slot
 ```views
 Label
 label Buy Now!
 ```
 
-## Keep props simple
+## Keep slots simple
 This is better
 ```views
 Label Text
-onWhen props.isVisible
+onWhen <isVisible
 text Buy Now!
 ```
 Than this
 ```views
 Label Text
-onWhen props.isOne && props.isTwo || props.isThree
+onWhen <button.isVisible
 text Buy Now!
 ```
-Manage these in the logic file and expose simple prop back to the view like the
-one above `props.isVisible`
+Manage these in the logic file and expose simple slot back to the view like the
+one above `<isVisible`
 
-Complex props are easier for designers to reason about and they can be editable
+Simple slots are easier for designers to reason about and they are editable
 in the Views Tools.
 
 ## Don't repeat blocks, use lists
 This is better
 ```views
 Books List
-from props
+from <
 Book
 ```
 Than this
@@ -97,7 +97,7 @@ Book
 Book
 ```
 In design tools, we tend to duplicate elements in the layout to represent the lists.
-In production, we use lists with data passed dynamically from props.
+In production, we use lists with data passed dynamically from external data.
 
 ## Design System folders
 Any folders you create inside of the `src` in your project will be recognized by
@@ -124,57 +124,11 @@ in Views Tools.
 If you use `Main` folder to keep the top level views of your application, it will be
 a default folder in Views Tools, making it easy to explore the layouts to designers.
 
-## Sensible duplication and use of props
-When you face a question:
-"Should I duplicate a view or keep adding props to it?"
-You can think of the answer this way:
-1. Each view should be unique
-2. There is no value in having only props in a .view file, like this:
-```views
-Label Text
-text props
-color props
-fontSize props
-fontFamily props
-marginTop props
-marginBottom props
-```
-That view is totally useless since all the properties would have to be repeated
-at the point of use:
-```views
-Label
-text Buy Now!
-color green
-fontSize 14
-fontFamily Open Sans
-marginTop 10
-marginBottom 10
-```
-Back to duplication question.
-Say, you have a Label view defined by these properties:
-```views
-Label Text
-text props
-color green
-fontSize 14
-fontFamily Open Sans
-```
-But you also want to use another Label with different color. If the color of the Labels
-will be what differentiate them in your design then duplicate the Label, and change its name
-to `LabelGreen.view`. The duplicated Label can be now called `LabelRed.view`:
-```views
-Label Text
-text props
-color red
-fontSize 14
-fontFamily Open Sans
-```
-
 ## For readability, put the onWhen property as a first line below the block's name
 This reads better in Views Tools and in code
 ```views
 Label Text
-onWhen props.isVisible
+onWhen <isVisible
 fontSize 14
 color green
 ```
@@ -183,7 +137,7 @@ Than this
 Label Text
 fontSize 14
 color green
-onWhen props.isVisible
+onWhen <isVisible
 ```
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).

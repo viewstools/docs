@@ -27,7 +27,7 @@ on a real device, or iOS simulator. [Contribute here](https://github.com/viewsto
 ## I want to mix logic and interface styling in the same component
 Views has a specific pattern to separate logic from interface composition.
 We do that because the interface changes more often than the logic. That means,
-once the `props` contract is set, the changes in design are decoupled from the logic,
+once the `slots` (props) contract is set, the changes in design are decoupled from the logic,
 and both teams can work in parallel.
 
 

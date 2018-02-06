@@ -4,8 +4,8 @@ Properties define the style and type of all Blocks used in a view.
 There are two kinds of properties:
 - _Internal_: value is defined in the same .view file.
 Example: `text Buy Now`, `color red`
-- _External_: value comes from somewhere else (FakeProps, service, back-end).
-Example: `text props`
+- _External_: value comes from somewhere else (.view.logic.js, service, back-end).
+Example: `text <`, `text <label`
 
 ## Internal properties
 Views styling properties are based on regular CSS to lower the learning curve
@@ -29,14 +29,13 @@ Horizontals have `flexDirection` set to `row`, and Verticals to `column`.
 ### All supported properties
 [Go to the list of all properties](AllStylingProperties.md)
 
-## External properties
+## External properties, also called Slots
 Say, you want to change the label of a button dynamically depending on the View
 where the button is being used?
-1. Replace the value you want to make dynamic with `props`, or `props.anyName`
-2. Pass the value in FakeProps block and point of use, like `anyName value`
+To achieve that, add `<` before the value, like here `text < value`
 
 Here's an example of how to turn a Internal property `text` from `Buy Now` to an External
-property as a dynamic value, received through `props`.
+property as a dynamic value, managed through `slots`.
 
 **before**:
 ```views
@@ -49,41 +48,38 @@ color #f7941e
 **after**:
 ```views
 Text
-text props
+text < Buy Now
 fontSize 20
 color #f7941e
 ```
 
-After changing a value to a dynamic prop it will disappear from the preview.
-To bring the text back you need to add `text Buy Now` to the `FakeProps` block,
- like this:
-```
-FakeProps
-text Buy Now
-```
-
 Let's call that view `Label.view` and save it in the project folder.
-When you use it in another view, pass any value using the same name of the
+When you use it in another view, pass any other value using the same name of the
 property:
-```
+```views
 Label
-text Buy Now
+text Get New!!!
 ```
 
-You can keep passing it too:
-```
+Otherwise, if you just use `Label` view the default value will be used, so using:
+```views
 Label
-text props
+```
+will result in showing `Text` block with `Buy Now` value in your final build.
+
+
+You can also keep passing it too as a different slot, but it's usually not advised
+to give slots custom names:
+```views
+Text
+text <label Buy Now
+fontSize 20
+color #f7941e
 ```
 
-Even as a property with a custom name:
-```
-Label
-text props.label
-```
-
-Then, on the higher level of nesting, pass `label` property:
-```
+The reason why we don't advise to use custom slot names is because you will have to
+remember what you called it, and that introduces unnecessary complexity:
+```views
 Label
 label Buy Now
 ```

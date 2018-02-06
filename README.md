@@ -62,11 +62,10 @@ Text, Image, Captures, Svgs</br>
 Button, List of cards</br>
 4. [Use properties to style blocks](Properties/README.md)</br>
 Internal (CSS)</br>
-External (props)</br>
+External (slots)</br>
 5. [Use scope properties ](Scopes/README.md)</br>
 Control states of blocks</br>
 Control when blocks are rendered</br>
-FakeProps</br>
 6. [Keep logic ](Logic/README.md)
 7. [Route views with "at"](Routes/README.md)
 8. [Integrate React components](ReactComponents/README.md)

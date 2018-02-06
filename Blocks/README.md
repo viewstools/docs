@@ -15,7 +15,7 @@ text Buy Now!
 ```
 
 ## Text block with interpolated dynamic prop
-
+_TODOreviewInterpolation_
 To embed props inside a text value, use template literals (backticks are not needed) e.g.
 ```
 Text
@@ -27,7 +27,7 @@ this text will render as: Welcome Joe Summers
 
 ## Image
 
-`Image` takes a `source` prop, it can be a URL or a local file.
+`Image` takes a `source` property, it can be a URL or a local file.
 
 ```views
 UserAvatar Image
@@ -152,16 +152,9 @@ text Buy Now!
 List of cards:
 ```views
 People List
-from props
+from <
 User
-
-
-FakeProps
-from list 10
 ```
-
-If you use Views Tools you can set a repetition number as part of a `FakeProps` block
-positioned at the end of the view file, with enough empty lines to escape the top container.
 
 List repeats one view. The item has to be saved as a `.view` file within your project.
 
@@ -172,14 +165,9 @@ In this example `User.view` file looks like this:
 ```views
 User Horizontal
 Avatar Image
-source props.userAvatar
+source <userAvatar https://viewsdx.s3.amazonaws.com/userAvatar.png
 Name Text
-text props.userName
-
-
-FakeProps
-userAvatar https://viewsdx.s3.amazonaws.com/userAvatar.png
-userName Joe Summers
+text <userName Joe Summers
 ```
 
 ![Styled card](UserStyled.png)
@@ -197,23 +185,16 @@ marginLeft 10
 marginRight 10
 borderTop 1px solid #e6e6e6
 Avatar Image
-source props.userAvatar
+source <userAvatar https://viewsdx.s3.amazonaws.com/userAvatar.png
 width 40
 height 40
 Name Text
-text props.userName
+text <userName Joe Summers
 fontSize 14
 fontFamily Montserrat
 fontWeight 300
 marginLeft 15
-
-
-FakeProps
-userAvatar https://viewsdx.s3.amazonaws.com/userAvatar.png
-userName Joe Summers
 ```
-
-[More on Fake Props](../Scopes/README.md)
 
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).

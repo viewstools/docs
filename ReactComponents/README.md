@@ -44,33 +44,32 @@ export default ({ positionLat: lat, positionLng: lng, ...props }) => (
 
 Then in your view, following [the example from their docs](https://tomchentw.github.io/react-google-maps/#usage--configuration):
 
-```
+```views
 GoogleMap
 defaultZoom 0
 defaultCenterLat -34.397
 defaultCenterLng 150.644
 Marker
+onWhen <isMarkerShown
 positionLat -34.397
 positionLng 150.644
-when props.isMarkerShown
 ```
 
 You will notice that we've renamed certain props and flattened them out. In
 order to reduce the complexity of the language we made a decision not to allow
 complex objects in views as props for now. This isn't set in stone though, so if
 you feel strong about it, let us know and we can work to enable a syntax like:
-```
+```views
 GoogleMap
 defaultZoom 0
 defaultCenter
 lat -34.397
 lng 150.644
 Marker
+onWhen <isMarkerShown
 position
 lat -34.397
 lng 150.644
-
-when props.isMarkerShown
 ```
 
 ### .view.fake

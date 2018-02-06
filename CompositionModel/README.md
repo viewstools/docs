@@ -143,7 +143,7 @@ text BUY NOW!
 
 Take all the lines of the `Text` block and paste them to a new document. Save it
 within your project as `Label.view`. If you want to reuse the `Label` in many places with
-different text, turn it into prop by adding `props` instead of value.
+different text, turn it into slot by adding `< ` before the value.
 
 ```views
 Label Text
@@ -152,7 +152,7 @@ color white
 fontFamily Montserrat
 fontSize 16
 fontWeight 700
-text props
+text < default label
 ```
 
 And here's how it should look like AFTER saving `Text` as `Label.view` file
@@ -192,7 +192,7 @@ color white
 fontFamily Montserrat
 fontSize 14
 fontWeight 700
-text props
+text < default label
 ```
 
 And here's how it should look like AFTER saving `Text` as `Label.view` file
@@ -219,7 +219,7 @@ color white
 fontFamily Montserrat
 fontSize 20
 fontWeight 700
-text props
+text < default label
 ```
 
 

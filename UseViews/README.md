@@ -43,12 +43,8 @@ nesting patterns for great reusability and control.
 
 ### Props Panel
 Align with Flex, tweak typography, adjust white space, pick the right colours,
-use dynamic props, images and SVGs. Gain full creative control with the use of
+use dynamic slots, images and SVGs. Gain full creative control with the use of
 straightforward CSS-like properties.
-
-### Props Data
-Provide temporary data for the dynamic `props` during design process to take full
-control over the states and interactions of the interface.
 
 We aim to release first public version of Tools after finishing testing phase in
 the first quarter of 2018.
@@ -102,7 +98,7 @@ QUESTION: The default React component contract is preserved but is assumed to be
 
 ANSWER:
 - We are open to changing the extension of the logic file. Therefore, the name `.view.logic.js` was used to reinforce the pattern that the view has logic attached to it. If that file exists, Views picks it up instead of the view.js when it is required by another view.
-- Logic files are not always required for each view, team can make other implementation choices. You can pass props across like in any React application and choose where your logic lives.
+- Logic files are not always required for each view, team can make other implementation choices. You can pass props (we call them slots in Views syntax, but they are props) across like in any React application and choose where your logic lives.
 
 ### Use third party components via JS
 QUESTION: Manual boilerplate to integrate the existing ready-to-use 3rd-party component (I know this will be addressed at some point, but in the current implementation its kinda diminishes the purpose - since we write the terse view first, but are inclined to have a "wiring" file for every external component).
