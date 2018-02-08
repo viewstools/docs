@@ -94,13 +94,14 @@ Our hierarchy now looks like:
   * `Text`
 That new line before `Text` separates it from `InsideTop`.
 
-Each new line with move blocks below one nesting level higher, and since a view
+Each new line will move blocks below one nesting level higher, and since a view
 can only have one top level block, you can remove blocks from the view by adding
 enough empty space before.
 
 ```
 Top Vertical
 Text
+
 
 Text
 ```
