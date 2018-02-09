@@ -198,7 +198,7 @@ text < default label
 And here's how it should look like AFTER saving `Text` as `Label.view` file
 and using it in the `Button.view` file:
 
-![Button with Label block embedded from Label.view file and bigger font size](reuse3.png)
+![Button with Label block embedded from Label.view file and bigger font size](reuse4.png)
 
 **after**
 ```views
