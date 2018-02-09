@@ -2,6 +2,7 @@
 
 Setting one or multiple conditions on a block will define the way it will render.
 There are two ways you can take advantage of the scopes on any given block:
+
 1. To control how a block looks like when rendered in the view
 2. To show or hide a block from the view
 
@@ -9,16 +10,19 @@ Scopes are defined in the logic files, back-end, or via service call.
 Each scope depends on the value passed to respective slot.
 
 General syntax rules:
+
 1. `when` the `<conditionName` is true, display
 2. `<!props.conditionName` is a negation of the value passed to the slot
 3. There is a base scope which includes all the properties of the block without
-leading `when` statement.
+   leading `when` statement.
 4. Properties included in each scope have to also be used in the base scope
-with a default value.
+   with a default value.
 
 ## Control properties of blocks dynamically
+
 Blocks and Views can have many scopes driven by `when` statements.
 Basic example:
+
 ```views
 Button Vertical
 backgroundColor white
@@ -32,6 +36,7 @@ when <isClicked
 color white
 text I was clicked
 ```
+
 This comes handy when you want to change a block on interaction, or when you
 want to animate transitions.
 
@@ -67,14 +72,17 @@ text Click me
 when <isClicked
 color white
 text I was clicked
+
 SubTitle
 marginTop 5
 text Go for it!
 when <isClicked
 text Nicely done!
 ```
+
 The `SubTitle` view is saved as `SubTitle.view` file and contains on `Text` block
 with `text` defined as external slot.
+
 ```views
 SubTitle Text
 marginTop < 10
@@ -83,6 +91,7 @@ fontFamily Montserrat
 fontSize 16
 text < my text
 ```
+
 As you see, there is no `when` props in the `Subtitle` view but the `text` values
 are changing based on the `isClicked` condition specified in `Button.view` file.
 By default `when` will get `true` value and will create a new artboard in Views Tools.
@@ -100,6 +109,7 @@ Popup Text
 text Yoohoo!
 onWhen <goesYoohoo
 ```
+
 At this point slot `<goesYoohoo` expects a boolean value and can be set
 as true or false in the state of the `.view.logic.js` file.
 
@@ -117,13 +127,13 @@ the back-end, or via an API call. By default the Popup will not render.
 2. The name of the scope can have spaces, but not special characters like dashes or parenthesis.
 
 ## Javascript ternaries and props are no longer supported
+
 With the simplification of `when` conditions, ternaries like:
 `text props.isClicked ? 'Nicely done!' : 'Go for it!'`
 are no longer supported.
 
 With the introduction of slots, props are no longer supported (specifically from
 the morpher version 12.0.0)
-
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
 Mention `@views-tom` or `@dario` to make sure that we get your notifications.

@@ -15,8 +15,10 @@ text Buy Now!
 ```
 
 ## Text block with interpolated dynamic prop
+
 To embed dynamic values inside a text value, use a simple slot and pass the dynamic
 value from the `.view.logic.js`, like:
+
 ```views
 Text
 text <greeting
@@ -29,6 +31,7 @@ Then in the `.view.logic.js` file use:
 This will render in the view as `Welcome Joe`.
 
 Another way of doing it would be to split the Text into two Text blocks:
+
 ```views
 Horizontal
 Text
@@ -52,22 +55,24 @@ source https://viewsdx.s3.amazonaws.com/userAvatar.png
 `Capture` is your way to accept written input from a user. We have a few types
 defined for this:
 
-- `CaptureEmail`
-- `CaptureFile`
-- `CaptureInput`
-- `CaptureNumber`
-- `CapturePhone`
-- `CaptureSecure`
-- `CaptureText`
-- `CaptureTextArea`
+* `CaptureEmail`
+* `CaptureFile`
+* `CaptureInput`
+* `CaptureNumber`
+* `CapturePhone`
+* `CaptureSecure`
+* `CaptureText`
+* `CaptureTextArea`
 
 To set content of a any capture field use `placeholder` property. Example:
+
 ```
 Email CaptureEmail
 placeholder john@email.com
 ```
 
 To auto focus in a Capture field use `autoFocus` property. Example:
+
 ```
 CaptureTextArea
 autoFocus true
@@ -104,6 +109,7 @@ block. Inside it, you can use a these specific blocks:
 * `SvgStop`
 
 While you can make an `Svg` by hand, like:
+
 ```views
 Svg
 viewBox 0 0 20 20
@@ -121,10 +127,10 @@ run `views-morph file.svg` and 💥! You'll get a ready to go Views Svg!
 
 [Here's a little video on how you can use it in your project today](https://medium.com/viewsdx/from-svg-to-view-in-1-2-3-79cf8d771485).
 
-
 # Containers
 
-*Container* blocks let you group blocks together. They are:
+_Container_ blocks let you group blocks together. They are:
+
 * `Vertical`
 * `Horizontal`
 * `List`
@@ -132,6 +138,7 @@ run `views-morph file.svg` and 💥! You'll get a ready to go Views Svg!
 ## Button
 
 Button with an icon on the side:
+
 ```views
 Button Horizontal
 onClick props
@@ -141,11 +148,14 @@ height 15
 viewBox 0 0 25 25
 SvgPath
 d M24.5 9.7c-.2-.4-.5-.6-.9-.7l-7.1-1-3.2-6.4c-.3-.7-1.5-.7-1.8 0L8.4 8l-7 1c-.4.1-.7.3-.9.7s0 .8.3 1l5.1 5-1.2 7.1c-.1.4.1.8.4 1 .2.1.4.2.6.2.2 0 .3 0 .5-.1l6.3-3.3 6.3 3.3c.3.2.7.1 1.1-.1.3-.2.5-.6.4-1l-1.2-7.1 5.1-5c.3-.3.4-.6.3-1z
+
+
 Label Text
 text Buy Now!
 ```
 
 Button with an icon on the top:
+
 ```views
 Button Vertical
 onClick props
@@ -155,14 +165,18 @@ height 15
 viewBox 0 0 25 25
 SvgPath
 d M24.5 9.7c-.2-.4-.5-.6-.9-.7l-7.1-1-3.2-6.4c-.3-.7-1.5-.7-1.8 0L8.4 8l-7 1c-.4.1-.7.3-.9.7s0 .8.3 1l5.1 5-1.2 7.1c-.1.4.1.8.4 1 .2.1.4.2.6.2.2 0 .3 0 .5-.1l6.3-3.3 6.3 3.3c.3.2.7.1 1.1-.1.3-.2.5-.6.4-1l-1.2-7.1 5.1-5c.3-.3.4-.6.3-1z
+
+
 Label Text
 text Buy Now!
 ```
+
 ## List of cards
 
 ![List with cards](People.png)
 
 List of cards:
+
 ```views
 People List
 from <
@@ -180,6 +194,7 @@ In this example `User.view` file looks like this:
 User Horizontal
 Avatar Image
 source <userAvatar https://viewsdx.s3.amazonaws.com/userAvatar.png
+
 Name Text
 text <userName Joe Summers
 ```
@@ -202,6 +217,7 @@ Avatar Image
 source <userAvatar https://viewsdx.s3.amazonaws.com/userAvatar.png
 width 40
 height 40
+
 Name Text
 text <userName Joe Summers
 fontSize 14
@@ -209,7 +225,6 @@ fontFamily Montserrat
 fontWeight 300
 marginLeft 15
 ```
-
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
 Mention `@views-tom` or `@dario` to make sure that we get your notifications.
