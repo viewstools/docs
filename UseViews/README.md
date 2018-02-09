@@ -5,20 +5,20 @@
 1. If you don't have an app, create a new one:
 _To make a new web or desktop app_ run:
 ```
-yarn global add create-react-app
+npm install --global create-react-app
 create-react-app my-app
 ```
 
 _To make a new native app_ run:
 ```
-yarn global add create-react-native-app
+npm install --global create-react-native-app
 create-react-native-app my-app
 ```
 
 2. Add Views on it:
 
 ```
-yarn global add use-views
+npm install --global @viewstools/use
 cd my-app
 use-views
 ```
