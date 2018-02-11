@@ -56,11 +56,11 @@ You can think about your view as a stack of blocks where new lines set blocks ap
 
 Composer is a composition tool, and comes with Views Tools.
 
-**In Composer**
+**Example #1 In Composer**
 
 ![Nesting Levels 1 - Text inside the Second level container](nesting1.png)
 
-**In Code**
+**Example #1 In Code**
 ```views
 FirstNestingLevel Vertical
 SecondNestingLevel Vertical
@@ -72,11 +72,11 @@ In the example above, the hierarchy is:
   * `SecondNestingLevel`
     * `Text`
 
-**In Composer**
+**Example #2 In Composer**
 
 ![Nesting Levels 2 - Text inside the First level container](nesting2.png)
 
-**In Code**
+**Example #2 In Code**
 
 What if we want to have the text at the same level of `InsideTop`? Our code
 would look like:
