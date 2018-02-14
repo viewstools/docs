@@ -100,8 +100,7 @@ _We cherish openness, learning, and frequent shipping_
 
 ## 😍 How can I help?
 We're thrilled you want to help us make better UIs together 😀.
-You can contribute to the docs on [this repo](https://github.com/viewstools/docs)
-and to [Views morphers here](https://github.com/viewstools/morph).
+[Guidelines on contributions to the Morphers](https://github.com/viewstools/morph/blob/master/CONTRIBUTING.md)
 
 License BSD-3-Clause.<br>
 Copyright 2017 by UXtemple Ltd.
