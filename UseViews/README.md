@@ -23,6 +23,18 @@ cd my-app
 use-views
 ```
 
+## Upgrading the Morpher to a new major version
+When a new major version of the Morpher is released you can run this command to upgrade
+
+```yarn add --dev @viewstools/morph```
+
+We announce updates in the our Slack community [Join](https://slack.views.tools/) and you can find on [NPM Package](https://www.npmjs.com/package/@viewstools/morph) 
+
+To help you with updating your project to the latest changes we release [Code Modes](https://github.com/viewstools/codemods) together with major upgrades of the Morpher.
+
+To check what version of the morpher you are on use
+```npx views-morph --version```
+
 ## Using Views Tools (code and WYSIWYG editor for designers)
 Reach out to `@views-tom` in via our Slack Team to enroll for a pilot of beta
 tools.
