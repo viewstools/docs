@@ -123,7 +123,7 @@ stroke deepskyblue
 ```
 
 It's certainly more fun that have that done automatically for you 😇. You can
-run `views-morph file.svg` and 💥! You'll get a ready to go Views Svg!
+run `npx views-morph file.svg` in your Views project folder and 💥! You'll get a ready to go Views Svg!
 
 [Here's a little video on how you can use it in your project today](https://medium.com/viewsdx/from-svg-to-view-in-1-2-3-79cf8d771485).
 
