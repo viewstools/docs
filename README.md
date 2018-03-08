@@ -103,13 +103,13 @@ We're thrilled you want to help us make better UIs together 😀.
 [Guidelines on contributions to the Morphers](https://github.com/viewstools/morph/blob/master/CONTRIBUTING.md)
 
 ### Thank you to our main contributors ⊃━☆ﾟ. * ･ ｡ﾟ
-Amy https://github.com/amymc
-Larrisa https://github.com/callogerasl
-Dario https://github.com/dariocravero
-Tom https://github.com/tomatuxtemple
+Amy https://github.com/amymc</br>
+Larrisa https://github.com/callogerasl</br>
+Dario https://github.com/dariocravero</br>
+Tom https://github.com/tomatuxtemple</br></br>
 
-[All Morpher contributors](https://github.com/viewstools/morph/graphs/contributors)
-[All Docs contributors](https://github.com/viewstools/docs/graphs/contributors)
+[All Morpher contributors](https://github.com/viewstools/morph/graphs/contributors)</br>
+[All Docs contributors](https://github.com/viewstools/docs/graphs/contributors)</br>
 
 License BSD-3-Clause.<br>
 Copyright 2017 by UXtemple Ltd.
