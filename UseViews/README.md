@@ -23,7 +23,7 @@ cd my-app
 use-views
 ```
 
-## Upgrading the Morpher to a new major version
+## Upgrade the Morpher to a new major version
 When a new major version of the Morpher is released you can run this command to upgrade
 
 ```yarn add --dev @viewstools/morph```
@@ -35,7 +35,14 @@ To help you with updating your project to the latest changes we release [Code Mo
 To check what version of the morpher you are on use
 ```npx views-morph --version```
 
-## Using Views Tools (code and WYSIWYG editor for designers)
+## Preview your build online via Surge
+You can use the steps below to put the latest build of your app online and share access to it (available only for React Web projects).
+
+1. Go to [Surge](https://surge.sh/) and create your free account. Password protected builds are available under paid plan.
+2. Run `yarn build` to create the latest build.
+3. Run `surge -p build` to put it online.
+
+## Use Views Tools (code and WYSIWYG editor for designers)
 Reach out to `@views-tom` in via our Slack Team to enroll for a pilot of beta
 tools.
 
