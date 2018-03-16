@@ -110,6 +110,16 @@ And here's the [demo page](http://www.davidhu.io/react-spinners/)
 
 ![Some spinners examples](spinners-examples.png)
 
+Customise your loader with additional properties:
+
+```
+Spinner
+type BarLoader
+width 100
+height 4
+color #ff8300
+```
+
 ## .view.fake
 
 When you add a `.js` view, our toolset will let you define a `.view.fake` file
