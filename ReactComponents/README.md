@@ -2,6 +2,8 @@
 If you want to use an existing React component as is, you can import it by
 defining it as a `.js` file and adding a `// @view` pragma at the top.
 
+## Integration pattern
+
 E.g., say you have a file called `Magic.js`:
 
 ```
@@ -19,7 +21,11 @@ word hey!
 ```
 
 We'll be working on bridging NPM modules at some stage, but for now you can
-bridge any external modules by hand. Here's an example with
+bridge any external modules by hand. 
+
+## Google Maps integration
+
+Here's an example with
 [react-google-maps](https://tomchentw.github.io/react-google-maps/).
 
 `GoogleMap.js`
@@ -72,7 +78,39 @@ lat -34.397
 lng 150.644
 ```
 
-### .view.fake
+## Loaders
+
+Create `Spinner.js` in your project and add this code to it:
+
+```
+// @view
+import * as Spinners from 'react-spinners';
+import React from 'react';
+
+const Spinner = ({ type, ...props }) => {
+  const Type = Spinners[type];
+  return <Type loading={true} {...props} />;
+};
+Spinner.defaultProps = {
+  type: 'ClipLoader',
+};
+export default Spinner;
+```
+
+Views Moprher will auto-generate `Spinner.view.js` file for you.
+
+You can now use a `Spinner` block in any view on its own or together with setting a type of spinner:
+```
+Spinner
+type ClipLoader
+```
+
+Here's the link to NPM package with all [spinner options](https://www.npmjs.com/package/react-spinners)
+And here's the [demo page](http://www.davidhu.io/react-spinners/)
+
+![Some spinners examples](spinners-examples.png)
+
+## .view.fake
 
 When you add a `.js` view, our toolset will let you define a `.view.fake` file
 that mocks your `.js` component. A `.js` component like our `Magic` or
