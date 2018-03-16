@@ -69,6 +69,8 @@ Control when blocks are rendered</br>
 6. [Keep logic ](Logic/README.md)
 7. [Route views with "at"](Routes/README.md)
 8. [Integrate React components](ReactComponents/README.md)
+Google Map example</br>
+Loaders example</br>
 9. [Useful Conventions](Conventions/README.md)
 10. [Why not Views?](WhyNotViews/README.md)
 
