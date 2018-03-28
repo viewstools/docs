@@ -57,14 +57,14 @@ style with a default value.
 
 `when` conditions can be triggered on any basic blocks and custom views.
 The `when` property doesn't have to be passed down to the custom view manually.
-It will apply automatically. So, this is also valid even tho Title view doesn't
+It will apply automatically. So, this is also valid even though Title view doesn't
 have the `when <when` specified anywhere within the view.
 
 ```views
 Button Vertical
 backgroundColor white
 onClick <
-when props.isClicked
+when <isClicked
 backgroundColor green
 Label Text
 color black
@@ -98,6 +98,17 @@ By default `when` will get `true` value and will create a new artboard in Views 
 
 Here's the visual result of the conditions above :
 ![when conditions - ugly](whens-ungly.png)
+
+## Hover states
+You also use a `when` condition to apply hover states.
+
+```
+CloseButton Vertical
+backgroundColor white
+when <hover
+backgroundColor blue
+```
+
 
 ## Control when blocks are rendered/shown
 
