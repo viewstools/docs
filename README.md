@@ -22,7 +22,7 @@ Views language and its morphers are open source.
 
 We're also working on a toolset to enhance the design and development process
 even more. It is currently in closed beta and we're expecting to release
-the public beta by Q1 2018. Email us at hi@views.tools and we'll let you
+the public beta by Q3 2018. Email us at hi@views.tools and we'll let you
 know when its ready.
 
 [![Here is a quick (2:44s) overview](images/ViewsToolsOverview.png)](https://vimeo.com/248484288)
