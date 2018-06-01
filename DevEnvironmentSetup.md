@@ -1,17 +1,25 @@
 # Mac
 
-## General, for React DOM and React Native ##
+## I don't have development environment setup up yet: ##
+1. Run `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+2. Update Xcode in Software Update section in AppStore app
 3. Open the terminal (in Applications/Utilities) and run `curl -L https://git.io/n-install | bash`
-4. Open new tab (CMD+t) and run `n lts`
-5. Run `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+4. Run `n lts`
+5. /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 6. Run `brew install yarn --without-node`
-1. Install GIT https://gist.github.com/derhuerst/1b15ff4652a867391f03#file-mac-md
-7. Go to the project directory, type `cd ` (yes, with space after cd) and drag project folder on the terminal window
-8. You might be missing dependencies, so run `yarn`
-9. To start the project run `yarn start` - if it's a web project it will open in the browser
+7. Run `brew install git`
 
+### I don't have a project created yet: ###
+1. Install Create React App for web `npm install --global create-react-app`
+2. Install Create React App for native platforms (iOS, Android) `npm install --global create-react-native-app`
+3. Install Views 'npm install --global @viewstools/use'
+4. Create your React web(DOM) project `create-react-app my-app` or React Native project `create-react-app my-app`
+5. Go to the project directory, type `cd ` (with space after cd) and drag project folder on the terminal window
+6. Run `use-views` to enable Views on your project
+8. Ensure all dependencies are installed `yarn`
+9. To start the project run `yarn start` - if it's a web project it will open in the browser if it's a native project it will open iOS simulator
 
-## If you working on a React Native project (mobile) you need to also ##
+## If you working on a React Native project only (iOS, Android) you need to also ##
 1. Install Xcode from App Store
 2. Open Xcode and follow installation steps to get all the modules (we need iOS simulator)
 1. Run `brew install watchman`
@@ -23,7 +31,7 @@
 7. Click on the clipboard shortcut, your project will open
 
 Happy building! You are all set.
-In case if you run into any road blocks reach out with questions via Slack at https://slack.viewsdx.com/ and tag @dario or @viewsdx-tom
+In case if you run into any road blocks reach out with questions via Slack at https://slack.viewsdx.com/ and tag @dario or @interfacejunkie
 
 # Windows for React DOM
 
