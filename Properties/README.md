@@ -86,4 +86,4 @@ label Buy Now
 
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
-Mention `@views-tom` or `@dario` to make sure that we get your notifications.
+Mention `@interfacejunkiem` or `@dario` to make sure that we get your notifications.
