@@ -30,9 +30,6 @@
 6. Scroll to the right on the simulator screen and open Expo app
 7. Click on the clipboard shortcut, your project will open
 
-Happy building! You are all set.
-In case if you run into any road blocks reach out with questions via Slack at https://slack.viewsdx.com/ and tag @dario or @interfacejunkie
-
 # Windows for React DOM
 
 1. Download NodeJS from https://nodejs.org/en/ and install it.
@@ -42,3 +39,6 @@ In case if you run into any road blocks reach out with questions via Slack at ht
 7. Go to the project directory, type `cd ` (yes, with space after cd) and drag project folder on the terminal window
 8. You might be missing dependencies, so run `yarn`
 9. To start the project run `yarn start` - if it's a web project it will open in the browser
+
+Happy building! You are all set.
+In case if you run into any road blocks reach out with questions via Slack at https://slack.viewsdx.com/ and tag @dario or @interfacejunkie
