@@ -147,4 +147,4 @@ With the introduction of slots, props are no longer supported (specifically from
 the morpher version 12.0.0)
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
-Mention `@views-tom` or `@dario` to make sure that we get your notifications.
+Mention `@interfacejunkie` or `@dario` to make sure that we get your notifications.
