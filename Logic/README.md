@@ -50,7 +50,7 @@ This is where you would add any intermediate state to your views or connect them
 to an external store of data.
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
-Mention `@interfacejunkie` or `@dario` to make sure that we get your notifications.
+Mention `@tombrewsviews` or `@dario` to make sure that we get your notifications.
 
 ## Control global state
 
@@ -59,5 +59,3 @@ Here's the video to the session that shows how to manage global state:
 [![Control global state session](../images/ControlGlobalState.png)](https://youtu.be/kUT0crvNhoA)
 
 Here's the link to the [repo shown in the video](https://github.com/viewstools/dealing-with-global-app-state).
-
-

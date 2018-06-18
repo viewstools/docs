@@ -1,5 +1,7 @@
 # Syntax highlighting
+
 We’ve created the following packages to help you understand `.view` files better:
+
 * [Atom](http://atom.io/packages/language-views),
 * [Sublime](https://github.com/viewstools/syntax-sublime),
 * [VIM](https://github.com/viewstools/syntax-vim), and
@@ -14,4 +16,4 @@ and we’ll add it to this list.
 Happy editing!
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
-Mention `@interfacejunkie` or `@dario` to make sure that we get your notifications.
+Mention `@tombrewsviews` or `@dario` to make sure that we get your notifications.

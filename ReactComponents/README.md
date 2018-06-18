@@ -1,4 +1,5 @@
 # Views and your React components
+
 If you want to use an existing React component as is, you can import it by
 defining it as a `.js` file and adding a `// @view` pragma at the top.
 
@@ -21,7 +22,7 @@ word hey!
 ```
 
 We'll be working on bridging NPM modules at some stage, but for now you can
-bridge any external modules by hand. 
+bridge any external modules by hand.
 
 ## Google Maps integration
 
@@ -29,6 +30,7 @@ Here's an example with
 [react-google-maps](https://tomchentw.github.io/react-google-maps/).
 
 `GoogleMap.js`
+
 ```
 // @view
 import { GoogleMap } from 'react-google-maps'
@@ -40,6 +42,7 @@ export default ({ defaultCenterLat: lat, defaultCenterLng: lng, ...props }) => (
 ```
 
 `Marker.js`
+
 ```
 // @view
 import { Marker } from 'react-google-maps'
@@ -65,6 +68,7 @@ You will notice that we've renamed certain props and flattened them out. In
 order to reduce the complexity of the language we made a decision not to allow
 complex objects in views as props for now. This isn't set in stone though, so if
 you feel strong about it, let us know and we can work to enable a syntax like:
+
 ```views
 GoogleMap
 defaultZoom 0
@@ -100,6 +104,7 @@ export default Spinner;
 Views Moprher will auto-generate `Spinner.view.js` file for you.
 
 You can now use a `Spinner` block in any view on its own or together with setting a type of spinner:
+
 ```
 Spinner
 type ClipLoader
@@ -135,4 +140,4 @@ source ./google-map-fake.jpg
 ```
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
-Mention `@interfacejunkie` or `@dario` to make sure that we get your notifications.
+Mention `@tombrewsviews` or `@dario` to make sure that we get your notifications.

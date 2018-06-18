@@ -298,4 +298,4 @@ text Content Two
 ```
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
-Mention `@views-tom` or `@dario` to make sure that we get your notifications.
+Mention `@tombrewsviews` or `@dario` to make sure that we get your notifications.

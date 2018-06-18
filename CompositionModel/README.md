@@ -28,10 +28,10 @@ Containers wrap other blocks, displace, and align them.
 
 ### Containers
 
-1. Horizontal distributes blocks inside next to each other.
-2. Vertical distributes blocks inside on top of each other.
-3. List repeats one block based on the amount of passed data.
-![Containers wire-frame](containers.jpg)
+1.  Horizontal distributes blocks inside next to each other.
+2.  Vertical distributes blocks inside on top of each other.
+3.  List repeats one block based on the amount of passed data.
+    ![Containers wire-frame](containers.jpg)
 
 Examples of final interface
 ![Containers final interface representation](containersFinal.jpg)
@@ -40,14 +40,13 @@ Examples of final interface
 
 ### Content blocks
 
-1. Capture block lets you capture user input as data.
-2. Image block displays graphic files, like JPGs, PNGs, GIFFs, and more
-3. Text block renders text in the view.
-4. SVG block renders vector graphics.
-![Content blocks](contentblocks.jpg)
+1.  Capture block lets you capture user input as data.
+2.  Image block displays graphic files, like JPGs, PNGs, GIFFs, and more
+3.  Text block renders text in the view.
+4.  SVG block renders vector graphics.
+    ![Content blocks](contentblocks.jpg)
 
 [Examples of basic blocks](../Blocks/README.md)
-
 
 ## Proximity nesting and Composer
 
@@ -61,6 +60,7 @@ Composer is a composition tool, and comes with Views Tools.
 ![Nesting Levels 1 - Text inside the Second level container](nesting1.png)
 
 **Example #1 In Code**
+
 ```views
 FirstNestingLevel Vertical
 SecondNestingLevel Vertical
@@ -68,6 +68,7 @@ Text
 ```
 
 In the example above, the hierarchy is:
+
 * `FirstNestingLevel`
   * `SecondNestingLevel`
     * `Text`
@@ -89,10 +90,11 @@ Text
 ```
 
 Our hierarchy now looks like:
+
 * `FirstNestingLevel`
   * `SecondNestingLevel`
   * `Text`
-That new line before `Text` separates it from `InsideTop`.
+    That new line before `Text` separates it from `InsideTop`.
 
 Each new line will move blocks below one nesting level higher, and since a view
 can only have one top level block, you can remove blocks from the view by adding
@@ -105,22 +107,25 @@ Text
 
 Text
 ```
+
 In the example above, the second `Text` is outside of the top level container
 therefore it won't render in the view.
 
 ## Save and re-use .view files
+
 Views can be used as part of other views by referencing their file name.
 
 Common use case: Say you have a View that contains a button with a text label and
 you want to choose different label, or the fontSize depending where you use it.
 
 Here're simple steps to extract blocks and re-use them:
-1. Save the button code to separate .view file and give it a name
-starting with a capital letter
-2. Replace the previous button code with only the name of the extracted View,
-in our example it's `Filename`
-3. From now on `Filename.view` is your Custom block and you will
-see it being updated across your app upon any new changes.
+
+1.  Save the button code to separate .view file and give it a name
+    starting with a capital letter
+2.  Replace the previous button code with only the name of the extracted View,
+    in our example it's `Filename`
+3.  From now on `Filename.view` is your Custom block and you will
+    see it being updated across your app upon any new changes.
 
 ### Use case one - change text at the point of use
 
@@ -129,6 +134,7 @@ This is a simple View with one Text block BEFORE using it as a Custom Block:
 ![Button with Text block as part of it](reuse1.png)
 
 **before**
+
 ```views
 Button Vertical
 backgroundColor #009fff
@@ -144,7 +150,7 @@ text BUY NOW!
 
 Take all the lines of the `Text` block and paste them to a new document. Save it
 within your project as `Label.view`. If you want to reuse the `Label` in many places with
-different text, turn it into slot by adding `< ` before the value.
+different text, turn it into slot by adding `<` before the value.
 
 ```views
 Label Text
@@ -162,6 +168,7 @@ and using it in the `Button.view` file:
 ![Button with Text block used as a Custom Label block](reuse2.png)
 
 **after**
+
 ```views
 Button Vertical
 backgroundColor #009fff
@@ -178,6 +185,7 @@ change the `fontSize` value directly in the `Label`:
 ![Button with Label block embedded from Label.view file and small font size](reuse3.png)
 
 **before**
+
 ```views
 Button Vertical
 backgroundColor #009fff
@@ -202,6 +210,7 @@ and using it in the `Button.view` file:
 ![Button with Label block embedded from Label.view file and bigger font size](reuse4.png)
 
 **after**
+
 ```views
 Button Vertical
 backgroundColor #009fff
@@ -209,6 +218,7 @@ borderRadius 8
 Label
 text BUY NOW!
 ```
+
 Notice that we've changed the `fontSize` value in the `Label.view` and the `Button.view`
 is affected but doesn't "know" anything about that change, since it happened in self-contained
 `Label` file.
@@ -223,6 +233,5 @@ fontWeight 700
 text < default label
 ```
 
-
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
-Mention `@interfacejunkie` or `@dario` to make sure that we get your notifications.
+Mention `@tombrewsviews` or `@dario` to make sure that we get your notifications.
