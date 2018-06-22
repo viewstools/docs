@@ -226,5 +226,17 @@ fontWeight 300
 marginLeft 15
 ```
 
+By default, list cards will be keyed by their order in the list (`index`). To set the key
+to something other than `index` in the list, add a `key` prop to the card like:
+
+```
+List
+from <
+Card
+key id
+```
+
+It will map to `key={item.id}`.
+
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
 Mention `@tombrewsviews` or `@dario` to make sure that we get your notifications.
