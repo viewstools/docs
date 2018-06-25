@@ -36,4 +36,4 @@ once the `slots` (props) contract is set, the changes in design are decoupled fr
 and both teams can work in parallel.
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
-Mention `@tombrewsviews` or `@dario` to make sure that we get your notifications.
+Mention `@tom` or `@dario` to make sure that we get your notifications.

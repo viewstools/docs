@@ -234,4 +234,4 @@ text < default label
 ```
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
-Mention `@tombrewsviews` or `@dario` to make sure that we get your notifications.
+Mention `@tom` or `@dario` to make sure that we get your notifications.
