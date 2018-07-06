@@ -289,11 +289,11 @@ possible today using Javascript in the logic file.
 
 Views Tools beta will support props animations!
 
-Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
-Mention `@tom` or `@dario` to make sure that we get your notifications.
-
 ## Known issues - work in progress
 
 * There can be only one spring animation in the view
 * EaseInOut curve has a bug and currently doesn't work
 * delay on spring curves doesn't work
+
+Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
+Mention `@tom` or `@dario` to make sure that we get your notifications.
