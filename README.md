@@ -1,4 +1,5 @@
 # Views
+
 **An effective framework for creating production quality interfaces**
 
 Views is an intuitive language to define and build complex user interfaces.
@@ -28,12 +29,14 @@ know when its ready.
 [![Here is a quick (2:44s) overview](images/ViewsToolsOverview.png)](https://vimeo.com/248484288)
 
 Join conversations:
-- [Spectrum Channel](https://spectrum.chat/?t=ba1ad612-c26e-446f-9aa3-76f0c7ca6c81)
-- [Slack Team](https://slack.viewsdx.com/)
-- [Medium Publication](https://medium.com/viewsdx)
-- [Roadmap](https://trello.com/b/NhIKKbol/views-roadmap)
+
+* [Spectrum Channel](https://spectrum.chat/?t=ba1ad612-c26e-446f-9aa3-76f0c7ca6c81)
+* [Slack Team](https://slack.viewsdx.com/)
+* [Medium Publication](https://medium.com/viewsdx)
+* [Roadmap](https://trello.com/b/NhIKKbol/views-roadmap)
 
 ## How can you benefit from it?
+
 _Views make teams productive._ Designers contribute directly to the production build.</br>
 _Views improve build quality._ Designers can tweak styling without wasting dev time.</br>
 _Views compile to React and React Native._ No manual work is required in the compilation process.</br>
@@ -45,36 +48,40 @@ Test innovative ideas.</br>
 Reduce the cost of design iterations.</br>
 
 ## Who is using it successfully?
-- A strategic partner to deliver their core application to their 50 million users in the USA. _Web app_.
-- Views toolset. _Electron Desktop app_.
-- 2BFIT. _Mobile native app_ [AppStore](https://itunes.apple.com/us/app/2bfit/id1279427455?mt=8&ign-mpt=uo%3D4) [GooglePlay](https://play.google.com/store/apps/details?id=com.viewsdx.app2bfit&hl=en)
-- Classuite. _Mobile native app_. [AppStore](https://itunes.apple.com/us/app/classuite-workspaces/id1329983329?mt=8) [GooglePlay](https://play.google.com/store/apps/details?id=com.classuite.workspces)
+
+* A strategic partner to deliver their core application to their 50 million users in the USA. _Web app_.
+* Views toolset. _Electron Desktop app_.
+* 2BFIT. _Mobile native app_ [AppStore](https://itunes.apple.com/us/app/2bfit/id1279427455?mt=8&ign-mpt=uo%3D4) [GooglePlay](https://play.google.com/store/apps/details?id=com.viewsdx.app2bfit&hl=en)
+* Classuite. _Mobile native app_. [AppStore](https://itunes.apple.com/us/app/classuite-workspaces/id1329983329?mt=8) [GooglePlay](https://play.google.com/store/apps/details?id=com.classuite.workspces)
 
 ## Table of Contents
-1. [Use Views in your project](UseViews/README.md)</br>
-Open source (code driven)</br>
-Using Views Tools (code and WYSIWYG editor for designers)</br>
-2. [Compose Views](CompositionModel/README.md)</br>
-Atomic Design pattern</br>
-Containers and content blocks</br>
-3. [Examples of basic blocks](Blocks/README.md)</br>
-Text, Image, Captures, Svgs</br>
-Button, List of cards</br>
-4. [Use properties to style blocks](Properties/README.md)</br>
-Internal (CSS)</br>
-External (slots)</br>
-5. [Use scope properties ](Scopes/README.md)</br>
-Control states of blocks</br>
-Control when blocks are rendered</br>
-6. [Keep logic ](Logic/README.md)
-7. [Route views with "at"](Routes/README.md)
-8. [Integrate React components](ReactComponents/README.md)
-Google Map example</br>
-Loaders example</br>
-9. [Useful Conventions](Conventions/README.md)
-10. [Why not Views?](WhyNotViews/README.md)
+
+1.  [Use Views in your project](UseViews/README.md)</br>
+    Open source (code driven)</br>
+    Using Views Tools (code and WYSIWYG editor for designers)</br>
+2.  [Compose Views](CompositionModel/README.md)</br>
+    Atomic Design pattern</br>
+    Containers and content blocks</br>
+3.  [Examples of basic blocks](Blocks/README.md)</br>
+    Text, Image, Captures, Svgs</br>
+    Button, List of cards</br>
+4.  [Use properties to style blocks](Properties/README.md)</br>
+    Internal (CSS)</br>
+    External (slots)</br>
+5.  [Use scope properties](Scopes/README.md)</br>
+    Control states of blocks</br>
+    Control when blocks are rendered</br>
+6.  [Animate scopes](Animations/README.md)
+7.  [Keep logic ](Logic/README.md)
+8.  [Route views with "at"](Routes/README.md)
+9.  [Integrate React components](ReactComponents/README.md)
+    Google Map example</br>
+    Loaders example</br>
+10. [Useful Conventions](Conventions/README.md)
+11. [Why not Views?](WhyNotViews/README.md)
 
 ## Views is a knowledge transfer platform!
+
 The value of cross-functional teams is very well known to Growth Hacking community
 and it's explained well in this book [Hacking Growth: Fastest Growing Companies Breakout](https://www.amazon.com/Hacking-Growth-Fastest-Growing-Companies-Breakout/dp/045149721X)
 
@@ -101,10 +108,12 @@ development and the rest of the organisation.
 _We cherish openness, learning, and frequent shipping_
 
 ## 😍 How can I help?
+
 We're thrilled you want to help us make better UIs together 😀.
 [Guidelines on contributions to the Morphers](https://github.com/viewstools/morph/blob/master/CONTRIBUTING.md)
 
-### Thank you to our main contributors ⊃━☆ﾟ. * ･ ｡ﾟ
+### Thank you to our main contributors ⊃━☆ﾟ. \* ･ ｡ﾟ
+
 Amy https://github.com/amymc</br>
 Larrisa https://github.com/callogerasl</br>
 Dario https://github.com/dariocravero</br>
