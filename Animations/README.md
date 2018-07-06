@@ -295,5 +295,7 @@ Views Tools beta will support props animations!
 * EaseInOut curve has a bug and currently doesn't work
 * delay on spring curves doesn't work
 
+Big thank you to `@amymc` for the massive contribution! 🎁 🎈 🎊
+
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
 Mention `@tom` or `@dario` to make sure that we get your notifications.
