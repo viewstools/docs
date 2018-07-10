@@ -2,13 +2,12 @@
 
 ## I don't have development environment setup up yet:
 
-1.  Download and install recommended version of NodeJS from https://nodejs.org/en/
-2.  Open the terminal (in Applications/Utilities), copy, paste, and run with return `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-3.  Update (or download) Xcode in Software Update section in AppStore app
-4.  In the terminal run `curl -L https://git.io/n-install | bash`
-5.  Run `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-6.  Run `brew install yarn --without-node`
-7.  Run `brew install git`
+1.  Open the terminal (in Applications/Utilities), copy, paste, and run with return `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+2.  Update (or download) Xcode in Software Update section in AppStore app
+3.  In the terminal run `curl -L https://git.io/n-install | bash`
+4.  Run `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+5.  Run `brew install yarn --without-node`
+6.  Run `brew install git`
 
 ### I don't have a project created yet:
 
