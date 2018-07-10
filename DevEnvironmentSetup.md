@@ -14,7 +14,7 @@
 
 1.  Install Create React App for web `npm install --global create-react-app`
 2.  Install Create React App for native platforms (iOS, Android) `npm install --global create-react-native-app`
-3.  Install Views 'npm install --global @viewstools/use'
+3.  Install Views `npm install --global @viewstools/use`
 4.  Create your React web(DOM) project `create-react-app my-app` or React Native project `create-react-app my-app`
 5.  Go to the project directory, type `cd` (with space after cd) and drag project folder on the terminal window
 6.  Run `use-views` to enable Views on your project
