@@ -1,4 +1,5 @@
 # Use Views in your project
+If you're starting fresh (never done any React development) you might need to [setup dev environment](https://github.com/viewstools/docs/blob/master/DevEnvironmentSetup.md). This is a once off type of list but you will NOT be able to run any application localy on your computer without it.
 
 ## Open source (code driven)
 
