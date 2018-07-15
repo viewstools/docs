@@ -29,7 +29,7 @@ once the `slots` (props) contract is set, the changes in design are decoupled fr
 and both teams can work in parallel.
 
 ## ~~My designers want to control animations~~
-* This is already implemented in the v14 of the morpher and tools! 🎉 *
+> This is already implemented in the v14 of the morpher and tools! 🎉
 
 ~~We are working on cross-platform animations in the Views language [Contribute here](https://github.com/viewstools/morph/issues/11))~~
 
