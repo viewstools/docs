@@ -6,13 +6,6 @@ Views morphs to React and React Native. If you use Vue, Angular, or any other
 front-end library that Views doesn't currently morph to you will have to write
 new morpher, and we can guide you through the process.
 
-## My designers want to control animations
-
-We are working on cross-platform animations in the Views language [Contribute here](https://github.com/viewstools/morph/issues/11))
-
-Fully custom animations are always possible with Javascript integration of
-React Animated, or any in React Web projects transforms and transitions are possible today.
-
 ## I need more integration with my current code editor
 
 The current level of integration in the code editors stops at syntax highlighting
@@ -34,6 +27,15 @@ Views has a specific pattern to separate logic from interface composition.
 We do that because the interface changes more often than the logic. That means,
 once the `slots` (props) contract is set, the changes in design are decoupled from the logic,
 and both teams can work in parallel.
+
+## ~~My designers want to control animations~~
+* This is already implemented in the v14 of the morpher and tools! 🎉 *
+
+~~We are working on cross-platform animations in the Views language [Contribute here](https://github.com/viewstools/morph/issues/11))~~
+
+~~Fully custom animations are always possible with Javascript integration of
+React Animated, or any in React Web projects transforms and transitions are possible today.~~
+
 
 Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
 Mention `@tom` or `@dario` to make sure that we get your notifications.
