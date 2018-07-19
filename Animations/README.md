@@ -1,5 +1,7 @@
 # Animate scopes
 
+To add animations to Views run `yarn add @viewstools/animations` in the main folder of your project.
+
 ## Add animations to properties
 
 Say we want to animate the `width` of a simple button:
