@@ -1,6 +1,6 @@
 # Animate scopes
 
-To add animations to Views run `yarn add @viewstools/animations` in the main folder of your project.
+If you didn't add Views to your app through our [use-views](https://github.com/viewstools/docs/tree/master/UseViews) command, you will need to add our animations library manually by running `yarn add @viewstools/animations` in the main folder of your project.
 
 ## Add animations to properties
 
