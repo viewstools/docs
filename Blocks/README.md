@@ -71,18 +71,123 @@ Email CaptureEmail
 placeholder john@email.com
 ```
 
-To auto focus in a Capture field use `autoFocus` property. Example:
-
+You can change the placeholder's styles with the `placeholder` scope:
 ```
-CaptureTextArea
+Email CaptureEmail
+color blue
+placeholder john@email.com
+when <placeholder
+color green
+```
+
+To auto focus in a Capture field use `autoFocus` property. Example:
+```
+CaptureText
 autoFocus true
 ```
 
-The docs for [React forms](https://reactjs.org/docs/forms.html) apply for React
-DOM. For native we're [doing a bit more for you](https://github.com/viewstools/morph/blob/master/__tests__/__snapshots__/react.js.snap#L1682-L1697).
-This is still work in progress and we're loooking at integrating some of the
-concepts of [formik](https://github.com/jaredpalmer/formik) to easy form
-creation and management without dictating UI.
+The React docs for [DOM](https://reactjs.org/docs/forms.html) and
+[native](https://facebook.github.io/react-native/docs/textinput) apply.
+If you have very complex forms, I'd recommend you use
+[formik](https://github.com/jaredpalmer/formik). It will help structure the
+logic for your forms without dictating UI.
+
+### Getting the Capture's value
+Say we have a view called `MyInput.view` like:
+```
+MyInput CaptureText
+value <
+onChange <
+```
+
+To control and get its value we can add a logic file to it that deals with
+`value` and the `onChange` event:
+
+```
+import MyInput from './MyInput.view.js'
+import React from 'react'
+
+class MyInputLogic extends React.Component {
+  state = {
+    value: '' // starts empty
+  }
+
+  onChange = event => {
+    // React DOM and native differs in how you get the value for your inputs.
+
+    // For DOM use:
+    this.setState({ value: event.target.value })
+    // For Native use:
+    this.setState({ value: event.nativeEvent.text })
+  }
+
+  render() {
+    return (
+      <MyInput
+        {...this.props}
+        {...this.state}
+        onChange={this.onChange}
+      />
+    )
+  }
+}
+export default MyInputLogic
+```
+
+### Adding a keyboard spacer in React Native
+If you're coming from a web background, this could be a head scratcher since
+native apps expect us to manage how the software keyboard affects our UI. We've
+used this code to some success in iOS so far. We would love to hear what worked
+for you!
+
+Add a `src/KeyboardSpacer.js` file to your project like this:
+```
+// @view
+import { Platform } from 'react-native';
+import KeyboardSpacer from 'react-native-keyboard-spacer';
+import React from 'react';
+
+export default props => Platform.OS === 'ios' ? <KeyboardSpacer {...props} /> : null;
+```
+
+Add a `src/KeyboardSpacer.view.fake` file to tell Views Tools how
+to display it while designing your app. This file won't be used in production.
+```
+KeyboardSpacerFake Vertical
+Image
+source ./KeyboardSpacerFake.png
+width 100%
+height 220
+```
+Download [KeyboardSpacerFake.png](./KeyboardSpacerFake.png) to `src/KeyboardSpacerFake.png`.
+
+Finally, use the spacer in your view like:
+```
+Settings Vertical
+flexGrow 1
+flexShrink 1
+flexBasis auto
+CaptureText
+value <
+onChange <
+
+KeyboardSpacer
+```
+
+React Native has [KeyboardAvoidingView](https://facebook.github.io/react-native/docs/keyboardavoidingview)
+but it didn't really work for us as expected. There are also other alternatives
+that look promising, like [react-native-spacer](https://www.npmjs.com/package/react-native-spacer).
+
+### Setting the return key type/label in React Native
+Native apps let you specify how the return key that submits the user's input
+look like. In React Native you use the `returnKeyType` prop with one of the
+possible values: `done`, `go`, `next`, `search`, or `send`.
+[Docs](https://facebook.github.io/react-native/docs/textinput#returnkeytype).
+
+```
+CaptureText
+returnKeyType go
+```
 
 ## Svgs
 
