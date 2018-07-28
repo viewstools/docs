@@ -189,6 +189,15 @@ CaptureText
 returnKeyType go
 ```
 
+### Default values in React Native
+We've added the following defaults to Captures morphed to React Native that came
+after our use of it. You can override any of them:
+```
+autoCorrect false
+underlineColorAndroid transparent
+textAlignVertical top
+```
+
 ## Svgs
 
 _SVGs are amazing_. They let you do amazing graphics that scale like crazy.
