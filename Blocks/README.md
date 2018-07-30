@@ -236,10 +236,23 @@ r 5
 stroke deepskyblue
 ```
 
-It's certainly more fun that have that done automatically for you 😇. You can
-run `npx views-morph file.svg` in your Views project folder and 💥! You'll get a ready to go Views Svg!
+Tips and trick on how to export SVGs to make them production compliant:
+Sketch App
+Select layers with arrows pointing down next to the name, right click and chose Ignore Underlying Masks option.
+![Ignore masks in Sketch](SketchAppIgnoreMasks.png)
 
-[Here's a little video on how you can use it in your project today](https://medium.com/viewsdx/from-svg-to-view-in-1-2-3-79cf8d771485).
+Illustrator
+When you saving file as an Svg make sure to select Tiny 1.1 format:
+![Format in Illustrator](IllustratorSvgFormat.png)
+
+Rasterised masks will cause compilation errors:
+![Masks error Illustrator](IllustratorMaskError.png)
+
+To avoid unwanted masks convert paths to Compound Paths:
+![Illustrator convert paths](IllustratorConvertPaths.png)
+
+If you use Views Tools, save your Svgs in `Svgs` folder inside your project. Tools will automatically convert all Svgs from that folder into `.view` files and into React components (`.view.js` files) when you open the project. You can treat the `Svgs` folder as a working directory and keep all your original files in there.
+![Example of the folder structure with Svgs folder](SvgsFolder.png)
 
 # Containers
 
