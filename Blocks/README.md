@@ -50,6 +50,10 @@ UserAvatar Image
 source https://viewsdx.s3.amazonaws.com/userAvatar.png
 ```
 
+If you use Views Tools, save your images in `Images` folder inside your project. Tools will automatically convert all images from that folder into `.view` files and into React components (`.view.js` files), when you open the project in Views Tools. You can treat the `Images` folder as a working directory and keep all your original files in there.
+
+Important: Any files, images, SVGs, views have to start with a capital letter due to the way that JavaScript works.
+
 ## Captures
 
 `Capture` is your way to accept written input from a user. We have a few types
@@ -253,6 +257,8 @@ To avoid unwanted masks convert paths to Compound Paths:
 
 If you use Views Tools, save your Svgs in `Svgs` folder inside your project. Tools will automatically convert all Svgs from that folder into `.view` files and into React components (`.view.js` files) when you open the project. You can treat the `Svgs` folder as a working directory and keep all your original files in there.
 ![Example of the folder structure with Svgs folder](SvgsFolder.png)
+
+Important: Any files, images, SVGs, views have to start with a capital letter due to the way that JavaScript works.
 
 # Containers
 
