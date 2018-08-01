@@ -8,20 +8,17 @@
 4.  Run `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 5.  Run `brew install yarn --without-node`
 6.  Run `brew install git`
+7.  Install Create React App for web `sudo npm install --global create-react-app`
+8.  Install Create React App for native platforms (iOS, Android) `sudo npm install --global create-react-native-app`
 
 ### I don't have a project created yet:
 
-1.  Install Create React App for web `npm install --global create-react-app`
-1a. If you need to run it as an administrator `sudo npm install --global create-react-app`
-2.  Install Create React App for native platforms (iOS, Android) `npm install --global create-react-native-app`
-2a. If you need to run it as an administrator `sudo npm install --global create-react-native-app`
-3.  Install Views `npm install --global @viewstools/use`
-3a. If you need to run it as an administrator `sudo npm install --global @viewstools/use`
-4.  Create your React web(DOM) project `create-react-app my-app` or React Native project `create-react-app my-app`
-5.  Go to the project directory, type `cd` (with space after cd) and drag project folder on the terminal window
-6.  Run `use-views` to enable Views on your project
-7.  Ensure all dependencies are installed `yarn`
-8.  To start the project run `yarn start` - if it's a web project it will open in the browser if it's a native project it will open iOS simulator
+1. If you need to run it as an administrator `sudo npm install --global @viewstools/use`
+2.  Create your React web(DOM) project `create-react-app my-app` or React Native project `create-react-app my-app`
+3.  Go to the project directory, type `cd` (with space after cd) and drag project folder on the terminal window
+4.  Run `use-views` to enable Views on your project
+5.  Ensure all dependencies are installed `yarn`
+6.  To start the project run `yarn start` - if it's a web project it will open in the browser if it's a native project it will open iOS simulator
 
 ## If you working on a React Native project only (iOS, Android) you need to also
 
