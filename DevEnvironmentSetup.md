@@ -8,17 +8,17 @@
 4.  Run `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 5.  Run `brew install yarn --without-node`
 6.  Run `brew install git`
-7.  Install Create React App for web `sudo npm install --global create-react-app`
-8.  Install Create React App for native platforms (iOS, Android) `sudo npm install --global create-react-native-app`
+7.  Install Create React App for web `npm install --global create-react-app`
+8.  Install Create React App for native platforms (iOS, Android) `npm install --global create-react-native-app`
+9.  Install Views `npm install --global @viewstools/use`
 
 ### I don't have a project created yet:
 
-1. If you need to run it as an administrator `sudo npm install --global @viewstools/use`
-2.  Create your React web(DOM) project `create-react-app my-app` or React Native project `create-react-app my-app`
-3.  Go to the project directory, type `cd` (with space after cd) and drag project folder on the terminal window
-4.  Run `use-views` to enable Views on your project
-5.  Ensure all dependencies are installed `yarn`
-6.  To start the project run `yarn start` - if it's a web project it will open in the browser if it's a native project it will open iOS simulator
+1.  Create your React web(DOM) project `create-react-app my-app` or React Native project `create-react-app my-app`
+2.  Go to the project directory, type `cd` (with space after cd) and drag project folder on the terminal window
+3.  Run `use-views` to enable Views on your project
+4.  Ensure all dependencies are installed `yarn`
+5.  To start the project run `yarn start` - if it's a web project it will open in the browser if it's a native project it will open iOS simulator
 
 ## If you working on a React Native project only (iOS, Android) you need to also
 
