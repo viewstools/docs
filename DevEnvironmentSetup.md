@@ -5,12 +5,11 @@
 1.  Update (or download) Xcode in Software Update section in AppStore app
 2.  Open the terminal (in Applications/Utilities), copy, paste, and run with return `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 3.  In the terminal run `curl -L https://git.io/n-install | bash`
-4.  Run `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-5.  Run `brew install yarn --without-node`
-6.  Run `brew install git`
-7.  Install Create React App for web `npm install --global create-react-app`
-8.  Install Create React App for native platforms (iOS, Android) `npm install --global create-react-native-app`
-9.  Install Views `npm install --global @viewstools/use`
+4.  Run `brew install yarn --without-node`
+5.  Run `brew install git`
+6.  Install Create React App for web `npm install --global create-react-app`
+7.  Install Create React App for native platforms (iOS, Android) `npm install --global create-react-native-app`
+8.  Install Views `npm install --global @viewstools/use`
 
 ### I don't have a project created yet:
 
