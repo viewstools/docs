@@ -2,8 +2,8 @@
 
 ## I don't have development environment setup up yet:
 
-1.  Open the terminal (in Applications/Utilities), copy, paste, and run with return `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-2.  Update (or download) Xcode in Software Update section in AppStore app
+1.  Update (or download) Xcode in Software Update section in AppStore app
+2.  Open the terminal (in Applications/Utilities), copy, paste, and run with return `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 3.  In the terminal run `curl -L https://git.io/n-install | bash`
 4.  Run `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 5.  Run `brew install yarn --without-node`
