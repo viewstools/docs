@@ -25,7 +25,7 @@
 2.  Open Xcode and follow installation steps to get all the modules (we need iOS simulator)
 3.  Run `brew install watchman`
 4.  To get expo simulator for native run `yarn global add exp`
-5.  To install expo ios `exp install:ios`
+5.  To install expo ios `exp install:ios` (you might need to run `sudo xcode-select -s /Applications/Xcode.app`)
 6.  To start project run `yarn start` - you will get a QR code and URL. You can scan the code with your mobile or copy the code
 7.  In a new tab (CMD+t) run `expo ios` - it will open the simulator
 8.  Scroll to the right on the simulator screen and open Expo app
