@@ -28,8 +28,8 @@
 5.  To install expo ios `exp install:ios` (you might need to run `sudo xcode-select -s /Applications/Xcode.app`)
 6.  To start project run `yarn start` - you will get a QR code and URL. You can scan the code with your mobile or copy the code
 7.  In a new tab (CMD+t) run `expo ios` - it will open the simulator
-8.  Scroll to the right on the simulator screen and open Expo app
-9.  Click on the clipboard shortcut, your project will open
+8.  Swipe to the right on the simulator screen and open Expo app
+9.  Click on the clipboard shortcut in Terminal and your project will open
 
 # Windows for React DOM
 
