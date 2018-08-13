@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "docz": "^0.10.0"
+  },
+  "repository": "https://github.com/viewstools/docs"
+}

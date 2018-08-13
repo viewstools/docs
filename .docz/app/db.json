@@ -1,0 +1,782 @@
+{
+  "config": {
+    "title": "My Doc",
+    "description": "My awesome app using docz",
+    "themeConfig": {},
+    "ordering": "descending",
+    "repository": "https://github.com/viewstools/docs",
+    "files": "**/*.{md,markdown,mdx}"
+  },
+  "entries": {
+    "DevEnvironmentSetup.md": {
+      "id": "29e8ad7c6821d879e2eec7092d7df81d",
+      "filepath": "DevEnvironmentSetup.md",
+      "link": "https://github.com/viewstools/docs/edit/master/DevEnvironmentSetup.md",
+      "slug": "dev-environment-setup",
+      "route": "/dev-environment-setup",
+      "name": "Dev environment setup",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "mac",
+          "value": "Mac"
+        },
+        {
+          "depth": 2,
+          "slug": "i-dont-have-development-environment-setup-up-yet",
+          "value": "I dont have development environment setup up yet"
+        },
+        {
+          "depth": 3,
+          "slug": "i-dont-have-a-project-created-yet",
+          "value": "I dont have a project created yet"
+        },
+        {
+          "depth": 2,
+          "slug": "if-you-working-on-a-react-native-project-only-ios-android-you-need-to-also",
+          "value": "If you working on a react native project only ios android you need to also"
+        },
+        {
+          "depth": 1,
+          "slug": "windows-for-react-dom",
+          "value": "Windows for react dom"
+        }
+      ]
+    },
+    "Animations/README.md": {
+      "id": "9116a2488fbc4e2d4d8824d3b7cec04b",
+      "filepath": "Animations/README.md",
+      "link": "https://github.com/viewstools/docs/edit/master/Animations/README.md",
+      "slug": "animations-readme",
+      "route": "/animations-readme",
+      "name": "Readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "animate-scopes",
+          "value": "Animate scopes"
+        },
+        {
+          "depth": 2,
+          "slug": "add-animations-to-properties",
+          "value": "Add animations to properties"
+        },
+        {
+          "depth": 2,
+          "slug": "animation-curves",
+          "value": "Animation curves"
+        },
+        {
+          "depth": 3,
+          "slug": "spring",
+          "value": "Spring"
+        },
+        {
+          "depth": 3,
+          "slug": "easein",
+          "value": "Easein"
+        },
+        {
+          "depth": 3,
+          "slug": "easeout",
+          "value": "Easeout"
+        },
+        {
+          "depth": 3,
+          "slug": "ease",
+          "value": "Ease"
+        },
+        {
+          "depth": 3,
+          "slug": "linear",
+          "value": "Linear"
+        },
+        {
+          "depth": 2,
+          "slug": "delay",
+          "value": "Delay"
+        },
+        {
+          "depth": 2,
+          "slug": "list-of-all-animated-properties",
+          "value": "List of all animated properties"
+        },
+        {
+          "depth": 3,
+          "slug": "animatable-layout-props",
+          "value": "Animatable layout props"
+        },
+        {
+          "depth": 3,
+          "slug": "animatable-spacing-props",
+          "value": "Animatable spacing props"
+        },
+        {
+          "depth": 3,
+          "slug": "animatable-color-props",
+          "value": "Animatable color props"
+        },
+        {
+          "depth": 3,
+          "slug": "animatable-transform-props",
+          "value": "Animatable transform props"
+        },
+        {
+          "depth": 3,
+          "slug": "animatable-border-props",
+          "value": "Animatable border props"
+        },
+        {
+          "depth": 2,
+          "slug": "combine-animated-properties",
+          "value": "Combine animated properties"
+        },
+        {
+          "depth": 2,
+          "slug": "transitions-lists-loops-and-tools",
+          "value": "Transitions lists loops and tools"
+        },
+        {
+          "depth": 2,
+          "slug": "known-issues---work-in-progress",
+          "value": "Known issues work in progress"
+        }
+      ]
+    },
+    "Blocks/README.md": {
+      "id": "6fe1af24a1a415c3076fd6ed507690a5",
+      "filepath": "Blocks/README.md",
+      "link": "https://github.com/viewstools/docs/edit/master/Blocks/README.md",
+      "slug": "blocks-readme",
+      "route": "/blocks-readme",
+      "name": "Readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "examples-of-basic-blocks---content-blocks",
+          "value": "Examples of basic blocks content blocks"
+        },
+        {
+          "depth": 2,
+          "slug": "basic-text-block",
+          "value": "Basic text block"
+        },
+        {
+          "depth": 2,
+          "slug": "named-text-block",
+          "value": "Named text block"
+        },
+        {
+          "depth": 2,
+          "slug": "text-block-with-interpolated-dynamic-prop",
+          "value": "Text block with interpolated dynamic prop"
+        },
+        {
+          "depth": 2,
+          "slug": "image",
+          "value": "Image"
+        },
+        {
+          "depth": 2,
+          "slug": "captures",
+          "value": "Captures"
+        },
+        {
+          "depth": 3,
+          "slug": "getting-the-captures-value",
+          "value": "Getting the captures value"
+        },
+        {
+          "depth": 3,
+          "slug": "adding-a-keyboard-spacer-in-react-native",
+          "value": "Adding a keyboard spacer in react native"
+        },
+        {
+          "depth": 3,
+          "slug": "setting-the-return-key-typelabel-in-react-native",
+          "value": "Setting the return key typelabel in react native"
+        },
+        {
+          "depth": 3,
+          "slug": "default-values-in-react-native",
+          "value": "Default values in react native"
+        },
+        {
+          "depth": 2,
+          "slug": "svgs",
+          "value": "Svgs"
+        },
+        {
+          "depth": 1,
+          "slug": "containers",
+          "value": "Containers"
+        },
+        {
+          "depth": 2,
+          "slug": "button",
+          "value": "Button"
+        },
+        {
+          "depth": 2,
+          "slug": "list-of-cards",
+          "value": "List of cards"
+        }
+      ]
+    },
+    "CompositionModel/README.md": {
+      "id": "16045bc2494b354335605c59150cfd66",
+      "filepath": "CompositionModel/README.md",
+      "link": "https://github.com/viewstools/docs/edit/master/CompositionModel/README.md",
+      "slug": "composition-model-readme",
+      "route": "/composition-model-readme",
+      "name": "Readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "views-composition-model",
+          "value": "Views composition model"
+        },
+        {
+          "depth": 2,
+          "slug": "atomic-design",
+          "value": "Atomic design"
+        },
+        {
+          "depth": 2,
+          "slug": "containers-and-content-blocks",
+          "value": "Containers and content blocks"
+        },
+        {
+          "depth": 3,
+          "slug": "containers",
+          "value": "Containers"
+        },
+        {
+          "depth": 3,
+          "slug": "content-blocks",
+          "value": "Content blocks"
+        },
+        {
+          "depth": 2,
+          "slug": "proximity-nesting-and-composer",
+          "value": "Proximity nesting and composer"
+        },
+        {
+          "depth": 2,
+          "slug": "save-and-re-use-view-files",
+          "value": "Save and re use view files"
+        },
+        {
+          "depth": 3,
+          "slug": "use-case-one---change-text-at-the-point-of-use",
+          "value": "Use case one change text at the point of use"
+        },
+        {
+          "depth": 3,
+          "slug": "use-case-two---change-the-size-of-the-font-in-one-place",
+          "value": "Use case two change the size of the font in one place"
+        }
+      ]
+    },
+    "Conventions/README.md": {
+      "id": "8b1e168fc8438940ac4db4ba351ecd9c",
+      "filepath": "Conventions/README.md",
+      "link": "https://github.com/viewstools/docs/edit/master/Conventions/README.md",
+      "slug": "conventions-readme",
+      "route": "/conventions-readme",
+      "name": "Readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "useful-conventions",
+          "value": "Useful conventions"
+        },
+        {
+          "depth": 2,
+          "slug": "always-name-blocks",
+          "value": "Always name blocks"
+        },
+        {
+          "depth": 2,
+          "slug": "extract-blocks-as-view-files-to-keep-the-composition-simple",
+          "value": "Extract blocks as view files to keep the composition simple"
+        },
+        {
+          "depth": 2,
+          "slug": "dont-name-slots-unless-you-absolutely-have-to",
+          "value": "Dont name slots unless you absolutely have to"
+        },
+        {
+          "depth": 2,
+          "slug": "keep-slots-simple",
+          "value": "Keep slots simple"
+        },
+        {
+          "depth": 2,
+          "slug": "dont-repeat-blocks-use-lists",
+          "value": "Dont repeat blocks use lists"
+        },
+        {
+          "depth": 2,
+          "slug": "design-system-folders",
+          "value": "Design system folders"
+        },
+        {
+          "depth": 2,
+          "slug": "for-readability-put-the-onwhen-property-as-a-first-line-below-the-blocks-name",
+          "value": "For readability put the onwhen property as a first line below the blocks name"
+        }
+      ]
+    },
+    "Logic/README.md": {
+      "id": "2158b423a934a16baff44e9a7bfd7dc6",
+      "filepath": "Logic/README.md",
+      "link": "https://github.com/viewstools/docs/edit/master/Logic/README.md",
+      "slug": "logic-readme",
+      "route": "/logic-readme",
+      "name": "Readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "viewlogicjs",
+          "value": "Viewlogicjs"
+        },
+        {
+          "depth": 2,
+          "slug": "control-global-state",
+          "value": "Control global state"
+        }
+      ]
+    },
+    "Properties/AllStylingProperties.md": {
+      "id": "f6354f9f78b7a478e317e517a28600d2",
+      "filepath": "Properties/AllStylingProperties.md",
+      "link": "https://github.com/viewstools/docs/edit/master/Properties/AllStylingProperties.md",
+      "slug": "properties-all-styling-properties",
+      "route": "/properties-all-styling-properties",
+      "name": "All styling properties",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "all-styling-properties",
+          "value": "All styling properties"
+        },
+        {
+          "depth": 2,
+          "slug": "a",
+          "value": "A"
+        },
+        {
+          "depth": 2,
+          "slug": "f",
+          "value": "F"
+        }
+      ]
+    },
+    "Properties/Flex.md": {
+      "id": "dec056c00829132c328bd5bc1ab6b947",
+      "filepath": "Properties/Flex.md",
+      "link": "https://github.com/viewstools/docs/edit/master/Properties/Flex.md",
+      "slug": "properties-flex",
+      "route": "/properties-flex",
+      "name": "Flex",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "flex-1",
+          "value": "Flex 1"
+        },
+        {
+          "depth": 4,
+          "slug": "001-no-flex-1",
+          "value": "001 no flex 1"
+        },
+        {
+          "depth": 4,
+          "slug": "002-flex-on-the-vertical-only",
+          "value": "002 flex on the vertical only"
+        },
+        {
+          "depth": 4,
+          "slug": "003-flex-on-the-vertical-and-on-the-text-block",
+          "value": "003 flex on the vertical and on the text block"
+        },
+        {
+          "depth": 4,
+          "slug": "004-flex-on-the-horizontal-only",
+          "value": "004 flex on the horizontal only"
+        },
+        {
+          "depth": 4,
+          "slug": "005-flex-on-the-horizontal-and-text",
+          "value": "005 flex on the horizontal and text"
+        },
+        {
+          "depth": 4,
+          "slug": "006-no-flex-1-on-the-vertical-or-on-nested-blocks",
+          "value": "006 no flex 1 on the vertical or on nested blocks"
+        },
+        {
+          "depth": 4,
+          "slug": "007-flex-only-on-the-vertical-with-nested-blocks",
+          "value": "007 flex only on the vertical with nested blocks"
+        },
+        {
+          "depth": 4,
+          "slug": "008-flex-on-the-vertical-and-on-nested-blocks",
+          "value": "008 flex on the vertical and on nested blocks"
+        },
+        {
+          "depth": 4,
+          "slug": "008a-flex-on-the-vertical-and-on-one-nested-block-only",
+          "value": "008a flex on the vertical and on one nested block only"
+        },
+        {
+          "depth": 4,
+          "slug": "009-no-flex-1-on-the-horizontal-or-on-nested-blocks",
+          "value": "009 no flex 1 on the horizontal or on nested blocks"
+        },
+        {
+          "depth": 4,
+          "slug": "010-flex-only-on-the-horizontal-with-nested-blocks",
+          "value": "010 flex only on the horizontal with nested blocks"
+        },
+        {
+          "depth": 4,
+          "slug": "011-flex-on-the-horizontal-and-on-nested-blocks",
+          "value": "011 flex on the horizontal and on nested blocks"
+        },
+        {
+          "depth": 4,
+          "slug": "011a-flex-on-the-horizontal-and-on-one-nested-block-only",
+          "value": "011a flex on the horizontal and on one nested block only"
+        }
+      ]
+    },
+    "Properties/README.md": {
+      "id": "1011ddd15c8cfe8b6896c7b5868c2c96",
+      "filepath": "Properties/README.md",
+      "link": "https://github.com/viewstools/docs/edit/master/Properties/README.md",
+      "slug": "properties-readme",
+      "route": "/properties-readme",
+      "name": "Readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "use-properties-to-style-blocks",
+          "value": "Use properties to style blocks"
+        },
+        {
+          "depth": 2,
+          "slug": "internal-properties",
+          "value": "Internal properties"
+        },
+        {
+          "depth": 3,
+          "slug": "flexbox",
+          "value": "Flexbox"
+        },
+        {
+          "depth": 3,
+          "slug": "all-supported-properties",
+          "value": "All supported properties"
+        },
+        {
+          "depth": 2,
+          "slug": "external-properties-also-called-slots",
+          "value": "External properties also called slots"
+        }
+      ]
+    },
+    "ReactComponents/README.md": {
+      "id": "34ac34031c35b4208bde6aa9ae1f9a09",
+      "filepath": "ReactComponents/README.md",
+      "link": "https://github.com/viewstools/docs/edit/master/ReactComponents/README.md",
+      "slug": "react-components-readme",
+      "route": "/react-components-readme",
+      "name": "Readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "views-and-your-react-components",
+          "value": "Views and your react components"
+        },
+        {
+          "depth": 2,
+          "slug": "integration-pattern",
+          "value": "Integration pattern"
+        },
+        {
+          "depth": 2,
+          "slug": "google-maps-integration",
+          "value": "Google maps integration"
+        },
+        {
+          "depth": 2,
+          "slug": "loaders",
+          "value": "Loaders"
+        },
+        {
+          "depth": 2,
+          "slug": "viewfake",
+          "value": "Viewfake"
+        }
+      ]
+    },
+    "Routes/README.md": {
+      "id": "4ab834eb86af22f00e43ea526aab85ee",
+      "filepath": "Routes/README.md",
+      "link": "https://github.com/viewstools/docs/edit/master/Routes/README.md",
+      "slug": "routes-readme",
+      "route": "/routes-readme",
+      "name": "Readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "routes",
+          "value": "Routes"
+        }
+      ]
+    },
+    "Scopes/README.md": {
+      "id": "ce63d2a427ea3fac5194393e075785b7",
+      "filepath": "Scopes/README.md",
+      "link": "https://github.com/viewstools/docs/edit/master/Scopes/README.md",
+      "slug": "scopes-readme",
+      "route": "/scopes-readme",
+      "name": "Readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "scope-properties",
+          "value": "Scope properties"
+        },
+        {
+          "depth": 2,
+          "slug": "control-properties-of-blocks-dynamically",
+          "value": "Control properties of blocks dynamically"
+        },
+        {
+          "depth": 2,
+          "slug": "hover-states",
+          "value": "Hover states"
+        },
+        {
+          "depth": 2,
+          "slug": "control-when-blocks-are-renderedshown",
+          "value": "Control when blocks are renderedshown"
+        },
+        {
+          "depth": 2,
+          "slug": "to-avoid-errors-make-sure-your-fake-props-comply-with-these-simple-rules",
+          "value": "To avoid errors make sure your fake props comply with these simple rules"
+        },
+        {
+          "depth": 2,
+          "slug": "javascript-ternaries-and-props-are-no-longer-supported",
+          "value": "Javascript ternaries and props are no longer supported"
+        }
+      ]
+    },
+    "SyntaxHighlighting/README.md": {
+      "id": "946902b74f8c1f137903d5670d2ff00e",
+      "filepath": "SyntaxHighlighting/README.md",
+      "link": "https://github.com/viewstools/docs/edit/master/SyntaxHighlighting/README.md",
+      "slug": "syntax-highlighting-readme",
+      "route": "/syntax-highlighting-readme",
+      "name": "Readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "syntax-highlighting",
+          "value": "Syntax highlighting"
+        }
+      ]
+    },
+    "UseViews/README.md": {
+      "id": "d43d68251209fa66f58cb900f886c7be",
+      "filepath": "UseViews/README.md",
+      "link": "https://github.com/viewstools/docs/edit/master/UseViews/README.md",
+      "slug": "use-views-readme",
+      "route": "/use-views-readme",
+      "name": "Readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "use-views-in-your-project",
+          "value": "Use views in your project"
+        },
+        {
+          "depth": 2,
+          "slug": "open-source-code-driven",
+          "value": "Open source code driven"
+        },
+        {
+          "depth": 2,
+          "slug": "upgrade-the-morpher-to-a-new-major-version",
+          "value": "Upgrade the morpher to a new major version"
+        },
+        {
+          "depth": 2,
+          "slug": "preview-your-build-online-via-surge",
+          "value": "Preview your build online via surge"
+        },
+        {
+          "depth": 2,
+          "slug": "use-views-tools-code-and-wysiwyg-editor-for-designers",
+          "value": "Use views tools code and wysiwyg editor for designers"
+        },
+        {
+          "depth": 3,
+          "slug": "design-system-window",
+          "value": "Design system window"
+        },
+        {
+          "depth": 3,
+          "slug": "live-preview",
+          "value": "Live preview"
+        },
+        {
+          "depth": 3,
+          "slug": "composer",
+          "value": "Composer"
+        },
+        {
+          "depth": 3,
+          "slug": "props-panel",
+          "value": "Props panel"
+        },
+        {
+          "depth": 2,
+          "slug": "more-or-less-convenient-questions-and-answers",
+          "value": "More or less convenient questions and answers"
+        },
+        {
+          "depth": 3,
+          "slug": "about-the-benefits",
+          "value": "About the benefits"
+        },
+        {
+          "depth": 3,
+          "slug": "out-of-experimental-phase",
+          "value": "Out of experimental phase"
+        },
+        {
+          "depth": 3,
+          "slug": "we-optimize-for-both-designers-and-developers",
+          "value": "We optimize for both designers and developers"
+        },
+        {
+          "depth": 3,
+          "slug": "advanced-development-features-are-on-the-roadmap",
+          "value": "Advanced development features are on the roadmap"
+        },
+        {
+          "depth": 3,
+          "slug": "easy-in-easy-out",
+          "value": "Easy in easy out"
+        },
+        {
+          "depth": 3,
+          "slug": "your-project-your-folder-structure",
+          "value": "Your project your folder structure"
+        },
+        {
+          "depth": 3,
+          "slug": "there-is-logic-to-logic-files",
+          "value": "There is logic to logic files"
+        },
+        {
+          "depth": 3,
+          "slug": "use-third-party-components-via-js",
+          "value": "Use third party components via js"
+        },
+        {
+          "depth": 3,
+          "slug": "views-files-are-responsible-for-composition-and-styling-as-well-as-the-advanced-styling-with-scopes",
+          "value": "Views files are responsible for composition and styling as well as the advanced styling with scopes"
+        },
+        {
+          "depth": 3,
+          "slug": "views-scopes-enter-the-next-implementation-stage",
+          "value": "Views scopes enter the next implementation stage"
+        },
+        {
+          "depth": 3,
+          "slug": "viewjs-is-auto-generated-and-shouldnt-be-edited",
+          "value": "Viewjs is auto generated and shouldnt be edited"
+        }
+      ]
+    },
+    "WhyNotViews/README.md": {
+      "id": "370625bd2bd7277c23a93694a829d799",
+      "filepath": "WhyNotViews/README.md",
+      "link": "https://github.com/viewstools/docs/edit/master/WhyNotViews/README.md",
+      "slug": "why-not-views-readme",
+      "route": "/why-not-views-readme",
+      "name": "Readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "why-not-views",
+          "value": "Why not views"
+        },
+        {
+          "depth": 2,
+          "slug": "i-use-different-target-platform",
+          "value": "I use different target platform"
+        },
+        {
+          "depth": 2,
+          "slug": "i-need-more-integration-with-my-current-code-editor",
+          "value": "I need more integration with my current code editor"
+        },
+        {
+          "depth": 2,
+          "slug": "i-want-to-use-views-tools-for-react-native-app",
+          "value": "I want to use views tools for react native app"
+        },
+        {
+          "depth": 2,
+          "slug": "i-want-to-mix-logic-and-interface-styling-in-the-same-component",
+          "value": "I want to mix logic and interface styling in the same component"
+        },
+        {
+          "depth": 2,
+          "slug": "my-designers-want-to-control-animations",
+          "value": "My designers want to control animations"
+        }
+      ]
+    }
+  }
+}
