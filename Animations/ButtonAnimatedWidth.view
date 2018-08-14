@@ -1,0 +1,8 @@
+ButtonAnimatedWidth Vertical
+backgroundColor red
+onClick <
+width 100
+when <isClicked
+width 150 spring
+Label Text
+text Hi

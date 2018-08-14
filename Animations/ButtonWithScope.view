@@ -1,0 +1,8 @@
+Button Vertical
+backgroundColor red
+onClick <
+width 100
+when <isClicked
+width 150
+Label Text
+text Hi

@@ -7,10 +7,10 @@ export const imports = {
     import(/* webpackPrefetch: true, webpackChunkName: "blocks-readme" */ 'Blocks/README.md'),
   'CompositionModel/README.md': () =>
     import(/* webpackPrefetch: true, webpackChunkName: "composition-model-readme" */ 'CompositionModel/README.md'),
-  'Conventions/README.md': () =>
-    import(/* webpackPrefetch: true, webpackChunkName: "conventions-readme" */ 'Conventions/README.md'),
   'Logic/README.md': () =>
     import(/* webpackPrefetch: true, webpackChunkName: "logic-readme" */ 'Logic/README.md'),
+  'Conventions/README.md': () =>
+    import(/* webpackPrefetch: true, webpackChunkName: "conventions-readme" */ 'Conventions/README.md'),
   'Properties/AllStylingProperties.md': () =>
     import(/* webpackPrefetch: true, webpackChunkName: "properties-all-styling-properties" */ 'Properties/AllStylingProperties.md'),
   'Properties/Flex.md': () =>

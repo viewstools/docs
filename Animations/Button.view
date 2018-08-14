@@ -1,0 +1,6 @@
+Button Vertical
+backgroundColor red
+onClick <
+width 100
+Label Text
+text Hi

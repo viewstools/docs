@@ -5,7 +5,10 @@
     "themeConfig": {},
     "ordering": "descending",
     "repository": "https://github.com/viewstools/docs",
-    "files": "**/*.{md,markdown,mdx}"
+    "files": "**/*.{md,markdown,mdx}",
+    "plugins": [
+      {}
+    ]
   },
   "entries": {
     "DevEnvironmentSetup.md": {
@@ -46,12 +49,12 @@
       ]
     },
     "Animations/README.md": {
+      "name": "Animations",
       "id": "9116a2488fbc4e2d4d8824d3b7cec04b",
       "filepath": "Animations/README.md",
       "link": "https://github.com/viewstools/docs/edit/master/Animations/README.md",
       "slug": "animations-readme",
       "route": "/animations-readme",
-      "name": "Readme",
       "order": 0,
       "menu": null,
       "headings": [
@@ -286,6 +289,28 @@
         }
       ]
     },
+    "Logic/README.md": {
+      "id": "2158b423a934a16baff44e9a7bfd7dc6",
+      "filepath": "Logic/README.md",
+      "link": "https://github.com/viewstools/docs/edit/master/Logic/README.md",
+      "slug": "logic-readme",
+      "route": "/logic-readme",
+      "name": "Readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "viewlogicjs",
+          "value": "Viewlogicjs"
+        },
+        {
+          "depth": 2,
+          "slug": "control-global-state",
+          "value": "Control global state"
+        }
+      ]
+    },
     "Conventions/README.md": {
       "id": "8b1e168fc8438940ac4db4ba351ecd9c",
       "filepath": "Conventions/README.md",
@@ -335,28 +360,6 @@
           "depth": 2,
           "slug": "for-readability-put-the-onwhen-property-as-a-first-line-below-the-blocks-name",
           "value": "For readability put the onwhen property as a first line below the blocks name"
-        }
-      ]
-    },
-    "Logic/README.md": {
-      "id": "2158b423a934a16baff44e9a7bfd7dc6",
-      "filepath": "Logic/README.md",
-      "link": "https://github.com/viewstools/docs/edit/master/Logic/README.md",
-      "slug": "logic-readme",
-      "route": "/logic-readme",
-      "name": "Readme",
-      "order": 0,
-      "menu": null,
-      "headings": [
-        {
-          "depth": 1,
-          "slug": "viewlogicjs",
-          "value": "Viewlogicjs"
-        },
-        {
-          "depth": 2,
-          "slug": "control-global-state",
-          "value": "Control global state"
         }
       ]
     },

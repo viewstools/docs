@@ -1,6 +1,13 @@
 {
   "devDependencies": {
-    "docz": "^0.10.0"
+    "docz": "^0.10.0",
+    "raw-loader": "^0.5.1"
   },
-  "repository": "https://github.com/viewstools/docs"
+  "repository": "https://github.com/viewstools/docs",
+  "dependencies": {
+    "@viewstools/animations": "^1.0.4",
+    "@viewstools/morph": "^14.4.1",
+    "emotion": "^9.2.6",
+    "insert-css": "^2.0.0"
+  }
 }
