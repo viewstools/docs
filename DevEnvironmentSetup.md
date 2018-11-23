@@ -42,4 +42,4 @@
 7.  To start the project run `yarn start` - if it's a web project it will open in the browser
 
 Happy building! You are all set.
-In case if you run into any road blocks reach out with questions via Slack at https://slack.viewsdx.com/ and tag @dario or @tombrewsviews
+In case if you run into any road blocks reach out with questions via Slack at https://slack.viewsdx.com/ and tag @dario or @tom
