@@ -1,35 +1,45 @@
 # Mac
 
-## I don't have development environment setup up yet:
+## If you don't have any development environment setup:
 
-1.  Update (or download) Xcode in Software Update section in AppStore app
-2.  Open the terminal (in Applications/Utilities), copy, paste, and run with return `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-3.  In the terminal run `curl -L https://git.io/n-install | bash`
-4.  Run `brew install yarn --without-node`
-5.  Run `brew install git`
-6.  Install Create React App for web `npm install --global create-react-app`
-7.  Install Create React App for native platforms (iOS, Android) `npm install --global create-react-native-app`
-8.  Install Views `npm install --global @viewstools/use`
+1. Update (or download) Xcode in Software Update section in AppStore app
+2. Open Xcode and follow installation steps to get all the modules (we need iOS simulator)
+3. Open the terminal (in Applications/Utilities) and run the following commands:
+4. Install homebrew to manage packages
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)`
+5. Install n to manage node
+`curl -L https://git.io/n-install | bash`
+6. Install watchman for react native
+`brew install watchman`
+7. Install git to manage code
+`brew install git`
+8. Install yarn to manage node npm packages
+`brew install yarn --without-node`
+9. Install expo-cli to manage react native apps
+`yarn global add expo-cli`
+10. Install create-react-app for web projects
+`yarn global add create-react-app`
+11. Install create-react-native-app for iOS and Android projects
+`yarn global add create-react-native-app`
+12. Install a helper to setup views on web and native projects
+`yarn global add @viewstools/use`
 
-### I don't have a project created yet:
+## If you want to create new React DOM project:
+1. Create your project using `create-react-app my-app`. Change `my-app` to whatever it's called.
+2. Go to the project directory, type `cd ` (with space after cd) and drag project folder on the terminal window
+3. Run `use-views` to enable Views on your project
+4. Ensure all dependencies are installed `yarn`
+5. To start the project run `yarn start` - the project will open in the browser 
 
-1.  Create your React web(DOM) project `create-react-app my-app` or React Native project `create-react-app my-app`
-2.  Go to the project directory, type `cd` (with space after cd) and drag project folder on the terminal window
-3.  Run `use-views` to enable Views on your project
-4.  Ensure all dependencies are installed `yarn`
-5.  To start the project run `yarn start` - if it's a web project it will open in the browser if it's a native project it will open iOS simulator
-
-## If you working on a React Native project only (iOS, Android) you need to also
-
-1.  Install Xcode from App Store
-2.  Open Xcode and follow installation steps to get all the modules (we need iOS simulator)
-3.  Run `brew install watchman`
-4.  To get expo simulator for native run `yarn global add exp`
-5.  To install expo ios `exp install:ios` (you might need to run `sudo xcode-select -s /Applications/Xcode.app`)
-6.  To start project run `yarn start` - you will get a QR code and URL. You can scan the code with your mobile or copy the code
-7.  In a new tab (CMD+t) run `expo ios` - it will open the simulator
-8.  Swipe to the right on the simulator screen and open Expo app
-9.  Click on the clipboard shortcut in Terminal and your project will open
+## If you want to create new React Native project:
+1. Create your project using `create-react-app my-app`
+2. Go to the project directory, type `cd ` (with space after cd) and drag project folder on the terminal window
+3. Run `use-views` to enable Views on your project
+4. To start project run yarn start - you will get a QR code and URL. You can scan the code with your mobile or copy the code
+5. In a new tab (CMD+t) run expo ios - it will open the simulator
+6. Swipe to the right on the simulator screen and open Expo app
+7. Click on the clipboard shortcut in Terminal and your project will open
+8. Run `exp install:ios` to install the Expo app into the iOS simulator. You might need to run `sudo xcode-select -s /Applications/Xcode.app` before.
 
 # Windows for React DOM
 
