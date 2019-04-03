@@ -105,5 +105,5 @@ Views Morpher will recognise the logic file automatically for you and use that i
 
 In Views Tools you will see three elements rendered on the list with placeholder data on it so you can design it.
 
-Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
+Reach out with questions via our [Slack Questions Channel](https://slack.views.tools/).
 Mention `@tom` or `@dario` to make sure that we get your notifications.

@@ -37,5 +37,5 @@ and both teams can work in parallel.
 React Animated, or any in React Web projects transforms and transitions are possible today.~~
 
 
-Reach out with questions via our [Slack Questions Channel](https://slack.viewsdx.com/).
+Reach out with questions via our [Slack Questions Channel](https://slack.views.tools/).
 Mention `@tom` or `@dario` to make sure that we get your notifications.

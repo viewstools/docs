@@ -31,7 +31,7 @@ know when its ready.
 Join conversations:
 
 * [Spectrum Channel](https://spectrum.chat/?t=ba1ad612-c26e-446f-9aa3-76f0c7ca6c81)
-* [Slack Team](https://slack.viewsdx.com/)
+* [Slack Team](https://slack.views.tools/)
 * [Medium Publication](https://medium.com/viewsdx)
 * [Roadmap](https://trello.com/b/NhIKKbol/views-roadmap)
 
