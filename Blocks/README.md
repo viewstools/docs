@@ -304,6 +304,21 @@ Label Text
 text Buy Now!
 ```
 
+### Button with a div instead of a button
+_@viewstools/morph version 18.1.6 or higher required._
+
+Sometimes you need a container to be clickable and it will have other clickable
+stuff inside. On the web, `button` doesn't allow other `button` tags inside.
+That's when you can use the special prop `onClickUseDiv true`, eg:
+
+```
+ButtonAsDiv Vertical
+  onClick <
+  onClickUseDiv true
+  Text
+    text I'm inside a div
+```
+
 ## List of cards
 
 ![List with cards](People.png)
