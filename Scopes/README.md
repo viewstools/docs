@@ -106,7 +106,7 @@ You also use a `when` condition to apply hover states.
 ```
 CloseButton Vertical
 backgroundColor white
-when <hover
+when <isHovered
 backgroundColor blue
 ```
 

@@ -56,37 +56,48 @@ Important: Any files, images, SVGs, views have to start with a capital letter du
 
 ## Captures
 
-`Capture` is your way to accept written input from a user. We have a few types
-defined for this:
+`Capture` and `CaptureTextArea` are your ways to accept written input from a user.
 
-* `CaptureEmail`
-* `CaptureFile`
-* `CaptureInput`
-* `CaptureNumber`
-* `CapturePhone`
-* `CaptureSecure`
-* `CaptureText`
-* `CaptureTextArea`
+These are the possible types of `Capture`:
+
+* `type text` (default)
+* `type email`
+* `type file`
+* `type number`
+* `type phone`
+* `type secure`
+
+`CaptureTextArea` is a multi-line text input.
+
+`Capture` takes `value` and `onChange` props:
+
+```
+Capture
+onChange <
+value <
+```
 
 To set content of a any capture field use `placeholder` property. Example:
 
 ```
-Email CaptureEmail
+Email Capture
+type email
 placeholder john@email.com
 ```
 
-You can change the placeholder's styles with the `placeholder` scope:
+You can change the placeholder's styles with the `isPlaceholder` scope:
 ```
-Email CaptureEmail
+Email Capture
+type email
 color blue
 placeholder john@email.com
-when <placeholder
+when <isPlaceholder
 color green
 ```
 
 To auto focus in a Capture field use `autoFocus` property. Example:
 ```
-CaptureText
+Capture
 autoFocus true
 ```
 
@@ -99,9 +110,9 @@ logic for your forms without dictating UI.
 ### Getting the Capture's value
 Say we have a view called `MyInput.view` like:
 ```
-MyInput CaptureText
-value <
+MyInput Capture
 onChange <
+value <
 ```
 
 To control and get its value we can add a logic file to it that deals with
@@ -109,31 +120,27 @@ To control and get its value we can add a logic file to it that deals with
 
 ```
 import MyInput from './MyInput.view.js'
-import React from 'react'
+import React, { useState } from 'react'
 
-class MyInputLogic extends React.Component {
-  state = {
-    value: '' // starts empty
-  }
+let MyInputLogic = props => {
+  let [ value, setValue ] = useState('') // starts empty
 
-  onChange = event => {
+  let onChange = event => {
     // React DOM and native differs in how you get the value for your inputs.
 
     // For DOM use:
-    this.setState({ value: event.target.value })
+    setValue(event.target.value)
     // For Native use:
-    this.setState({ value: event.nativeEvent.text })
+    // setValue(event.nativeEvent.text)
   }
 
-  render() {
-    return (
-      <MyInput
-        {...this.props}
-        {...this.state}
-        onChange={this.onChange}
-      />
-    )
-  }
+  return (
+    <MyInput
+      {...props}
+      onChange={onChange}
+      value={value}
+    />
+  )
 }
 export default MyInputLogic
 ```
@@ -171,7 +178,7 @@ Settings Vertical
 flexGrow 1
 flexShrink 1
 flexBasis auto
-CaptureText
+Capture
 value <
 onChange <
 
@@ -189,7 +196,7 @@ possible values: `done`, `go`, `next`, `search`, or `send`.
 [Docs](https://facebook.github.io/react-native/docs/textinput#returnkeytype).
 
 ```
-CaptureText
+Capture
 returnKeyType go
 ```
 
