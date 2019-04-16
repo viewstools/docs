@@ -48,9 +48,9 @@ Examples of final interface
 
 [Examples of basic blocks](../Blocks/README.md)
 
-## Proximity nesting and Composer
+## Indentation and the Composer
 
-Proximity nesting (when you use code editor) is how we do composition inside a view.
+Indentation (when you use code editor) is how we do composition inside a view.
 You can think about your view as a stack of blocks where new lines set blocks apart.
 
 Composer is a composition tool, and comes with Views Tools.
@@ -63,8 +63,8 @@ Composer is a composition tool, and comes with Views Tools.
 
 ```views
 FirstNestingLevel Vertical
-SecondNestingLevel Vertical
-Text
+  SecondNestingLevel Vertical
+    Text
 ```
 
 In the example above, the hierarchy is:
@@ -84,9 +84,8 @@ would look like:
 
 ```views
 FirstNestingLevel Vertical
-SecondNestingLevel Vertical
-
-Text
+  SecondNestingLevel Vertical
+  Text
 ```
 
 Our hierarchy now looks like:
@@ -94,22 +93,15 @@ Our hierarchy now looks like:
 * `FirstNestingLevel`
   * `SecondNestingLevel`
   * `Text`
-    That new line before `Text` separates it from `InsideTop`.
 
-Each new line will move blocks below one nesting level higher, and since a view
-can only have one top level block, you can remove blocks from the view by adding
-enough empty space before.
+Every view with more than one block needs a top-level container.
+In the example above, `Text` is outside of the top level container
+and it won't render in the view.
 
 ```
 Top Vertical
 Text
-
-
-Text
 ```
-
-In the example above, the second `Text` is outside of the top level container
-therefore it won't render in the view.
 
 ## Save and re-use .view files
 
@@ -137,15 +129,21 @@ This is a simple View with one Text block BEFORE using it as a Custom Block:
 
 ```views
 Button Vertical
-backgroundColor #009fff
-borderRadius 8
-Text
-padding 20
-color white
-fontFamily Montserrat
-fontSize 16
-fontWeight 700
-text BUY NOW!
+  backgroundColor #009fff
+  borderTopLeftRadius 8
+  borderTopRightRadius 8
+  borderBottomLeftRadius 8
+  borderBottomRightRadius 8
+  Text
+    color white
+    fontFamily Montserrat
+    fontSize 16
+    fontWeight 700
+    paddingBottom 20
+    paddingLeft 20
+    paddingRight 20
+    paddingTop 20
+    text BUY NOW!
 ```
 
 Take all the lines of the `Text` block and paste them to a new document. Save it
@@ -154,12 +152,15 @@ different text, turn it into slot by adding `<` before the value.
 
 ```views
 Label Text
-padding 20
-color white
-fontFamily Montserrat
-fontSize 16
-fontWeight 700
-text < default label
+  color white
+  fontFamily Montserrat
+  fontSize 16
+  fontWeight 700
+  paddingBottom 20
+  paddingLeft 20
+  paddingRight 20
+  paddingTop 20
+  text < default label
 ```
 
 And here's how it should look like AFTER saving `Text` as `Label.view` file
@@ -171,10 +172,13 @@ and using it in the `Button.view` file:
 
 ```views
 Button Vertical
-backgroundColor #009fff
-borderRadius 8
-Label
-text BUY NOW!
+  backgroundColor #009fff
+  borderTopLeftRadius 8
+  borderTopRightRadius 8
+  borderBottomLeftRadius 8
+  borderBottomRightRadius 8
+  Label
+    text BUY NOW!
 ```
 
 ### Use case two - change the size of the font in one place
@@ -188,20 +192,26 @@ change the `fontSize` value directly in the `Label`:
 
 ```views
 Button Vertical
-backgroundColor #009fff
-borderRadius 8
-Label
-text BUY NOW!
+  backgroundColor #009fff
+  borderTopLeftRadius 8
+  borderTopRightRadius 8
+  borderBottomLeftRadius 8
+  borderBottomRightRadius 8
+  Label
+    text BUY NOW!
 ```
 
 ```views
 Label Text
-padding 20
-color white
-fontFamily Montserrat
-fontSize 14
-fontWeight 700
-text < default label
+  color white
+  fontFamily Montserrat
+  fontSize 14
+  fontWeight 700
+  paddingBottom 20
+  paddingLeft 20
+  paddingRight 20
+  paddingTop 20
+  text < default label
 ```
 
 And here's how it should look like AFTER saving `Text` as `Label.view` file
@@ -213,10 +223,13 @@ and using it in the `Button.view` file:
 
 ```views
 Button Vertical
-backgroundColor #009fff
-borderRadius 8
-Label
-text BUY NOW!
+  backgroundColor #009fff
+  borderTopLeftRadius 8
+  borderTopRightRadius 8
+  borderBottomLeftRadius 8
+  borderBottomRightRadius 8
+  Label
+    text BUY NOW!
 ```
 
 Notice that we've changed the `fontSize` value in the `Label.view` and the `Button.view`
@@ -225,12 +238,15 @@ is affected but doesn't "know" anything about that change, since it happened in 
 
 ```views
 Label Text
-padding 20
-color white
-fontFamily Montserrat
-fontSize 20
-fontWeight 700
-text < default label
+  color white
+  fontFamily Montserrat
+  fontSize 20
+  fontWeight 700
+  paddingBottom 20
+  paddingLeft 20
+  paddingRight 20
+  paddingTop 20
+  text < default label
 ```
 
 Reach out with questions via our [Slack Questions Channel](https://slack.views.tools/).

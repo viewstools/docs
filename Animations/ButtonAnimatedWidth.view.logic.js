@@ -1,19 +1,15 @@
 import ButtonAnimatedWidth from './ButtonAnimatedWidth.view.js'
-import React from 'react'
+import React, { useState } from 'react'
 
-export default class ButtonAnimatedWidthLogic extends React.Component {
-  state = {
-    isClicked: false,
-  }
+let ButtonAnimatedWidthLogic = props => {
+  let [isClicked, setIsClicked] = useState(false)
 
-  render() {
-    const { props } = this
-    return (
-      <ButtonAnimatedWidth
-        {...props}
-        {...this.state}
-        onClick={event => this.setState({ isClicked: !this.state.isClicked })}
-      />
-    )
-  }
+  return (
+    <ButtonAnimatedWidth
+      {...props}
+      isClicked={isClicked}
+      onClick={() => setIsClicked(!isClicked)}
+    />
+  )
 }
+export default ButtonAnimatedWidthLogic

@@ -7,8 +7,8 @@ Views syntax is clean, intuitive, and functional. Here's a sample:
 
 ```views
 Text
-color deepskyblue
-text Hello. Don't be a stranger!
+  color deepskyblue
+  text Hello. Don't be a stranger!
 ```
 
 There are no divs, classes or ids. We use styled blocks to compose interfaces.
@@ -73,7 +73,6 @@ Reduce the cost of design iterations.</br>
     Control when blocks are rendered</br>
 6.  [Animate scopes](Animations/README.md)
 7.  [Keep logic ](Logic/README.md)
-8.  [Route views with "at"](Routes/README.md)
 9.  [Integrate React components](ReactComponents/README.md)
     Google Map example</br>
     Loaders example</br>

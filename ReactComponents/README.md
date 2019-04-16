@@ -55,13 +55,13 @@ Then in your view, following [the example from their docs](https://tomchentw.git
 
 ```views
 GoogleMap
-defaultZoom 0
-defaultCenterLat -34.397
-defaultCenterLng 150.644
-Marker
-onWhen <isMarkerShown
-positionLat -34.397
-positionLng 150.644
+  defaultZoom 0
+  defaultCenterLat -34.397
+  defaultCenterLng 150.644
+  Marker
+  onWhen <isMarkerShown
+    positionLat -34.397
+    positionLng 150.644
 ```
 
 You will notice that we've renamed certain props and flattened them out. In
@@ -69,17 +69,18 @@ order to reduce the complexity of the language we made a decision not to allow
 complex objects in views as props for now. This isn't set in stone though, so if
 you feel strong about it, let us know and we can work to enable a syntax like:
 
+_Warning: The following is not real Views code_
 ```views
 GoogleMap
-defaultZoom 0
-defaultCenter
-lat -34.397
-lng 150.644
-Marker
-onWhen <isMarkerShown
-position
-lat -34.397
-lng 150.644
+  defaultZoom 0
+  defaultCenter
+  lat -34.397
+  lng 150.644
+  Marker
+  onWhen <isMarkerShown
+    position
+      lat -34.397
+      lng 150.644
 ```
 
 ## Loaders
@@ -101,7 +102,7 @@ Spinner.defaultProps = {
 export default Spinner;
 ```
 
-Views Moprher will auto-generate `Spinner.view.js` file for you.
+Views Morpher will auto-generate `Spinner.view.js` file for you.
 
 You can now use a `Spinner` block in any view on its own or together with setting a type of spinner:
 
@@ -119,10 +120,10 @@ Customise your loader with additional properties:
 
 ```
 Spinner
-type BarLoader
-width 100
-height 4
-color #ff8300
+  color #ff8300
+  height 4
+  type BarLoader
+  width 100
 ```
 
 ## .view.fake
@@ -136,7 +137,7 @@ example, it's fake view could look like:
 
 ```
 GoogleMapFake Image
-source ./google-map-fake.jpg
+  source ./google-map-fake.jpg
 ```
 
 Reach out with questions via our [Slack Questions Channel](https://slack.views.tools/).

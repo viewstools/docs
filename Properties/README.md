@@ -48,18 +48,18 @@ property as a dynamic value, managed through `slots`.
 
 ```views
 Text
-text Buy Now
-fontSize 20
-color #f7941e
+  color #f7941e
+  fontSize 20
+  text Buy Now
 ```
 
 **after**:
 
 ```views
 Text
-text < Buy Now
-fontSize 20
-color #f7941e
+  color #f7941e
+  fontSize 20
+  text < Buy Now
 ```
 
 Let's call that view `Label.view` and save it in the project folder.
@@ -68,7 +68,7 @@ property:
 
 ```views
 Label
-text Get New!!!
+  text Get New!!!
 ```
 
 Otherwise, if you just use `Label` view the default value will be used, so using:
@@ -84,9 +84,9 @@ to give slots custom names:
 
 ```views
 Text
-text <label Buy Now
-fontSize 20
-color #f7941e
+  color #f7941e
+  fontSize 20
+  text <label Buy Now
 ```
 
 The reason why we don't advise to use custom slot names is because you will have to
@@ -94,7 +94,7 @@ remember what you called it, and that introduces unnecessary complexity:
 
 ```views
 Label
-label Buy Now
+  label Buy Now
 ```
 
 Reach out with questions via our [Slack Questions Channel](https://slack.views.tools/).

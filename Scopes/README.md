@@ -25,16 +25,16 @@ Basic example:
 
 ```views
 Button Vertical
-backgroundColor white
-onClick <
-when <isClicked
-backgroundColor green
-Label Text
-color black
-text Click me
-when <isClicked
-color white
-text I was clicked
+  backgroundColor white
+  onClick <
+  when <isClicked
+  backgroundColor green
+  Label Text
+    color black
+    text Click me
+    when <isClicked
+    color white
+    text I was clicked
 ```
 
 This comes handy when you want to change a block on interaction, or when you
@@ -62,22 +62,21 @@ have the `when <when` specified anywhere within the view.
 
 ```views
 Button Vertical
-backgroundColor white
-onClick <
-when <isClicked
-backgroundColor green
-Label Text
-color black
-text Click me
-when <isClicked
-color white
-text I was clicked
-
-SubTitle
-marginTop 5
-text Go for it!
-when <isClicked
-text Nicely done!
+  backgroundColor white
+  onClick <
+  when <isClicked
+  backgroundColor green
+  Label Text
+    color black
+    text Click me
+    when <isClicked
+    color white
+    text I was clicked
+  SubTitle
+    marginTop 5
+    text Go for it!
+    when <isClicked
+    text Nicely done!
 ```
 
 The `SubTitle` view is saved as `SubTitle.view` file and contains on `Text` block
@@ -85,11 +84,11 @@ with `text` defined as external slot.
 
 ```views
 SubTitle Text
-marginTop < 10
-color #ffaa00
-fontFamily Montserrat
-fontSize 16
-text < my text
+  color #ffaa00
+  fontFamily Montserrat
+  fontSize 16
+  marginTop < 10
+  text < my text
 ```
 
 As you see, there is no `when` props in the `Subtitle` view but the `text` values
@@ -105,9 +104,9 @@ You also use a `when` condition to apply hover states.
 
 ```
 CloseButton Vertical
-backgroundColor white
-when <isHovered
-backgroundColor blue
+  backgroundColor white
+  when <isHovered
+  backgroundColor blue
 ```
 
 ## Control when blocks are rendered/shown
@@ -117,8 +116,8 @@ switch, and show or hide the block.
 
 ```views
 Popup Text
-text Yoohoo!
 onWhen <goesYoohoo
+  text Yoohoo!
 ```
 
 At this point slot `<goesYoohoo` expects a boolean value and can be set

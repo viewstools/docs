@@ -4,14 +4,14 @@
 
 ```views
 Text
-text Buy Now!
+  text Buy Now!
 ```
 
 ## Named Text block
 
 ```views
 Label Text
-text Buy Now!
+  text Buy Now!
 ```
 
 ## Text block with interpolated dynamic prop
@@ -21,7 +21,7 @@ value from the `.view.logic.js`, like:
 
 ```views
 Text
-text <greeting
+  text <greeting
 ```
 
 Then in the `.view.logic.js` file use:
@@ -34,11 +34,10 @@ Another way of doing it would be to split the Text into two Text blocks:
 
 ```views
 Horizontal
-Text
-text Welcome
-
-Text
-text <username
+  Text
+    text Welcome
+  Text
+    text <username
 ```
 
 ## Image
@@ -47,7 +46,7 @@ text <username
 
 ```views
 UserAvatar Image
-source https://viewsdx.s3.amazonaws.com/userAvatar.png
+  source http://www.cutestpaw.com/wp-content/uploads/2015/10/Yipee.jpg
 ```
 
 If you use Views Tools, save your images in `Images` folder inside your project. Tools will automatically convert all images from that folder into `.view` files and into React components (`.view.js` files), when you open the project in Views Tools. You can treat the `Images` folder as a working directory and keep all your original files in there.
@@ -73,32 +72,32 @@ These are the possible types of `Capture`:
 
 ```
 Capture
-onChange <
-value <
+  onChange <
+  value <
 ```
 
 To set content of a any capture field use `placeholder` property. Example:
 
 ```
 Email Capture
-type email
-placeholder john@email.com
+  placeholder john@email.com
+  type email
 ```
 
 You can change the placeholder's styles with the `isPlaceholder` scope:
 ```
 Email Capture
-type email
-color blue
-placeholder john@email.com
-when <isPlaceholder
-color green
+  color blue
+  placeholder john@email.com
+  type email
+  when <isPlaceholder
+  color green
 ```
 
 To auto focus in a Capture field use `autoFocus` property. Example:
 ```
 Capture
-autoFocus true
+  autoFocus true
 ```
 
 The React docs for [DOM](https://reactjs.org/docs/forms.html) and
@@ -111,8 +110,8 @@ logic for your forms without dictating UI.
 Say we have a view called `MyInput.view` like:
 ```
 MyInput Capture
-onChange <
-value <
+  onChange <
+  value <
 ```
 
 To control and get its value we can add a logic file to it that deals with
@@ -165,24 +164,23 @@ Add a `src/KeyboardSpacer.view.fake` file to tell Views Tools how
 to display it while designing your app. This file won't be used in production.
 ```
 KeyboardSpacerFake Vertical
-Image
-source ./KeyboardSpacerFake.png
-width 100%
-height 220
+  Image
+    height 220
+    source ./KeyboardSpacerFake.png
+    width 100%
 ```
 Download [KeyboardSpacerFake.png](./KeyboardSpacerFake.png) to `src/KeyboardSpacerFake.png`.
 
 Finally, use the spacer in your view like:
 ```
 Settings Vertical
-flexGrow 1
-flexShrink 1
-flexBasis auto
-Capture
-value <
-onChange <
-
-KeyboardSpacer
+  flexBasis auto
+  flexGrow 1
+  flexShrink 1
+  Capture
+    onChange <
+    value <
+  KeyboardSpacer
 ```
 
 React Native has [KeyboardAvoidingView](https://facebook.github.io/react-native/docs/keyboardavoidingview)
@@ -197,16 +195,17 @@ possible values: `done`, `go`, `next`, `search`, or `send`.
 
 ```
 Capture
-returnKeyType go
+  returnKeyType go
 ```
 
 ### Default values in React Native
 We've added the following defaults to Captures morphed to React Native that came
 after our use of it. You can override any of them:
 ```
-autoCorrect false
-underlineColorAndroid transparent
-textAlignVertical top
+Capture
+  autoCorrect false
+  underlineColorAndroid transparent
+  textAlignVertical top
 ```
 
 ## Svgs
@@ -237,14 +236,14 @@ While you can make an `Svg` by hand, like:
 
 ```views
 Svg
-viewBox 0 0 20 20
-width 20
-height 20
-SvgCircle
-cx 10
-cy 10
-r 5
-stroke deepskyblue
+  viewBox 0 0 20 20
+  width 20
+  height 20
+  SvgCircle
+  cx 10
+  cy 10
+  r 5
+  stroke deepskyblue
 ```
 
 Tips and trick on how to export SVGs to make them production compliant:
@@ -281,13 +280,13 @@ Button with an icon on the side:
 
 ```views
 Button Horizontal
-onClick props
-Icon Svg
-width 15
-height 15
-viewBox 0 0 25 25
-SvgPath
-d M24.5 9.7c-.2-.4-.5-.6-.9-.7l-7.1-1-3.2-6.4c-.3-.7-1.5-.7-1.8 0L8.4 8l-7 1c-.4.1-.7.3-.9.7s0 .8.3 1l5.1 5-1.2 7.1c-.1.4.1.8.4 1 .2.1.4.2.6.2.2 0 .3 0 .5-.1l6.3-3.3 6.3 3.3c.3.2.7.1 1.1-.1.3-.2.5-.6.4-1l-1.2-7.1 5.1-5c.3-.3.4-.6.3-1z
+  onClick <
+  Icon Svg
+    width 15
+    height 15
+    viewBox 0 0 25 25
+    SvgPath
+      d M24.5 9.7c-.2-.4-.5-.6-.9-.7l-7.1-1-3.2-6.4c-.3-.7-1.5-.7-1.8 0L8.4 8l-7 1c-.4.1-.7.3-.9.7s0 .8.3 1l5.1 5-1.2 7.1c-.1.4.1.8.4 1 .2.1.4.2.6.2.2 0 .3 0 .5-.1l6.3-3.3 6.3 3.3c.3.2.7.1 1.1-.1.3-.2.5-.6.4-1l-1.2-7.1 5.1-5c.3-.3.4-.6.3-1z
 
 
 Label Text
@@ -298,17 +297,15 @@ Button with an icon on the top:
 
 ```views
 Button Vertical
-onClick props
-Icon Svg
-width 15
-height 15
-viewBox 0 0 25 25
-SvgPath
-d M24.5 9.7c-.2-.4-.5-.6-.9-.7l-7.1-1-3.2-6.4c-.3-.7-1.5-.7-1.8 0L8.4 8l-7 1c-.4.1-.7.3-.9.7s0 .8.3 1l5.1 5-1.2 7.1c-.1.4.1.8.4 1 .2.1.4.2.6.2.2 0 .3 0 .5-.1l6.3-3.3 6.3 3.3c.3.2.7.1 1.1-.1.3-.2.5-.6.4-1l-1.2-7.1 5.1-5c.3-.3.4-.6.3-1z
-
-
-Label Text
-text Buy Now!
+  onClick <
+  Icon Svg
+    width 15
+    height 15
+    viewBox 0 0 25 25
+    SvgPath
+      d M24.5 9.7c-.2-.4-.5-.6-.9-.7l-7.1-1-3.2-6.4c-.3-.7-1.5-.7-1.8 0L8.4 8l-7 1c-.4.1-.7.3-.9.7s0 .8.3 1l5.1 5-1.2 7.1c-.1.4.1.8.4 1 .2.1.4.2.6.2.2 0 .3 0 .5-.1l6.3-3.3 6.3 3.3c.3.2.7.1 1.1-.1.3-.2.5-.6.4-1l-1.2-7.1 5.1-5c.3-.3.4-.6.3-1z
+  Label Text
+    text Buy Now!
 ```
 
 ### Button with a div instead of a button
@@ -334,8 +331,8 @@ List of cards:
 
 ```views
 People List
-from <
-User
+  from <
+  User
 ```
 
 List repeats one view. The item has to be saved as a `.view` file within your project
@@ -347,11 +344,10 @@ In this example `User.view` file looks like this:
 
 ```views
 User Horizontal
-Avatar Image
-source <userAvatar https://viewsdx.s3.amazonaws.com/userAvatar.png
-
-Name Text
-text <userName Joe Summers
+  Avatar Image
+    source <userAvatar https://viewsdx.s3.amazonaws.com/userAvatar.png
+  Name Text
+    text <userName Joe Summers
 ```
 
 ![Styled card](UserStyled.png)
@@ -360,25 +356,24 @@ Styled user card in a list would look more like this:
 
 ```views
 User Horizontal
-alignItems center
-paddingTop 10
-paddingLeft 10
-paddingRight 10
-marginTop 10
-marginLeft 10
-marginRight 10
-borderTop 1px solid #e6e6e6
-Avatar Image
-source <userAvatar https://viewsdx.s3.amazonaws.com/userAvatar.png
-width 40
-height 40
-
-Name Text
-text <userName Joe Summers
-fontSize 14
-fontFamily Montserrat
-fontWeight 300
-marginLeft 15
+  alignItems center
+  borderTop 1px solid #e6e6e6
+  marginLeft 10
+  marginRight 10
+  marginTop 10
+  paddingLeft 10
+  paddingRight 10
+  paddingTop 10
+  Avatar Image
+    height 40
+    source <userAvatar http://www.cutestpaw.com/wp-content/uploads/2015/10/Yipee.jpg
+    width 40
+  Name Text
+    fontFamily Montserrat
+    fontSize 14
+    fontWeight 300
+    marginLeft 15
+    text <userName Joe Summers
 ```
 
 By default, list cards will be keyed by their order in the list (`index`). To set the key
@@ -386,9 +381,9 @@ to something other than `index` in the list, add a `key` prop to the card like:
 
 ```
 List
-from <
-Card
-key id
+  from <
+  Card
+    key id
 ```
 
 It will map to `key={item.id}`.

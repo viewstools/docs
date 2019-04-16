@@ -6,8 +6,8 @@ With `Counter.view` file like:
 
 ```
 Text
-color black
-text props.number
+  color black
+  text <number 1
 ```
 
 We can add a `Counter.view.logic.js` file that would increment a number by one
@@ -15,31 +15,19 @@ every second like this:
 
 ```
 import Counter from './Counter.view.js'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-export default class CounterLogic extends React.Component {
-  state = {
-    number: 0,
-  }
+let CounterLogic = props => {
+  let [number, setNumber] = useState(0)
 
-  componentDidMount() {
-    this._interval = setInterval(this.increment, 1000)
-  }
+  useEffect(() => {
+    let interval = setInterval(() => setNumber(number + 1), 1000)
+    return () => clearInterval(interval)
+  })
 
-  componentWillUnmount() {
-    clearInterval(this._interval)
-  }
-
-  increment = () => {
-    this.setState({
-      number: this.state.number + 1
-    })
-  }
-
-  render() {
-    return <Counter number={this.state.number} />
-  }
+  return <Counter number={number} />
 }
+export default CounterLogic
 ```
 
 A logic file is an extension to your view and Views imports that it if it's
@@ -64,18 +52,17 @@ We would use logic files for that containing the logic to fetch external data.
 Say you have a `Posts.view` like:
 ```
 Posts List
-from <
-Post
+  from <
+  Post
 ```
 
 And another one `Post.view` (to show the actual post):
 ```
 Post Vertical
-Text
-text <title This is the title
-
-Text
-text <body This is the body of the post. Lots of stuff goes in here.
+  Text
+    text <title This is the title
+  Text
+    text <body This is the body of the post. Lots of stuff goes in here.
 ```
 
 You’d then add a `Posts.view.logic.js` file that will have the fetching logic in React like:
@@ -98,7 +85,7 @@ export default function PostsLogic(props) {
 So say you’re then using the `Posts` in `App.view` like:
 ```
 App Vertical
-Posts
+  Posts
 ```
 
 Views Morpher will recognise the logic file automatically for you and use that instead of the view.
