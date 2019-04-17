@@ -383,7 +383,7 @@ to something other than `index` in the list, add a `key` prop to the card like:
 List
   from <
   Card
-    key id
+    key item.id
 ```
 
 It will map to `key={item.id}`.
