@@ -388,5 +388,5 @@ List
 
 It will map to `key={item.id}`.
 
-Reach out with questions via our [Slack Questions Channel](https://slack.views.tools/).
-Mention `@tom` or `@dario` to make sure that we get your notifications.
+Reach out with questions via Github Issues [Github Issues](https://github.com/viewstools/docs/issues).
+Mention `@tombrewsviews` or `@dariocravero` to make sure that we get your notifications.

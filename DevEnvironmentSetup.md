@@ -52,4 +52,5 @@
 7.  To start the project run `yarn start` - if it's a web project it will open in the browser
 
 Happy building! You are all set.
-In case if you run into any road blocks reach out with questions via Slack at https://slack.views.tools/ and tag @dario or @tom
+Reach out with questions via Github Issues [Github Issues](https://github.com/viewstools/docs/issues).
+Mention `@tombrewsviews` or `@dariocravero` to make sure that we get your notifications.
