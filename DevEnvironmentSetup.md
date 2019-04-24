@@ -53,7 +53,7 @@
 
 # Linter and syntax highlighing
 
-1. You can get the syntax highlighting for Vim, Atom, VSCode, Sublime here [Syntax Highlighting](/SyntaxHighlighing/README.md)
+1. You can get the syntax highlighting for Vim, Atom, VSCode, Sublime here [Syntax Highlighting](SyntaxHighlighing/README.md)
 2. We've kicked off a basic linter for the Views syntax. I covers few most important use cases for now and we will be adding more in time. You can get it here [Views Linter](https://marketplace.visualstudio.com/items?itemName=uxtemple.views-lsp)
 
 Happy building! You are all set.
