@@ -1,6 +1,10 @@
-# .view.logic.js
+# Custom logic
 
-Any View file can be also wrapped with JavaScript logic to make a Smart View.
+When Views Morpher runs morphs a `.view` file, it automatically creates `.view.js` file
+next to it. While it might be tempting to edit that file and add your own logic,
+you will find that Views Morpher will override your changes every time it runs!
+
+So, how do you add your own custom logic to a `.view` file? With a `.view.logic.js` file.
 
 With `Counter.view` file like:
 
@@ -37,13 +41,12 @@ will actually be using the `Counter.view.logic.js` instead.
 This is where you would add any intermediate state to your views or connect them
 to an external store of data.
 
-## Control global state
+*It's important to note that logic files are expected to import the `.view.js` file
+and export a new component that adds extra logic to it.*
 
-Here's the video to the session that shows how to manage global state:
-
-[![Control global state session](../images/ControlGlobalState.png)](https://youtu.be/kUT0crvNhoA)
-
-Here's the link to the [repo shown in the video](https://github.com/viewstools/dealing-with-global-app-state).
+When you have a logic file for a view, Views Morpher will automatically import that file
+instead of the raw view. Eg, say you have a `Button.view` and add a `Button.view.logic.js`.
+When you use `Button` in another view like `App`, the logic file would be imported instead.
 
 ## Example on showing a list data coming from a service
 

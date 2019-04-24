@@ -70,7 +70,7 @@ Reduce the cost of design iterations.</br>
     Control states of blocks</br>
     Control when blocks are rendered</br>
 6.  [Animate scopes](Animations/README.md)
-7.  [Keep logic ](Logic/README.md)
+8.  [Custom logic](Logic/README.md)
 9.  [Integrate React components](ReactComponents/README.md)
     Google Map example</br>
     Loaders example</br>
