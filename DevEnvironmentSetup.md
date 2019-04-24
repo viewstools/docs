@@ -51,6 +51,11 @@
 6.  You might be missing dependencies, so run `yarn`
 7.  To start the project run `yarn start` - if it's a web project it will open in the browser
 
+# Linter and syntax highlighing
+
+1. You can get the syntax highlighting for Vim, Atom, VSCode, Sublime here [Syntax Highlighting](/SyntaxHighlighing/README.md)
+2. We've kicked off a basic linter for the Views syntax. I covers few most important use cases for now and we will be adding more in time. You can get it here [Views Linter](https://marketplace.visualstudio.com/items?itemName=uxtemple.views-lsp)
+
 Happy building! You are all set.
 Reach out with questions via Github Issues [Github Issues](https://github.com/viewstools/docs/issues).
 Mention `@tombrewsviews` or `@dariocravero` to make sure that we get your notifications.
