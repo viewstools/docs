@@ -336,7 +336,7 @@ People List
 ```
 
 List repeats one view. The item has to be saved as a `.view` file within your project
-and it CANNOT be a basic block, like Text or Image.
+and it can't be a basic block, like Text or Image.
 
 In this example `User.view` file looks like this:
 
@@ -352,7 +352,7 @@ User Horizontal
 
 ![Styled card](UserStyled.png)
 
-Styled user card in a list would look more like this:
+A styled user card in a list would look more like this:
 
 ```views
 User Horizontal
@@ -376,6 +376,44 @@ User Horizontal
     text <userName Joe Summers
 ```
 
+`from` is a prop that would need to be provided to the view with the list of
+items. This could be done at point of use:
+
+```
+UseOfList Vertical
+  People
+    from <people
+```
+
+It could also be done through a logic file, like:
+
+```
+import People from './People.view.js'
+import React from 'react'
+
+let PeopleLogic = props => (
+  <People
+    {...props}
+    from={[
+      {
+        id: 1,
+        userName: 'Joe Summers',
+        userAvatar: 'http://www.cutestpaw.com/wp-content/uploads/2015/10/Yipee.jpg',
+      },
+      {
+        id: 2,
+        userName: 'Jenny Winters',
+        userAvatar: 'http://www.cutestpaw.com/wp-content/uploads/2015/10/Yipee.jpg',
+      },
+    ]}
+  />
+)
+export default PeopleLogic
+```
+
+In the example above, we've inlined the list of people but it can come from
+any data store you could think.
+
 By default, list cards will be keyed by their order in the list (`index`). To set the key
 to something other than `index` in the list, add a `key` prop to the card like:
 
@@ -386,7 +424,24 @@ List
     key item.id
 ```
 
-It will map to `key={item.id}`.
+It will map to `key={item.id}` in the morphed code.
+
+`List` expects its items to be objects. If you have a list of primitives like
+`['item 1', 'item 2', 'item 3']`, you can define a prop name under which the values
+would be passed to the card like this:
+```
+List
+  from <
+  pass thing
+  Card
+```
+
+This means that `Card` would receive a prop named `thing` that it can use inside,
+e.g.:
+```
+Card Text
+  text <thing
+```
 
 Reach out with questions via Github Issues [Github Issues](https://github.com/viewstools/docs/issues).
 Mention `@tombrewsviews` or `@dariocravero` to make sure that we get your notifications.
