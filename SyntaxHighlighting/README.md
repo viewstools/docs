@@ -7,6 +7,10 @@ We’ve created the following packages to help you understand `.view` files bett
 * [VIM](https://github.com/viewstools/syntax-vim), and
 * [VSCode](https://marketplace.visualstudio.com/items?itemName=uxtemple.views).
 
+We also have a Language Server for VSCode that lints your Views code and warns
+you about issues. [Get it
+here](https://marketplace.visualstudio.com/items?itemName=uxtemple.views-lsp).
+
 We currently highlight block names, numbers, props, and strings. Our highlighters
 aren’t perfect, but they should get us started. Feel free to submit fixes and suggestions!
 
