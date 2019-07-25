@@ -15,6 +15,7 @@ _To make a new native app_ run:
 npm install --global create-react-native-app
 create-react-native-app my-app
 ```
+In the CLI menu select `Blank - minimal dependencies to run and an empty root component`
 
 2. Add Views on it:
 
