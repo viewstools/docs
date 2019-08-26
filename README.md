@@ -1,10 +1,10 @@
 # Views
 
-Consistent and predictable state, 
-Front-end code easy for everyone on the team to contribute to,
-Separation of concerns between layout and logic,
-Full engineering flexibility,
-Portable patterns.
+* Consistent and predictable state, 
+* Front-end code easy for everyone on the team to contribute to,
+* Separation of concerns between layout and logic,
+* Full engineering flexibility,
+* Portable patterns.
 
 Start by [setting up the local environment](https://github.com/viewstools/docs/blob/master/DevEnvironmentSetup.md)
 
