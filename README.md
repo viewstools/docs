@@ -6,7 +6,7 @@ Separation of concerns between layout and logic,
 Full engineering flexibility,
 Portable patterns.
 
-Start by [setting up the local environment] (https://github.com/viewstools/docs/blob/master/DevEnvironmentSetup.md)
+Start by [setting up the local environment](https://github.com/viewstools/docs/blob/master/DevEnvironmentSetup.md)
 
 * [Medium Publication](https://medium.com/viewstools)
 * [Roadmap](https://trello.com/b/NhIKKbol/views-roadmap)
