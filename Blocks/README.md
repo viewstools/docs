@@ -268,7 +268,7 @@ Important: Any files, images, SVGs, views have to start with a capital letter du
 
 # Containers
 
-_Container_ blocks let you group blocks together. They are:
+_Container_ blocks let you group blocks together. There are:
 
 * `Vertical`
 * `Horizontal`
@@ -324,8 +324,6 @@ ButtonAsDiv Vertical
 ```
 
 ## List of cards
-
-![List with cards](People.png)
 
 List of cards:
 
