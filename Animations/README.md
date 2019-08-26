@@ -1,6 +1,48 @@
 # Animate scopes
 
-If you didn't add Views to your app through our [use-views](https://github.com/viewstools/docs/tree/master/UseViews) command, you will need to add our animations library manually by running `yarn add @viewstools/animations` in the main folder of your project.
+Each Block has at least one scope, the base scope.
+
+Other, conditional scopes are described in detail below. It’s important to distinguish them though and to keep in mind that if the prop is missing from the base scope, it will not affect the conditional scope.
+
+```views
+Vertical
+backgroundColor red - the start of the base scope
+width 100
+height 100 - the end of the base scope 
+when <isHovered - the second condition
+backgroundColor blue - the start of the first conditional scope
+height 50 - the end of the first conditional scope
+when <isSelected - the second condition
+backgroundColor black - the second conditional scope
+```
+A Block can have an unlimited number of conditional scopes. The order of those matters tho as the code is executed top to bottom.
+
+## Types of conditional scopes
+
+* isHovered
+* isFocused
+* isPlaceholder
+* isMediaMobile
+* isMediaTablet
+* isMediaDesktop
+* isMediaLaptop
+* isBefore
+
+Example of an on View load fade animation with isBefore condition. 
+
+```views
+App View
+  Vertical
+  opacity 1
+  when <isBefore
+  opacity 0 linear
+    Text
+     text hey
+     color black
+     when <isBefore
+     color red
+```
+Many blocks within the same View can share the same condition, as shown in the example above.
 
 ## Add animations to properties
 
