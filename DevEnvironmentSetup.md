@@ -14,7 +14,7 @@
 7. Install git to manage code
 `brew install git`
 8. Install yarn to manage node npm packages
-`brew install yarn --without-node`
+`curl -o- -L https://yarnpkg.com/install.sh | bash`
 9. Install expo-cli to manage react native apps
 `yarn global add expo-cli`
 10. Install create-react-app for web projects
