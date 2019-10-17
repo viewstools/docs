@@ -6,7 +6,21 @@
 * Full engineering flexibility,
 * Portable patterns.
 
-Start by [setting up the local environment](https://github.com/viewstools/docs/blob/master/DevEnvironmentSetup.md)
+# Start
+
+* [Set up the local dev environment](https://github.com/viewstools/docs/blob/master/DevEnvironmentSetup.md)
+* Create new app and add Views to it
+* Add Views to an existing projet
+* Create `.view` files in `src` folder to start working on the UI
+
+# Things we are working on
+
+* State machine modeling patterns
+* Data management from the View level
+* Views Tools improvements
+* Docs improvements
+
+# More info
 
 * [Medium Publication](https://medium.com/viewstools)
 * [Roadmap](https://trello.com/b/NhIKKbol/views-roadmap)
