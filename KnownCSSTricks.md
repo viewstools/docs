@@ -8,6 +8,7 @@ Here we collect useful CSS tricks we use to solve known issues in layouts we des
    ![Center with the maxWidth and resizable with flex, no media query](images/centerMaxWidth.png)
    
 2. Ellipsis
+   
    Add these props to Text block
    ```
    textOverflow ellipsis
@@ -15,6 +16,8 @@ Here we collect useful CSS tricks we use to solve known issues in layouts we des
    overflowX hidden
    ```
    to get this ![Example](images/ellipsisExample.png)
+   
+   **the Text block or a wrapping parent block needs to have a `width` set for the ellipsis to work**
    
    you can put the ellipsis on the start of the Text block with
    `direction rtl`
