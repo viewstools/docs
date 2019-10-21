@@ -14,7 +14,7 @@ Here we collect useful CSS tricks we use to solve known issues in layouts we des
    whiteSpace nowrap
    overflowX hidden
    ```
-   to get this ![Example](images/ellipsis example.png)
+   to get this ![Example](images/ellipsisExample.png)
    
    you can put the ellipsis on the start of the Text block with
    `direction rtl`
