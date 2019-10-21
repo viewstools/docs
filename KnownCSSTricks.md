@@ -6,3 +6,16 @@ Here we collect useful CSS tricks we use to solve known issues in layouts we des
    add `maxWidth` and some pixel value, like 600, on the container, but also add
    `width 100%` to the same container to prevent the container's content collapsing
    ![Center with the maxWidth and resizable with flex, no media query](images/centerMaxWidth.png)
+   
+2. Ellipsis
+   Add these props to Text block
+   ```
+   textOverflow ellipsis
+   whiteSpace nowrap
+   overflowX hidden
+   ```
+   to get this ![Example](images/ellipsis example.png)
+   
+   you can put the ellipsis on the start of the Text block with
+   `direction rtl`
+   
