@@ -95,5 +95,18 @@ Views Morpher will recognise the logic file automatically for you and use that i
 
 In Views Tools you will see three elements rendered on the list with placeholder data on it so you can design it.
 
+## Hover Manual
+Hover manual will force the `hover` state on the companent. Use when you want to show a block on hover.
+
+```
+import useHoveredManual from 'useHoveredManual.js'
+
+export default function DataAutoCentredLogic(props) {
+  let hoveredManual = useHoveredManual()
+
+  return <DataAutoCentred {...props} {...hoveredManual} />
+}
+```
+
 Reach out with questions via Github Issues [Github Issues](https://github.com/viewstools/docs/issues).
 Mention `@tombrewsviews` or `@dariocravero` to make sure that we get your notifications.
