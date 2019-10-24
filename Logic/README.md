@@ -107,6 +107,7 @@ export default function DataAutoCentredLogic(props) {
   return <DataAutoCentred {...props} {...hoveredManual} />
 }
 ```
+[See useHoverManual](../useHoveredManual.js)
 
 Reach out with questions via Github Issues [Github Issues](https://github.com/viewstools/docs/issues).
 Mention `@tombrewsviews` or `@dariocravero` to make sure that we get your notifications.
