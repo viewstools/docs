@@ -19,6 +19,7 @@
 * Data management from the View level
 * Views Tools improvements
 * Docs improvements
+* Better ways to work with Design Systems
 * Sample apps
 
 ## More info
