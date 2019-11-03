@@ -50,6 +50,7 @@
 5.  Go to the project directory, type `cd` (yes, with space after cd) and drag project folder on the terminal window
 6.  You might be missing dependencies, so run `yarn`
 7.  To start the project run `yarn start` - if it's a web project it will open in the browser
+8. [Enable long file paths](https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later)
 
 # Linter and syntax highlighing
 
