@@ -19,6 +19,7 @@
 * Data management from the View level
 * Views Tools improvements
 * Docs improvements
+* Sample apps
 
 ## More info
 
