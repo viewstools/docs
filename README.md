@@ -1,4 +1,14 @@
-# Views
+# Why Views?
+
+* Views Framework is our response to the complexities and silos we see and experience every day in the software delivery process
+* We're trying to simplify development to make it more inclusive for non-developers
+* We achieve simplicity through smart automation
+* We noticed that when designers and product owners have access to the code-base the quality of the final solution is higher
+* Better collaboration, shared knowledge, common vocabluary and access to code lower the risk of software delivery
+
+We don't have everything figured out yet. [Things we've done](https://design.views.tools/) up to now give us high confidence towards the future.
+
+## Direct benefits of Views
 
 * Consistent and predictable state, 
 * Front-end code easy for everyone on the team to contribute to,
@@ -24,6 +34,7 @@
 
 ## More info
 
+* [Website](https://design.views.tools/)
 * [Medium Publication](https://medium.com/viewstools)
 * [Roadmap](https://trello.com/b/NhIKKbol/views-roadmap)
 
