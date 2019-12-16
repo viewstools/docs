@@ -5,7 +5,7 @@
 1. Update (or download) Xcode in Software Update section in AppStore app
 2. Open Xcode and follow installation steps to get all the modules (we need iOS simulator)
 3. Open the terminal (in Applications/Utilities) and run the following commands:
-4. Install homebrew to manage packages (select both lines, it's a one command)
+4. Install homebrew to manage packages (select both lines, it's one command)
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 5. Install n to manage node
 `curl -L https://git.io/n-install | bash`
