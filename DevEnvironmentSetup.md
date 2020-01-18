@@ -32,7 +32,7 @@
 5. To start the project run `yarn start` - the project will open in the browser 
 
 ## If you want to create new React Native project:
-1. Create your project using `create-react-app my-app`
+1. Create your project using `create-react-native-app my-app`
 2. Go to the project directory, type `cd ` (with space after cd) and drag project folder on the terminal window
 3. Run `use-views` to enable Views on your project
 4. To start project run yarn start - you will get a QR code and URL. You can scan the code with your mobile or copy the code
