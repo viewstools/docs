@@ -1,9 +1,10 @@
 # Use Views in your project
 If you're starting fresh (never done any React development) you might need to [setup dev environment](https://github.com/viewstools/docs/blob/master/DevEnvironmentSetup.md). This is a once off type of list but you will NOT be able to run any application localy on your computer without it.
 
-## Open source (code driven)
+## New project
+Headsup, we are working on a simpler way to create new projects and it should available when we launch public version of Views Tools.
 
-1. If you don't have an app, create a new one:
+1. Create a new one from Terminal:
 _To make a new web or desktop app_ run:
 ```
 npm install --global create-react-app
@@ -26,6 +27,30 @@ cd my-app
 use-views
 ```
 
+## Integrate Views in existing React apps
+Install dependencies (as of April 2020 they are):
+- @viewstools/morph
+- emotion
+- immer
+- lodash
+- react-query
+
+Put a ViewsFlow component at the top of the app:
+
+```
+import { ViewsFlow } from 'Logic/ViewsFlow.js';
+import React from 'react';
+
+export default function AppLogic() {
+  return (
+    <ViewsFlow>
+      <App />
+    </ViewsFlow>
+  );
+}
+```
+Import *.view.js* files into the React component you want to use it.
+
 ## Upgrade the Morpher to a new major version
 When a new major version of the Morpher is released you can run this command to upgrade
 
@@ -44,32 +69,6 @@ You can use the steps below to put the latest build of your app online and share
 1. Go to [Surge](https://surge.sh/) and create your free account. Password protected builds are available under paid plan.
 2. Run `yarn build` to create the latest build.
 3. Run `surge -p build` to put it online.
-
-## Use Views Tools (code and WYSIWYG editor for designers)
-Reach out to `@views-tom` in via our Slack Team to enroll for a pilot of beta
-tools.
-
-Views Tools are designed to minimise the learning curve for non-developers, and include:
-
-### Design System Window
-Look inside of your React project folder. Browse and access all components in a
-visual way to easily determine the state of your Design System.
-
-### Live Preview
-After every change, the live preview shows what your users will see.
-
-### Composer
-Use the layout composer to reason about the structure of a view. Drag and drop,
-add in place and reorder blocks - Trello style. Take advantage of Atomic Design
-nesting patterns for great reusability and control.
-
-### Props Panel
-Align with Flex, tweak typography, adjust white space, pick the right colours,
-use dynamic slots, images and SVGs. Gain full creative control with the use of
-straightforward CSS-like properties.
-
-We aim to release first public version of Tools after finishing testing phase in
-the first quarter of 2018.
 
 ## More, or less, convenient questions and answers
 ### About the benefits
