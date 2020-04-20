@@ -2,18 +2,18 @@
 If you're starting fresh (never done any React development) you might need to [setup dev environment](https://github.com/viewstools/docs/blob/master/DevEnvironmentSetup.md). This is a once off type of list but you will NOT be able to run any application localy on your computer without it.
 
 ## New project
-Headsup, we are working on a simpler way to create new projects and it should available when we launch public version of Views Tools.
+Headsup, we are working on a simpler way to create new projects and it should available when we launch public version of Views Tools. Replace `my-app` with the name of your project.
 
 1. Create a new one from Terminal:
 _To make a new web or desktop app_ run:
 ```
-npm install --global create-react-app
-create-react-app my-app
+yarn install --global create-react-app
+yarn create react-app my-app
 ```
 
 _To make a new native app_ run:
 ```
-npm install --global expo-cli
+yarn install --global expo-cli
 expo init --template blank my-app
 ```
 Put the name of your app when prompted
@@ -22,9 +22,14 @@ Press Y when `Use Yarn to install dependencies? (Y/n)`
 2. Add Views on it:
 
 ```
-npm install --global @viewstools/use
+yarn install --global @viewstools/use
 cd my-app
-use-views
+yarn create views-app
+```
+
+3. Start your app from the project folder:
+```
+yarn start
 ```
 
 ## Integrate Views in existing React apps
