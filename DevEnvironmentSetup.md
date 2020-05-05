@@ -17,29 +17,23 @@
 `curl -o- -L https://yarnpkg.com/install.sh | bash`
 9. Install expo-cli to manage react native apps
 `yarn global add expo-cli`
-10. Install create-react-app for web projects
-`yarn global add create-react-app`
-11. Install create-react-native-app for iOS and Android projects
-`yarn global add create-react-native-app`
-12. Install a helper to setup views on web and native projects
-`yarn global add @viewstools/use`
 
 ## If you want to create new React DOM project:
-1. Create your project using `create-react-app my-app`. Change `my-app` to whatever it's called.
+1. Create your project using `yarn create react-app my-app`. Change `my-app` to whatever it's called.
 2. Go to the project directory, type `cd ` (with space after cd) and drag project folder on the terminal window
-3. Run `use-views` to enable Views on your project
+3. Run `yarn create views-app` to enable Views on your project
 4. Ensure all dependencies are installed `yarn`
 5. To start the project run `yarn start` - the project will open in the browser 
 
 ## If you want to create new React Native project:
-1. Create your project using `create-react-native-app my-app`
+1. Create your project using `yarn create react-native-app my-app`
 2. Go to the project directory, type `cd ` (with space after cd) and drag project folder on the terminal window
-3. Run `use-views` to enable Views on your project
+3. Run `yarn create views-app` to enable Views on your project
 4. To start project run yarn start - you will get a QR code and URL. You can scan the code with your mobile or copy the code
 5. In a new tab (CMD+t) run expo ios - it will open the simulator
 6. Swipe to the right on the simulator screen and open Expo app
 7. Click on the clipboard shortcut in Terminal and your project will open
-8. Run `exp install:ios` to install the Expo app into the iOS simulator. You might need to run `sudo xcode-select -s /Applications/Xcode.app` before.
+8. Run `expo client:install:ios` to install the Expo app into the iOS simulator. You might need to run `sudo xcode-select -s /Applications/Xcode.app` before.
 
 # Windows for React DOM
 
