@@ -26,6 +26,7 @@ Full documentation is included in Views Tools. ![Views Tools](/images/Tools.jpg)
 
 * [Website](https://design.views.tools/)
 * [Medium Publication](https://medium.com/viewstools)
+* [Youtube Channel](https://www.youtube.com/watch?v=HyLWk813xYw)
 
 ## 😍 How can you help?
 
