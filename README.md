@@ -18,7 +18,7 @@ We don't have everything figured out yet, but [the things we've done](https://de
 
 ## Start
 
-To get your version of Views Tools fill out this [Typeform](https://tom734512.typeform.com/to/yyz1Ja)
+To get your free public beta version of Views Tools fill out this [Typeform](https://tom734512.typeform.com/to/yyz1Ja).
 
 Full documentation is included in Views Tools. ![Views Tools](/images/Tools.jpg)
 
