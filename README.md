@@ -6,7 +6,7 @@
 
 * Views Framework is our response to the complexities and silos we see and experience every day in the software delivery process
 * We're trying to simplify development to make it more inclusive for non-developers
-* We achieve simplicity through smart automation
+* We achieve simplicity through smart automation and carefully designed creative constraints
 * We noticed that when designers and product owners have access to the code-base the quality of the final solution is higher
 * Better collaboration enables knowledge transfer, designers become better at engineering and engineers better at design
 * Faster delivery and shared responibility lower the risk of faluire
