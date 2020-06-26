@@ -1,10 +1,15 @@
-# Why Views?
+# Make beautiful software!
+# Obsess about every detail!
+# Upskill on the job!
+
+## Why Views?
 
 * Views Framework is our response to the complexities and silos we see and experience every day in the software delivery process
 * We're trying to simplify development to make it more inclusive for non-developers
 * We achieve simplicity through smart automation
 * We noticed that when designers and product owners have access to the code-base the quality of the final solution is higher
-* Better collaboration, shared knowledge, common vocabluary and access to code lower the risk of software delivery
+* Better collaboration enables knowledge transfer, designers become better at engineering and engineers better at design
+* Faster delivery and shared responibility lower the risk of faluire
 
 We don't have everything figured out yet, but [the things we've done](https://design.views.tools/) up to now give us high confidence towards the future.
 
