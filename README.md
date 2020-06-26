@@ -2,7 +2,7 @@
 # Obsess about every detail!
 # Upskill on the job!
 
-## Why Views?
+## Views is a creative toolset for professional product teams
 
 * Views Framework is our response to the complexities and silos we see and experience every day in the software delivery process
 * We're trying to simplify development to make it more inclusive for non-developers
