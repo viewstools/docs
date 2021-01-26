@@ -6,7 +6,7 @@
 2. Open Xcode and follow installation steps to get all the modules (we need iOS simulator)
 3. Open the terminal (in Applications/Utilities) and run the following commands:
 4. Install homebrew to manage packages (select both lines, it's one command)
-`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 5. Install n to manage node
 `curl -L https://git.io/n-install | bash`
 6. Install watchman for react native
