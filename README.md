@@ -1,4 +1,4 @@
-# Make beautiful software!
+# Make beautiful software! Discontinued
 # Obsess about every detail!
 # Upskill on the job!
 
